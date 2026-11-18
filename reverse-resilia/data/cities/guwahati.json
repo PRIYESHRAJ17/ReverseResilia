@@ -1,0 +1,2187 @@
+{
+  "city_id": "guwahati",
+  "city_name": "Guwahati",
+  "currency": "INR",
+  "warehouses": [
+    {
+      "id": "WH-GUW-01",
+      "name": "Guwahati Central Fulfillment Hub",
+      "pincode": "781038",
+      "latitude": 26.129139,
+      "longitude": 91.787139,
+      "stock_units": 19,
+      "capacity_orders": 14,
+      "handling_cost_per_order": 29.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-GUW-02",
+      "name": "Guwahati North Distribution Center",
+      "pincode": "781365",
+      "latitude": 26.44169,
+      "longitude": 91.61042,
+      "stock_units": 19,
+      "capacity_orders": 17,
+      "handling_cost_per_order": 25.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-GUW-03",
+      "name": "Guwahati South Regional Depot",
+      "pincode": "781012",
+      "latitude": 26.16834,
+      "longitude": 91.68133,
+      "stock_units": 17,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 29.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-GUW-04",
+      "name": "Guwahati West Industrial Yard",
+      "pincode": "781025",
+      "latitude": 26.1429,
+      "longitude": 91.731,
+      "stock_units": 15,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 26.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-GUW-001",
+      "customer_name": "Customer Panbari B.O",
+      "pincode": "782401",
+      "latitude": 26.1401,
+      "longitude": 91.5625,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-002",
+      "customer_name": "Customer Dekachang B.O",
+      "pincode": "781136",
+      "latitude": 26.2302,
+      "longitude": 91.7102,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-003",
+      "customer_name": "Customer Binovanagar S.O",
+      "pincode": "781018",
+      "latitude": 26.1475,
+      "longitude": 91.743056,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-004",
+      "customer_name": "Customer Damalchos B.O",
+      "pincode": "781135",
+      "latitude": 25.5638,
+      "longitude": 91.0924,
+      "demand_units": 1,
+      "deadline_minutes": 252,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-005",
+      "customer_name": "Customer Baniapara B.O",
+      "pincode": "781124",
+      "latitude": 26.048,
+      "longitude": 91.386,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-006",
+      "customer_name": "Customer Futuri B.O",
+      "pincode": "781122",
+      "latitude": 26.10066,
+      "longitude": 91.50519,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-007",
+      "customer_name": "Customer Saraibaha B.O.",
+      "pincode": "781135",
+      "latitude": 25.9452,
+      "longitude": 91.1569,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-008",
+      "customer_name": "Customer Paltanbazar S.O",
+      "pincode": "781008",
+      "latitude": 26.181028,
+      "longitude": 91.75,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-009",
+      "customer_name": "Customer Balikuchi B.O",
+      "pincode": "781381",
+      "latitude": 26.34613,
+      "longitude": 91.72826,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-010",
+      "customer_name": "Customer Hengrabari S.O",
+      "pincode": "781036",
+      "latitude": 26.15101,
+      "longitude": 91.79836,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-011",
+      "customer_name": "Customer Mataikhar B.O",
+      "pincode": "781120",
+      "latitude": 26.0802,
+      "longitude": 91.5596,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-012",
+      "customer_name": "Customer Uzanbazar S.O",
+      "pincode": "781001",
+      "latitude": 26.19243,
+      "longitude": 91.75537,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-013",
+      "customer_name": "Customer Bamunimaidan S.O",
+      "pincode": "781021",
+      "latitude": 26.183861,
+      "longitude": 91.786861,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-GUW-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-014",
+      "customer_name": "Customer Bhattaparagaral B.O",
+      "pincode": "781017",
+      "latitude": 26.1373,
+      "longitude": 91.6278,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-015",
+      "customer_name": "Customer Mirza S.O",
+      "pincode": "781125",
+      "latitude": 26.088028,
+      "longitude": 91.535556,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-016",
+      "customer_name": "Customer Bharalumukh S.O",
+      "pincode": "781009",
+      "latitude": 26.171833,
+      "longitude": 91.732694,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-017",
+      "customer_name": "Customer Dharapur B.O",
+      "pincode": "781017",
+      "latitude": 26.137,
+      "longitude": 91.627,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-018",
+      "customer_name": "Customer Bardekpar B.O",
+      "pincode": "781382",
+      "latitude": 26.4223,
+      "longitude": 91.7313,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-019",
+      "customer_name": "Customer Amtala B.O",
+      "pincode": "781134",
+      "latitude": 26.073611,
+      "longitude": 91.428611,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-020",
+      "customer_name": "Customer Amsinggaon E (S  85) B.O",
+      "pincode": "781027",
+      "latitude": 26.1532,
+      "longitude": 91.85334,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-021",
+      "customer_name": "Customer Kahilipara S.O",
+      "pincode": "781019",
+      "latitude": 26.140917,
+      "longitude": 91.762806,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-022",
+      "customer_name": "Customer Baralabari B.O",
+      "pincode": "781101",
+      "latitude": 26.26283,
+      "longitude": 91.69594,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-023",
+      "customer_name": "Customer Jalukbari S.O",
+      "pincode": "781013",
+      "latitude": 26.142528,
+      "longitude": 91.665,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-024",
+      "customer_name": "Customer Ambari Fatasil S.O",
+      "pincode": "781025",
+      "latitude": 26.15869,
+      "longitude": 91.73444,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-GUW-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-GUW-025",
+      "customer_name": "Customer Jorabat B.O",
+      "pincode": "781023",
+      "latitude": 26.1523,
+      "longitude": 91.8787,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-GUW-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-001",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-001",
+      "distance_km": 29.64,
+      "transit_time_minutes": 71,
+      "cost_inr": 291.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-002",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-002",
+      "distance_km": 17.96,
+      "transit_time_minutes": 49,
+      "cost_inr": 192.66,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-003",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-003",
+      "distance_km": 6.4,
+      "transit_time_minutes": 27,
+      "cost_inr": 94.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-004",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-004",
+      "distance_km": 123.72,
+      "transit_time_minutes": 247,
+      "cost_inr": 1091.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-005",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-005",
+      "distance_km": 54.2,
+      "transit_time_minutes": 117,
+      "cost_inr": 500.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-006",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-006",
+      "distance_km": 37.39,
+      "transit_time_minutes": 86,
+      "cost_inr": 357.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-007",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-007",
+      "distance_km": 87.39,
+      "transit_time_minutes": 179,
+      "cost_inr": 782.82,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-008",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-008",
+      "distance_km": 9.05,
+      "transit_time_minutes": 32,
+      "cost_inr": 116.93,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-009",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-009",
+      "distance_km": 32.78,
+      "transit_time_minutes": 77,
+      "cost_inr": 318.63,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-010",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-010",
+      "distance_km": 3.53,
+      "transit_time_minutes": 22,
+      "cost_inr": 70.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-011",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-011",
+      "distance_km": 30.84,
+      "transit_time_minutes": 73,
+      "cost_inr": 302.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-012",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-012",
+      "distance_km": 10.19,
+      "transit_time_minutes": 35,
+      "cost_inr": 126.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-013",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-013",
+      "distance_km": 8.03,
+      "transit_time_minutes": 31,
+      "cost_inr": 108.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-014",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-014",
+      "distance_km": 21.03,
+      "transit_time_minutes": 55,
+      "cost_inr": 218.75,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-015",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-015",
+      "distance_km": 33.7,
+      "transit_time_minutes": 79,
+      "cost_inr": 326.45,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-016",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-016",
+      "distance_km": 9.52,
+      "transit_time_minutes": 33,
+      "cost_inr": 120.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-017",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-017",
+      "distance_km": 21.13,
+      "transit_time_minutes": 55,
+      "cost_inr": 219.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-018",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-018",
+      "distance_km": 43.65,
+      "transit_time_minutes": 97,
+      "cost_inr": 411.02,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-019",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-019",
+      "distance_km": 47.95,
+      "transit_time_minutes": 105,
+      "cost_inr": 447.58,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-020",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-020",
+      "distance_km": 9.41,
+      "transit_time_minutes": 33,
+      "cost_inr": 119.98,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-021",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-021",
+      "distance_km": 3.64,
+      "transit_time_minutes": 22,
+      "cost_inr": 70.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-022",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-022",
+      "distance_km": 23.01,
+      "transit_time_minutes": 59,
+      "cost_inr": 235.59,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-023",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-023",
+      "distance_km": 16.21,
+      "transit_time_minutes": 46,
+      "cost_inr": 177.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-024",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-024",
+      "distance_km": 8.19,
+      "transit_time_minutes": 31,
+      "cost_inr": 109.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-01-ORD-GUW-025",
+      "warehouse_id": "WH-GUW-01",
+      "order_id": "ORD-GUW-025",
+      "distance_km": 12.53,
+      "transit_time_minutes": 39,
+      "cost_inr": 146.5,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-001",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-001",
+      "distance_km": 44.71,
+      "transit_time_minutes": 99,
+      "cost_inr": 420.04,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-002",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-002",
+      "distance_km": 33.7,
+      "transit_time_minutes": 79,
+      "cost_inr": 326.45,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-003",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-003",
+      "distance_km": 46.57,
+      "transit_time_minutes": 103,
+      "cost_inr": 435.85,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-004",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-004",
+      "distance_km": 145.85,
+      "transit_time_minutes": 289,
+      "cost_inr": 1279.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-005",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-005",
+      "distance_km": 64.9,
+      "transit_time_minutes": 137,
+      "cost_inr": 591.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-006",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-006",
+      "distance_km": 51.94,
+      "transit_time_minutes": 113,
+      "cost_inr": 481.49,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-007",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-007",
+      "distance_km": 94.22,
+      "transit_time_minutes": 192,
+      "cost_inr": 840.87,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-008",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-008",
+      "distance_km": 42.44,
+      "transit_time_minutes": 95,
+      "cost_inr": 400.74,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-009",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-009",
+      "distance_km": 20.9,
+      "transit_time_minutes": 55,
+      "cost_inr": 217.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-010",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-010",
+      "distance_km": 49.31,
+      "transit_time_minutes": 108,
+      "cost_inr": 459.13,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-011",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-011",
+      "distance_km": 53.48,
+      "transit_time_minutes": 116,
+      "cost_inr": 494.58,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-012",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-012",
+      "distance_km": 41.26,
+      "transit_time_minutes": 93,
+      "cost_inr": 390.71,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-013",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-013",
+      "distance_km": 44.4,
+      "transit_time_minutes": 99,
+      "cost_inr": 417.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-014",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-014",
+      "distance_km": 44.74,
+      "transit_time_minutes": 99,
+      "cost_inr": 420.29,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-015",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-015",
+      "distance_km": 52.84,
+      "transit_time_minutes": 115,
+      "cost_inr": 489.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-016",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-016",
+      "distance_km": 42.75,
+      "transit_time_minutes": 96,
+      "cost_inr": 403.38,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-017",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-017",
+      "distance_km": 44.77,
+      "transit_time_minutes": 99,
+      "cost_inr": 420.55,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-018",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-018",
+      "distance_km": 16.14,
+      "transit_time_minutes": 46,
+      "cost_inr": 177.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-019",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-019",
+      "distance_km": 59.09,
+      "transit_time_minutes": 126,
+      "cost_inr": 542.27,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-020",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-020",
+      "distance_km": 53.05,
+      "transit_time_minutes": 115,
+      "cost_inr": 490.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-021",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-021",
+      "distance_km": 48.49,
+      "transit_time_minutes": 106,
+      "cost_inr": 452.17,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-022",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-022",
+      "distance_km": 28.56,
+      "transit_time_minutes": 69,
+      "cost_inr": 282.76,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-023",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-023",
+      "distance_km": 44.49,
+      "transit_time_minutes": 99,
+      "cost_inr": 418.17,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-024",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-024",
+      "distance_km": 44.63,
+      "transit_time_minutes": 99,
+      "cost_inr": 419.36,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-02-ORD-GUW-025",
+      "warehouse_id": "WH-GUW-02",
+      "order_id": "ORD-GUW-025",
+      "distance_km": 55.23,
+      "transit_time_minutes": 119,
+      "cost_inr": 509.45,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-001",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-001",
+      "distance_km": 16.2,
+      "transit_time_minutes": 46,
+      "cost_inr": 177.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-002",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-002",
+      "distance_km": 9.84,
+      "transit_time_minutes": 34,
+      "cost_inr": 123.64,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-003",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-003",
+      "distance_km": 8.69,
+      "transit_time_minutes": 32,
+      "cost_inr": 113.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-004",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-004",
+      "distance_km": 118.0,
+      "transit_time_minutes": 237,
+      "cost_inr": 1043.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-005",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-005",
+      "distance_km": 42.74,
+      "transit_time_minutes": 96,
+      "cost_inr": 403.29,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-006",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-006",
+      "distance_km": 25.25,
+      "transit_time_minutes": 63,
+      "cost_inr": 254.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-007",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-007",
+      "distance_km": 76.51,
+      "transit_time_minutes": 159,
+      "cost_inr": 690.34,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-008",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-008",
+      "distance_km": 9.24,
+      "transit_time_minutes": 33,
+      "cost_inr": 118.54,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-009",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-009",
+      "distance_km": 26.82,
+      "transit_time_minutes": 66,
+      "cost_inr": 267.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-010",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-010",
+      "distance_km": 15.63,
+      "transit_time_minutes": 45,
+      "cost_inr": 172.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-011",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-011",
+      "distance_km": 20.61,
+      "transit_time_minutes": 54,
+      "cost_inr": 215.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-012",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-012",
+      "distance_km": 10.37,
+      "transit_time_minutes": 35,
+      "cost_inr": 128.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-013",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-013",
+      "distance_km": 14.09,
+      "transit_time_minutes": 42,
+      "cost_inr": 159.76,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-014",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-014",
+      "distance_km": 8.4,
+      "transit_time_minutes": 31,
+      "cost_inr": 111.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-015",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-015",
+      "distance_km": 22.54,
+      "transit_time_minutes": 58,
+      "cost_inr": 231.59,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-016",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-016",
+      "distance_km": 6.79,
+      "transit_time_minutes": 28,
+      "cost_inr": 97.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-017",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-017",
+      "distance_km": 8.51,
+      "transit_time_minutes": 31,
+      "cost_inr": 112.33,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-018",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-018",
+      "distance_km": 37.85,
+      "transit_time_minutes": 86,
+      "cost_inr": 361.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-019",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-019",
+      "distance_km": 36.09,
+      "transit_time_minutes": 83,
+      "cost_inr": 346.77,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-020",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-020",
+      "distance_km": 22.77,
+      "transit_time_minutes": 58,
+      "cost_inr": 233.54,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-021",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-021",
+      "distance_km": 11.46,
+      "transit_time_minutes": 37,
+      "cost_inr": 137.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-022",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-022",
+      "distance_km": 14.0,
+      "transit_time_minutes": 42,
+      "cost_inr": 159.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-023",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-023",
+      "distance_km": 4.36,
+      "transit_time_minutes": 24,
+      "cost_inr": 77.06,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-024",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-024",
+      "distance_km": 7.14,
+      "transit_time_minutes": 29,
+      "cost_inr": 100.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-03-ORD-GUW-025",
+      "warehouse_id": "WH-GUW-03",
+      "order_id": "ORD-GUW-025",
+      "distance_km": 26.11,
+      "transit_time_minutes": 64,
+      "cost_inr": 261.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-001",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-001",
+      "distance_km": 22.21,
+      "transit_time_minutes": 57,
+      "cost_inr": 228.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-002",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-002",
+      "distance_km": 13.1,
+      "transit_time_minutes": 40,
+      "cost_inr": 151.35,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-003",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-003",
+      "distance_km": 1.73,
+      "transit_time_minutes": 19,
+      "cost_inr": 54.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-004",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-004",
+      "distance_km": 119.75,
+      "transit_time_minutes": 240,
+      "cost_inr": 1057.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-005",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-005",
+      "distance_km": 47.56,
+      "transit_time_minutes": 105,
+      "cost_inr": 444.26,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-006",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-006",
+      "distance_km": 30.4,
+      "transit_time_minutes": 72,
+      "cost_inr": 298.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-007",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-007",
+      "distance_km": 81.08,
+      "transit_time_minutes": 168,
+      "cost_inr": 729.18,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-008",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-008",
+      "distance_km": 6.13,
+      "transit_time_minutes": 27,
+      "cost_inr": 92.1,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-009",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-009",
+      "distance_km": 29.83,
+      "transit_time_minutes": 71,
+      "cost_inr": 293.55,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-010",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-010",
+      "distance_km": 8.95,
+      "transit_time_minutes": 32,
+      "cost_inr": 116.07,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-011",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-011",
+      "distance_km": 24.39,
+      "transit_time_minutes": 61,
+      "cost_inr": 247.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-012",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-012",
+      "distance_km": 7.95,
+      "transit_time_minutes": 30,
+      "cost_inr": 107.58,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-013",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-013",
+      "distance_km": 9.5,
+      "transit_time_minutes": 33,
+      "cost_inr": 120.75,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-014",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-014",
+      "distance_km": 13.62,
+      "transit_time_minutes": 41,
+      "cost_inr": 155.77,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-015",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-015",
+      "distance_km": 26.99,
+      "transit_time_minutes": 66,
+      "cost_inr": 269.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-016",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-016",
+      "distance_km": 4.25,
+      "transit_time_minutes": 23,
+      "cost_inr": 76.12,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-017",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-017",
+      "distance_km": 13.73,
+      "transit_time_minutes": 41,
+      "cost_inr": 156.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-018",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-018",
+      "distance_km": 41.01,
+      "transit_time_minutes": 92,
+      "cost_inr": 388.58,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-019",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-019",
+      "distance_km": 41.13,
+      "transit_time_minutes": 93,
+      "cost_inr": 389.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-020",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-020",
+      "distance_km": 16.19,
+      "transit_time_minutes": 46,
+      "cost_inr": 177.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-021",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-021",
+      "distance_km": 4.2,
+      "transit_time_minutes": 23,
+      "cost_inr": 75.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-022",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-022",
+      "distance_km": 18.2,
+      "transit_time_minutes": 50,
+      "cost_inr": 194.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-023",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-023",
+      "distance_km": 8.7,
+      "transit_time_minutes": 32,
+      "cost_inr": 113.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-024",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-024",
+      "distance_km": 2.36,
+      "transit_time_minutes": 20,
+      "cost_inr": 60.06,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-GUW-04-ORD-GUW-025",
+      "warehouse_id": "WH-GUW-04",
+      "order_id": "ORD-GUW-025",
+      "distance_km": 19.51,
+      "transit_time_minutes": 52,
+      "cost_inr": 205.84,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    }
+  ],
+  "available_interventions": [
+    {
+      "id": "INT-GUW-STK-WH-GUW-01",
+      "name": "Emergency Stock Bundle for Guwahati Central Fulfillment Hub",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-GUW-01",
+      "cost_inr": 1800.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-GUW-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-CAP-WH-GUW-01",
+      "name": "Overtime Handling Shift for Guwahati Central Fulfillment Hub",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-GUW-01",
+      "cost_inr": 1400.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-GUW-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-STK-WH-GUW-02",
+      "name": "Emergency Stock Bundle for Guwahati North Distribution Center",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-GUW-02",
+      "cost_inr": 2000.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-GUW-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-CAP-WH-GUW-02",
+      "name": "Overtime Handling Shift for Guwahati North Distribution Center",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-GUW-02",
+      "cost_inr": 1550.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-GUW-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-STK-WH-GUW-03",
+      "name": "Emergency Stock Bundle for Guwahati South Regional Depot",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-GUW-03",
+      "cost_inr": 2200.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-GUW-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-CAP-WH-GUW-03",
+      "name": "Overtime Handling Shift for Guwahati South Regional Depot",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-GUW-03",
+      "cost_inr": 1700.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-GUW-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-STK-WH-GUW-04",
+      "name": "Emergency Stock Bundle for Guwahati West Industrial Yard",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-GUW-04",
+      "cost_inr": 2400.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-GUW-04",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-GUW-CAP-WH-GUW-04",
+      "name": "Overtime Handling Shift for Guwahati West Industrial Yard",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-GUW-04",
+      "cost_inr": 1850.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-GUW-04",
+      "provenance": "simulated operations"
+    }
+  ],
+  "disruptions": [
+    {
+      "id": "DIS-GUW-01",
+      "name": "Guwahati Primary Hub Complete Outage",
+      "failed_warehouse_ids": [
+        "WH-GUW-01"
+      ],
+      "closed_route_ids": [],
+      "capacity_reductions": {},
+      "description": "Total operational shutdown at Guwahati Central Fulfillment Hub (WH-GUW-01) due to facility flood / structural hazard."
+    },
+    {
+      "id": "DIS-GUW-02",
+      "name": "Guwahati Arterial Road Corridor Blockage",
+      "failed_warehouse_ids": [],
+      "closed_route_ids": [
+        "ROUTE-WH-GUW-02-ORD-GUW-001",
+        "ROUTE-WH-GUW-02-ORD-GUW-002",
+        "ROUTE-WH-GUW-02-ORD-GUW-003",
+        "ROUTE-WH-GUW-02-ORD-GUW-004"
+      ],
+      "capacity_reductions": {},
+      "description": "Severe traffic lockdown and arterial road collapse blocking 4 key delivery lanes."
+    },
+    {
+      "id": "DIS-GUW-03",
+      "name": "Guwahati Compound Disruption: Outage & Capacity Shock",
+      "failed_warehouse_ids": [
+        "WH-GUW-01"
+      ],
+      "closed_route_ids": [
+        "ROUTE-WH-GUW-02-ORD-GUW-001",
+        "ROUTE-WH-GUW-02-ORD-GUW-002"
+      ],
+      "capacity_reductions": {
+        "WH-GUW-02": 50.0
+      },
+      "description": "Primary hub failure at WH-GUW-01 combined with a 50% labor capacity reduction at WH-GUW-02."
+    }
+  ],
+  "metadata": {
+    "provenance_summary": {
+      "geography": "Sourced from real pincode.csv GPS coordinates",
+      "operations": "Simulated operational parameters with deterministic seeds",
+      "road_metrics": "Derived from Great Circle + 1.32 circuity factor"
+    },
+    "total_orders": 25,
+    "total_warehouses": 4,
+    "total_routes": 100,
+    "initial_total_stock": 70,
+    "initial_total_capacity": 63
+  }
+}

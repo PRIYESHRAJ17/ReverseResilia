@@ -1,0 +1,2577 @@
+{
+  "city_id": "delhi",
+  "city_name": "Delhi NCR",
+  "currency": "INR",
+  "warehouses": [
+    {
+      "id": "WH-DEL-01",
+      "name": "Delhi NCR Central Fulfillment Hub",
+      "pincode": "110001",
+      "latitude": 28.6165,
+      "longitude": 77.200972,
+      "stock_units": 20,
+      "capacity_orders": 17,
+      "handling_cost_per_order": 25.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-DEL-02",
+      "name": "Delhi NCR North Distribution Center",
+      "pincode": "110001",
+      "latitude": 28.617417,
+      "longitude": 77.212917,
+      "stock_units": 15,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 27.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-DEL-03",
+      "name": "Delhi NCR South Regional Depot",
+      "pincode": "110001",
+      "latitude": 28.610583,
+      "longitude": 77.198694,
+      "stock_units": 16,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 28.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-DEL-04",
+      "name": "Delhi NCR West Industrial Yard",
+      "pincode": "110067",
+      "latitude": 28.539361,
+      "longitude": 77.1635,
+      "stock_units": 20,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 34.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-DEL-001",
+      "customer_name": "Customer Janpath SO",
+      "pincode": "110001",
+      "latitude": 28.643361,
+      "longitude": 77.200917,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-DEL-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-002",
+      "customer_name": "Customer Sagarpur S.O",
+      "pincode": "110046",
+      "latitude": 28.611056,
+      "longitude": 77.102917,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-003",
+      "customer_name": "Customer Vasant Vihar1 SO",
+      "pincode": "110057",
+      "latitude": 28.568,
+      "longitude": 77.159417,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-004",
+      "customer_name": "Customer R K Puram Sect4 SO",
+      "pincode": "110022",
+      "latitude": 28.555,
+      "longitude": 77.181028,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-005",
+      "customer_name": "Customer CVD SO",
+      "pincode": "110010",
+      "latitude": 28.598889,
+      "longitude": 77.108583,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-006",
+      "customer_name": "Customer Chanakya Puri SO",
+      "pincode": "110021",
+      "latitude": 28.594389,
+      "longitude": 77.186278,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-007",
+      "customer_name": "Customer Delhi High Court Extension Counter SO",
+      "pincode": "110003",
+      "latitude": 28.631778,
+      "longitude": 77.24025,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-008",
+      "customer_name": "Customer Palam Airport SO",
+      "pincode": "110037",
+      "latitude": 28.574556,
+      "longitude": 77.097556,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-009",
+      "customer_name": "Customer Anand Niketan SO",
+      "pincode": "110021",
+      "latitude": 28.578722,
+      "longitude": 77.164889,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-010",
+      "customer_name": "Customer Delhi Cantt SO",
+      "pincode": "110010",
+      "latitude": 28.595722,
+      "longitude": 77.136444,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-011",
+      "customer_name": "Customer RML EXTN COUNTER NDHO",
+      "pincode": "110001",
+      "latitude": 28.626806,
+      "longitude": 77.20663,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-012",
+      "customer_name": "Customer Aps Colony BO",
+      "pincode": "110010",
+      "latitude": 28.57,
+      "longitude": 77.13,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-013",
+      "customer_name": "Customer Sansad Marg HO",
+      "pincode": "110001",
+      "latitude": 28.622583,
+      "longitude": 77.212722,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-014",
+      "customer_name": "Customer Supreme Court SO",
+      "pincode": "110001",
+      "latitude": 28.621222,
+      "longitude": 77.238028,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-015",
+      "customer_name": "Customer Nangal Dewat BO",
+      "pincode": "110037",
+      "latitude": 28.530278,
+      "longitude": 77.115528,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-016",
+      "customer_name": "Customer Shastri Bhawan SO",
+      "pincode": "110001",
+      "latitude": 28.616444,
+      "longitude": 77.215417,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-017",
+      "customer_name": "Customer Election Commission SO",
+      "pincode": "110001",
+      "latitude": 28.623778,
+      "longitude": 77.210861,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-018",
+      "customer_name": "Customer Pinto Park SO",
+      "pincode": "110010",
+      "latitude": 28.575083,
+      "longitude": 77.097167,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-019",
+      "customer_name": "Customer R K Puram Sect1 SO",
+      "pincode": "110022",
+      "latitude": 28.561556,
+      "longitude": 77.179222,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-020",
+      "customer_name": "Customer A F Palam SO",
+      "pincode": "110010",
+      "latitude": 28.577833,
+      "longitude": 77.122167,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-021",
+      "customer_name": "Customer 505 A B Workshop SO",
+      "pincode": "110010",
+      "latitude": 28.614778,
+      "longitude": 77.178583,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-022",
+      "customer_name": "Customer Nangal Raya S.O",
+      "pincode": "110046",
+      "latitude": 28.611056,
+      "longitude": 77.108806,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-023",
+      "customer_name": "Customer Nanak Pura SO",
+      "pincode": "110021",
+      "latitude": 28.580778,
+      "longitude": 77.172722,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-024",
+      "customer_name": "Customer Laxmi Bai Nagar SO",
+      "pincode": "110023",
+      "latitude": 28.578417,
+      "longitude": 77.20925,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-025",
+      "customer_name": "Customer Malcha Marg SO",
+      "pincode": "110021",
+      "latitude": 28.604083,
+      "longitude": 77.18725,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-DEL-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-026",
+      "customer_name": "Customer Munirka SO",
+      "pincode": "110067",
+      "latitude": 28.555083,
+      "longitude": 77.176222,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-027",
+      "customer_name": "Customer Connaught Place SO",
+      "pincode": "110001",
+      "latitude": 28.633139,
+      "longitude": 77.217944,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-028",
+      "customer_name": "Customer Patiala House SO",
+      "pincode": "110001",
+      "latitude": 28.234861,
+      "longitude": 77.234861,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-029",
+      "customer_name": "Customer Mahipalpur BO",
+      "pincode": "110037",
+      "latitude": 28.54,
+      "longitude": 77.12,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-DEL-030",
+      "customer_name": "Customer Bhagat Singh Market SO",
+      "pincode": "110001",
+      "latitude": 28.633056,
+      "longitude": 77.207722,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-DEL-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-001",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-001",
+      "distance_km": 3.94,
+      "transit_time_minutes": 23,
+      "cost_inr": 73.49,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-002",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-002",
+      "distance_km": 12.66,
+      "transit_time_minutes": 39,
+      "cost_inr": 147.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-003",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-003",
+      "distance_km": 8.91,
+      "transit_time_minutes": 32,
+      "cost_inr": 115.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-004",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-004",
+      "distance_km": 9.39,
+      "transit_time_minutes": 33,
+      "cost_inr": 119.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-005",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-005",
+      "distance_km": 12.18,
+      "transit_time_minutes": 38,
+      "cost_inr": 143.53,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-006",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-006",
+      "distance_km": 3.76,
+      "transit_time_minutes": 23,
+      "cost_inr": 71.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-007",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-007",
+      "distance_km": 5.54,
+      "transit_time_minutes": 26,
+      "cost_inr": 87.09,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-008",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-008",
+      "distance_km": 14.68,
+      "transit_time_minutes": 43,
+      "cost_inr": 164.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-009",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-009",
+      "distance_km": 7.24,
+      "transit_time_minutes": 29,
+      "cost_inr": 101.54,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-010",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-010",
+      "distance_km": 8.86,
+      "transit_time_minutes": 32,
+      "cost_inr": 115.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-011",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-011",
+      "distance_km": 1.68,
+      "transit_time_minutes": 19,
+      "cost_inr": 54.28,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-012",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-012",
+      "distance_km": 11.41,
+      "transit_time_minutes": 37,
+      "cost_inr": 136.99,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-013",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-013",
+      "distance_km": 1.76,
+      "transit_time_minutes": 19,
+      "cost_inr": 54.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-014",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-014",
+      "distance_km": 4.82,
+      "transit_time_minutes": 25,
+      "cost_inr": 80.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-015",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-015",
+      "distance_km": 16.78,
+      "transit_time_minutes": 47,
+      "cost_inr": 182.63,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-016",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-016",
+      "distance_km": 1.86,
+      "transit_time_minutes": 19,
+      "cost_inr": 55.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-017",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-017",
+      "distance_km": 1.66,
+      "transit_time_minutes": 19,
+      "cost_inr": 54.11,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-018",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-018",
+      "distance_km": 14.69,
+      "transit_time_minutes": 43,
+      "cost_inr": 164.87,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-019",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-019",
+      "distance_km": 8.54,
+      "transit_time_minutes": 32,
+      "cost_inr": 112.59,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-020",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-020",
+      "distance_km": 11.63,
+      "transit_time_minutes": 37,
+      "cost_inr": 138.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-021",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-021",
+      "distance_km": 2.9,
+      "transit_time_minutes": 21,
+      "cost_inr": 64.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-022",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-022",
+      "distance_km": 11.9,
+      "transit_time_minutes": 38,
+      "cost_inr": 141.15,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-023",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-023",
+      "distance_km": 6.38,
+      "transit_time_minutes": 27,
+      "cost_inr": 94.23,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-024",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-024",
+      "distance_km": 5.69,
+      "transit_time_minutes": 26,
+      "cost_inr": 88.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-025",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-025",
+      "distance_km": 2.54,
+      "transit_time_minutes": 20,
+      "cost_inr": 61.59,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-026",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-026",
+      "distance_km": 9.56,
+      "transit_time_minutes": 33,
+      "cost_inr": 121.26,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-027",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-027",
+      "distance_km": 3.28,
+      "transit_time_minutes": 22,
+      "cost_inr": 67.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-028",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-028",
+      "distance_km": 56.19,
+      "transit_time_minutes": 121,
+      "cost_inr": 517.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-029",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-029",
+      "distance_km": 15.33,
+      "transit_time_minutes": 44,
+      "cost_inr": 170.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-01-ORD-DEL-030",
+      "warehouse_id": "WH-DEL-01",
+      "order_id": "ORD-DEL-030",
+      "distance_km": 2.58,
+      "transit_time_minutes": 20,
+      "cost_inr": 61.93,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-001",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-001",
+      "distance_km": 4.11,
+      "transit_time_minutes": 23,
+      "cost_inr": 74.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-002",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-002",
+      "distance_km": 14.2,
+      "transit_time_minutes": 42,
+      "cost_inr": 160.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-003",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-003",
+      "distance_km": 10.01,
+      "transit_time_minutes": 34,
+      "cost_inr": 125.08,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-004",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-004",
+      "distance_km": 10.04,
+      "transit_time_minutes": 34,
+      "cost_inr": 125.34,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-005",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-005",
+      "distance_km": 13.72,
+      "transit_time_minutes": 41,
+      "cost_inr": 156.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-006",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-006",
+      "distance_km": 4.82,
+      "transit_time_minutes": 25,
+      "cost_inr": 80.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-007",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-007",
+      "distance_km": 4.1,
+      "transit_time_minutes": 23,
+      "cost_inr": 74.85,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-008",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-008",
+      "distance_km": 16.14,
+      "transit_time_minutes": 46,
+      "cost_inr": 177.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-009",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-009",
+      "distance_km": 8.4,
+      "transit_time_minutes": 31,
+      "cost_inr": 111.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-010",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-010",
+      "distance_km": 10.36,
+      "transit_time_minutes": 35,
+      "cost_inr": 128.06,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-011",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-011",
+      "distance_km": 1.6,
+      "transit_time_minutes": 18,
+      "cost_inr": 53.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-012",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-012",
+      "distance_km": 12.75,
+      "transit_time_minutes": 39,
+      "cost_inr": 148.38,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-013",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-013",
+      "distance_km": 0.76,
+      "transit_time_minutes": 17,
+      "cost_inr": 46.46,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-014",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-014",
+      "distance_km": 3.28,
+      "transit_time_minutes": 22,
+      "cost_inr": 67.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-015",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-015",
+      "distance_km": 17.92,
+      "transit_time_minutes": 49,
+      "cost_inr": 192.32,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-016",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-016",
+      "distance_km": 0.35,
+      "transit_time_minutes": 16,
+      "cost_inr": 42.98,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-017",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-017",
+      "distance_km": 0.97,
+      "transit_time_minutes": 17,
+      "cost_inr": 48.24,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-018",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-018",
+      "distance_km": 16.16,
+      "transit_time_minutes": 46,
+      "cost_inr": 177.36,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-019",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-019",
+      "distance_km": 9.28,
+      "transit_time_minutes": 33,
+      "cost_inr": 118.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-020",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-020",
+      "distance_km": 13.06,
+      "transit_time_minutes": 40,
+      "cost_inr": 151.01,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-021",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-021",
+      "distance_km": 4.44,
+      "transit_time_minutes": 24,
+      "cost_inr": 77.74,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-022",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-022",
+      "distance_km": 13.45,
+      "transit_time_minutes": 41,
+      "cost_inr": 154.32,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-023",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-023",
+      "distance_km": 7.47,
+      "transit_time_minutes": 30,
+      "cost_inr": 103.5,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-024",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-024",
+      "distance_km": 5.74,
+      "transit_time_minutes": 26,
+      "cost_inr": 88.79,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-025",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-025",
+      "distance_km": 3.84,
+      "transit_time_minutes": 23,
+      "cost_inr": 72.64,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-026",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-026",
+      "distance_km": 10.3,
+      "transit_time_minutes": 35,
+      "cost_inr": 127.55,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-027",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-027",
+      "distance_km": 2.4,
+      "transit_time_minutes": 20,
+      "cost_inr": 60.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-028",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-028",
+      "distance_km": 56.22,
+      "transit_time_minutes": 121,
+      "cost_inr": 517.87,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-029",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-029",
+      "distance_km": 16.51,
+      "transit_time_minutes": 46,
+      "cost_inr": 180.34,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-02-ORD-DEL-030",
+      "warehouse_id": "WH-DEL-02",
+      "order_id": "ORD-DEL-030",
+      "distance_km": 2.39,
+      "transit_time_minutes": 20,
+      "cost_inr": 60.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-001",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-001",
+      "distance_km": 4.82,
+      "transit_time_minutes": 25,
+      "cost_inr": 80.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-002",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-002",
+      "distance_km": 12.34,
+      "transit_time_minutes": 39,
+      "cost_inr": 144.89,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-003",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-003",
+      "distance_km": 8.04,
+      "transit_time_minutes": 31,
+      "cost_inr": 108.34,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-004",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-004",
+      "distance_km": 8.47,
+      "transit_time_minutes": 31,
+      "cost_inr": 112.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-005",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-005",
+      "distance_km": 11.74,
+      "transit_time_minutes": 38,
+      "cost_inr": 139.79,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-006",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-006",
+      "distance_km": 2.87,
+      "transit_time_minutes": 21,
+      "cost_inr": 64.39,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-007",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-007",
+      "distance_km": 6.19,
+      "transit_time_minutes": 27,
+      "cost_inr": 92.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-008",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-008",
+      "distance_km": 14.07,
+      "transit_time_minutes": 42,
+      "cost_inr": 159.59,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-009",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-009",
+      "distance_km": 6.39,
+      "transit_time_minutes": 27,
+      "cost_inr": 94.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-010",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-010",
+      "distance_km": 8.31,
+      "transit_time_minutes": 31,
+      "cost_inr": 110.64,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-011",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-011",
+      "distance_km": 2.59,
+      "transit_time_minutes": 20,
+      "cost_inr": 62.02,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-012",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-012",
+      "distance_km": 10.67,
+      "transit_time_minutes": 36,
+      "cost_inr": 130.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-013",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-013",
+      "distance_km": 2.52,
+      "transit_time_minutes": 20,
+      "cost_inr": 61.42,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-014",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-014",
+      "distance_km": 5.3,
+      "transit_time_minutes": 25,
+      "cost_inr": 85.05,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-015",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-015",
+      "distance_km": 15.93,
+      "transit_time_minutes": 45,
+      "cost_inr": 175.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-016",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-016",
+      "distance_km": 2.32,
+      "transit_time_minutes": 20,
+      "cost_inr": 59.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-017",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-017",
+      "distance_km": 2.49,
+      "transit_time_minutes": 20,
+      "cost_inr": 61.17,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-018",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-018",
+      "distance_km": 14.08,
+      "transit_time_minutes": 42,
+      "cost_inr": 159.68,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-019",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-019",
+      "distance_km": 7.62,
+      "transit_time_minutes": 30,
+      "cost_inr": 104.77,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-020",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-020",
+      "distance_km": 10.97,
+      "transit_time_minutes": 36,
+      "cost_inr": 133.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-021",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-021",
+      "distance_km": 2.66,
+      "transit_time_minutes": 20,
+      "cost_inr": 62.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-022",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-022",
+      "distance_km": 11.58,
+      "transit_time_minutes": 37,
+      "cost_inr": 138.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-023",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-023",
+      "distance_km": 5.51,
+      "transit_time_minutes": 26,
+      "cost_inr": 86.84,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-024",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-024",
+      "distance_km": 4.91,
+      "transit_time_minutes": 25,
+      "cost_inr": 81.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-025",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-025",
+      "distance_km": 1.76,
+      "transit_time_minutes": 19,
+      "cost_inr": 54.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-026",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-026",
+      "distance_km": 8.65,
+      "transit_time_minutes": 32,
+      "cost_inr": 113.53,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-027",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-027",
+      "distance_km": 4.14,
+      "transit_time_minutes": 23,
+      "cost_inr": 75.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-028",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-028",
+      "distance_km": 55.34,
+      "transit_time_minutes": 119,
+      "cost_inr": 510.39,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-029",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-029",
+      "distance_km": 14.5,
+      "transit_time_minutes": 43,
+      "cost_inr": 163.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-03-ORD-DEL-030",
+      "warehouse_id": "WH-DEL-03",
+      "order_id": "ORD-DEL-030",
+      "distance_km": 3.5,
+      "transit_time_minutes": 22,
+      "cost_inr": 69.75,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-001",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-001",
+      "distance_km": 16.01,
+      "transit_time_minutes": 46,
+      "cost_inr": 176.09,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-002",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-002",
+      "distance_km": 13.1,
+      "transit_time_minutes": 40,
+      "cost_inr": 151.35,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-003",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-003",
+      "distance_km": 4.24,
+      "transit_time_minutes": 23,
+      "cost_inr": 76.04,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-004",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-004",
+      "distance_km": 3.22,
+      "transit_time_minutes": 22,
+      "cost_inr": 67.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-005",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-005",
+      "distance_km": 11.25,
+      "transit_time_minutes": 37,
+      "cost_inr": 135.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-006",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-006",
+      "distance_km": 8.59,
+      "transit_time_minutes": 32,
+      "cost_inr": 113.02,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-007",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-007",
+      "distance_km": 16.79,
+      "transit_time_minutes": 47,
+      "cost_inr": 182.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-008",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-008",
+      "distance_km": 9.95,
+      "transit_time_minutes": 34,
+      "cost_inr": 124.57,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-009",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-009",
+      "distance_km": 5.78,
+      "transit_time_minutes": 26,
+      "cost_inr": 89.13,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-010",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-010",
+      "distance_km": 8.98,
+      "transit_time_minutes": 32,
+      "cost_inr": 116.33,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-011",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-011",
+      "distance_km": 13.99,
+      "transit_time_minutes": 42,
+      "cost_inr": 158.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-012",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-012",
+      "distance_km": 6.24,
+      "transit_time_minutes": 27,
+      "cost_inr": 93.04,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-013",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-013",
+      "distance_km": 13.76,
+      "transit_time_minutes": 41,
+      "cost_inr": 156.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-014",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-014",
+      "distance_km": 15.38,
+      "transit_time_minutes": 44,
+      "cost_inr": 170.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-015",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-015",
+      "distance_km": 6.33,
+      "transit_time_minutes": 27,
+      "cost_inr": 93.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-016",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-016",
+      "distance_km": 13.14,
+      "transit_time_minutes": 40,
+      "cost_inr": 151.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-017",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-017",
+      "distance_km": 13.81,
+      "transit_time_minutes": 41,
+      "cost_inr": 157.38,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-018",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-018",
+      "distance_km": 10.03,
+      "transit_time_minutes": 34,
+      "cost_inr": 125.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-019",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-019",
+      "distance_km": 3.84,
+      "transit_time_minutes": 23,
+      "cost_inr": 72.64,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-020",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-020",
+      "distance_km": 7.76,
+      "transit_time_minutes": 30,
+      "cost_inr": 105.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-021",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-021",
+      "distance_km": 11.24,
+      "transit_time_minutes": 37,
+      "cost_inr": 135.54,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-022",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-022",
+      "distance_km": 12.67,
+      "transit_time_minutes": 39,
+      "cost_inr": 147.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-023",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-023",
+      "distance_km": 6.19,
+      "transit_time_minutes": 27,
+      "cost_inr": 92.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-024",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-024",
+      "distance_km": 8.22,
+      "transit_time_minutes": 31,
+      "cost_inr": 109.87,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-025",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-025",
+      "distance_km": 9.98,
+      "transit_time_minutes": 34,
+      "cost_inr": 124.83,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-026",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-026",
+      "distance_km": 2.83,
+      "transit_time_minutes": 21,
+      "cost_inr": 64.06,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-027",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-027",
+      "distance_km": 15.45,
+      "transit_time_minutes": 44,
+      "cost_inr": 171.32,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-028",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-028",
+      "distance_km": 45.63,
+      "transit_time_minutes": 101,
+      "cost_inr": 427.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-029",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-029",
+      "distance_km": 5.61,
+      "transit_time_minutes": 26,
+      "cost_inr": 87.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-DEL-04-ORD-DEL-030",
+      "warehouse_id": "WH-DEL-04",
+      "order_id": "ORD-DEL-030",
+      "distance_km": 14.89,
+      "transit_time_minutes": 43,
+      "cost_inr": 166.56,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    }
+  ],
+  "available_interventions": [
+    {
+      "id": "INT-DEL-STK-WH-DEL-01",
+      "name": "Emergency Stock Bundle for Delhi NCR Central Fulfillment Hub",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-DEL-01",
+      "cost_inr": 1800.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-DEL-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-CAP-WH-DEL-01",
+      "name": "Overtime Handling Shift for Delhi NCR Central Fulfillment Hub",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-DEL-01",
+      "cost_inr": 1400.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-DEL-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-STK-WH-DEL-02",
+      "name": "Emergency Stock Bundle for Delhi NCR North Distribution Center",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-DEL-02",
+      "cost_inr": 2000.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-DEL-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-CAP-WH-DEL-02",
+      "name": "Overtime Handling Shift for Delhi NCR North Distribution Center",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-DEL-02",
+      "cost_inr": 1550.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-DEL-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-STK-WH-DEL-03",
+      "name": "Emergency Stock Bundle for Delhi NCR South Regional Depot",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-DEL-03",
+      "cost_inr": 2200.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-DEL-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-CAP-WH-DEL-03",
+      "name": "Overtime Handling Shift for Delhi NCR South Regional Depot",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-DEL-03",
+      "cost_inr": 1700.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-DEL-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-STK-WH-DEL-04",
+      "name": "Emergency Stock Bundle for Delhi NCR West Industrial Yard",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-DEL-04",
+      "cost_inr": 2400.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-DEL-04",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-DEL-CAP-WH-DEL-04",
+      "name": "Overtime Handling Shift for Delhi NCR West Industrial Yard",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-DEL-04",
+      "cost_inr": 1850.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-DEL-04",
+      "provenance": "simulated operations"
+    }
+  ],
+  "disruptions": [
+    {
+      "id": "DIS-DEL-01",
+      "name": "Delhi NCR Primary Hub Complete Outage",
+      "failed_warehouse_ids": [
+        "WH-DEL-01"
+      ],
+      "closed_route_ids": [],
+      "capacity_reductions": {},
+      "description": "Total operational shutdown at Delhi NCR Central Fulfillment Hub (WH-DEL-01) due to facility flood / structural hazard."
+    },
+    {
+      "id": "DIS-DEL-02",
+      "name": "Delhi NCR Arterial Road Corridor Blockage",
+      "failed_warehouse_ids": [],
+      "closed_route_ids": [
+        "ROUTE-WH-DEL-02-ORD-DEL-001",
+        "ROUTE-WH-DEL-02-ORD-DEL-002",
+        "ROUTE-WH-DEL-02-ORD-DEL-003",
+        "ROUTE-WH-DEL-02-ORD-DEL-004"
+      ],
+      "capacity_reductions": {},
+      "description": "Severe traffic lockdown and arterial road collapse blocking 4 key delivery lanes."
+    },
+    {
+      "id": "DIS-DEL-03",
+      "name": "Delhi NCR Compound Disruption: Outage & Capacity Shock",
+      "failed_warehouse_ids": [
+        "WH-DEL-01"
+      ],
+      "closed_route_ids": [
+        "ROUTE-WH-DEL-02-ORD-DEL-001",
+        "ROUTE-WH-DEL-02-ORD-DEL-002"
+      ],
+      "capacity_reductions": {
+        "WH-DEL-02": 50.0
+      },
+      "description": "Primary hub failure at WH-DEL-01 combined with a 50% labor capacity reduction at WH-DEL-02."
+    }
+  ],
+  "metadata": {
+    "provenance_summary": {
+      "geography": "Sourced from real pincode.csv GPS coordinates",
+      "operations": "Simulated operational parameters with deterministic seeds",
+      "road_metrics": "Derived from Great Circle + 1.32 circuity factor"
+    },
+    "total_orders": 30,
+    "total_warehouses": 4,
+    "total_routes": 120,
+    "initial_total_stock": 71,
+    "initial_total_capacity": 65
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guwahati North-Eastern Grid — ReverseResilia Deep Dive</title>
+    <meta name="description" content="Technical deep-dive into the Guwahati North-Eastern supply chain gateway, river bridge topology, and mathematical recovery under corridor disruptions." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/PPNeueMontreal-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/PPNeueMontrealMono-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/FHPhemister-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/residences.css" />
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/src/dock-mount.tsx"></script>
+  </head>
+  <body style="overflow-y: auto; height: auto;">
+    <main class="r-page">
+      <header class="res-hero">
+        <div class="res-meta-bar">
+          <span>[NETWORK 005]</span>
+          <span>GUWAHATI, ASSAM</span>
+          <span>NORTH-EASTERN GATEWAY GRID</span>
+          <span>4 HUBS / 25 ORDERS / 65 UNITS</span>
+        </div>
+        <h1 class="res-hero-title">GUWAHATI REGIONAL NETWORK</h1>
+        <p class="res-lead">
+          Strategic gateway network serving Kamrup Metropolitan and North-Eastern trade corridors with real Brahmaputra river bridge routing constraints.
+        </p>
+      </header>
+
+      <div class="res-gallery-grid">
+        <div class="res-img-wrap full-span">
+          <img src="/media/hero/guwahati_hero.jpeg" alt="Saraighat Bridge & Brahmaputra — Guwahati Strategic Gateway" />
+        </div>
+      </div>
+
+      <section class="res-specs-grid">
+        <div class="res-spec-item">
+          <span class="res-spec-key">Network Typology</span>
+          <span class="res-spec-val">Riverine Gateway Corridor</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Active Facilities</span>
+          <span class="res-spec-val">4 Hubs (Amingaon, Beltola, Borjhar, Panbazar)</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Customer Demands</span>
+          <span class="res-spec-val">25 Indivisible Orders (1 Unit Each)</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Geographic Boundaries</span>
+          <span class="res-spec-val">Lat 26.05&deg;N - 26.25&deg;N / Lon 91.55&deg;E - 91.85&deg;E</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Circuity &amp; Velocity</span>
+          <span class="res-spec-val">1.45x River Circuity / 28 km/h Mountain &amp; River Transit</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Optimization Engine</span>
+          <span class="res-spec-val">HiGHS Mixed-Integer Programming</span>
+        </div>
+      </section>
+
+      <article class="res-quote-box">
+        <p class="res-quote-text">
+          "When key arterial Brahmaputra bridge links or Amingaon gateway hubs experience disruptions, transit circuity spikes to 1.45x. ReverseResilia formulates integer constraints to immediately activate Beltola and Borjhar backup inventories without violating strict delivery deadlines."
+        </p>
+      </article>
+
+
+
+      <footer style="margin-top: calc(80 * var(--px)); border-top: 1px solid var(--green-12); padding-top: calc(40 * var(--px));">
+        <a class="pill" href="http://localhost:8000/" target="_blank" rel="noopener noreferrer">Launch Live Solver Suite &rarr;</a>
+      </footer>
+    </main>
+
+    <!-- Floating Top Navigation -->
+    <p class="blend h3 corner corner--tl" data-ui><a href="/" data-home>ReverseResilia</a></p>
+        <!-- macOS MagnificationDock (Fluid Spring Navigation) -->
+    <div id="dock-root" class="top-dock-container"></div>
+    <p class="blend h3 corner corner--br" data-ui>&copy;2026 Runtime Rebels</p>
+    <div class="veil" data-veil></div>
+  </body>
+</html>

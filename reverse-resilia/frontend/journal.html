@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Disruption Research &amp; Mathematical Essays — ReverseResilia</title>
+    <meta name="description" content="Technical publications, mathematical formulations, and engineering perspectives on goal-driven supply chain recovery, mixed-integer programming, and disaster resilience." />
+    <script>
+      if (typeof window !== 'undefined' && (window.location.pathname === '/journal' || window.location.pathname === '/journal.html')) {
+        window.history.replaceState(null, '', '/disruption-research');
+      }
+    </script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/PPNeueMontreal-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/PPNeueMontrealMono-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/FHPhemister-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/journal.css" />
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/src/dock-mount.tsx"></script>
+  </head>
+  <body style="overflow-y: auto; height: auto;">
+    <main class="j-page">
+      <header class="j-header">
+        <p class="j-kicker">[DISRUPTION RESEARCH &amp; MATHEMATICAL ESSAYS // RUNTIME REBELS]</p>
+        <h1 class="j-title">
+          MATHEMATICAL RIGOR, RECOVERY PROOF, AND SYSTEM HONESTY.
+        </h1>
+        <p class="j-subtitle">
+          Peer-grade mathematical essays on severe network disruptions, facility failure mechanics, binary integer programming, and provable decision-support across 5 Indian regional logistics networks.
+        </p>
+      </header>
+
+      <section class="j-articles">
+        <!-- Article 01 -->
+        <article class="j-article-card" id="art-1">
+          <div class="j-article-img-wrap">
+            <img src="/media/hero/bengaluru_hero.jpeg" alt="Vidhana Soudha, Bengaluru — Southern Distribution Hub" />
+          </div>
+          <div>
+            <div class="j-article-meta">
+              <span>01 / INTEGER PROGRAMMING &amp; CP-SAT</span>
+              <span>NOVEMBER 2026 &middot; 06 MIN READ</span>
+            </div>
+            <h2 class="j-article-title">THE INDIVISIBLE ASSIGNMENT PROBLEM IN REGIONAL LOGISTICS SHOCKS</h2>
+            <p class="j-article-excerpt">
+              Why continuous flow relaxations fail in disaster logistics, and how binary decision variables preserve indivisible order integrity under facility outages and road severance.
+            </p>
+            <div>
+              <span class="j-tag">MILP</span>
+              <span class="j-tag">OR-TOOLS CP-SAT</span>
+              <span class="j-tag">HIGHS MIP</span>
+              <span class="j-tag">BINARY ASSIGNMENT</span>
+              <span class="j-tag">STAGE C RECOVERY</span>
+            </div>
+            <div class="j-full-content">
+              <p>
+                In classical continuous linear programming (LP), solvers relax integrality constraints to find the cheapest fractional flow. While mathematically convenient for bulk pipeline commodities, this causes catastrophic failure in regional supply networks where individual customer orders represent discrete, indivisible delivery commitments.
+              </p>
+              
+              <div class="j-math-box">
+                <strong>FORMAL MIN-COST GOAL-DIRECTED RECOVERY FORMULATION:</strong><br><br>
+                Minimize Z = &sum;<sub>i &isin; W</sub> &sum;<sub>j &isin; C</sub> c<sub>ij</sub> &middot; x<sub>ij</sub> + &sum;<sub>k &isin; K</sub> F<sub>k</sub> &middot; z<sub>k</sub><br><br>
+                Subject to the core physical invariants:<br>
+                &bull; <strong>Indivisible Assignment:</strong> &sum;<sub>i &isin; W</sub> x<sub>ij</sub> &le; 1, &forall; j &isin; C &nbsp;&nbsp;[x<sub>ij</sub> &isin; {0, 1}]<br>
+                &bull; <strong>Service Target Floor:</strong> &sum;<sub>i &isin; W</sub> &sum;<sub>j &isin; C</sub> x<sub>ij</sub> &ge; &lceil; T &middot; |C| &rceil;<br>
+                &bull; <strong>Inventory Conservation:</strong> &sum;<sub>j &isin; C</sub> d<sub>j</sub> &middot; x<sub>ij</sub> &le; S<sub>i</sub> + &sum;<sub>k &isin; K<sub>i</sub></sub> &Delta;S<sub>k</sub> &middot; z<sub>k</sub>, &forall; i &isin; W<br>
+                &bull; <strong>Bay Dispatch Capacity:</strong> &sum;<sub>j &isin; C</sub> x<sub>ij</sub> &le; Cap<sub>i</sub> + &sum;<sub>k &isin; K<sub>i</sub></sub> &Delta;Cap<sub>k</sub> &middot; z<sub>k</sub>, &forall; i &isin; W<br>
+                &bull; <strong>Customer Cutoff Deadlines:</strong> x<sub>ij</sub> &middot; t<sub>ij</sub> &le; Deadline<sub>j</sub>, &forall; i &isin; W, j &isin; C<br>
+                &bull; <strong>Emergency Budget Ceiling:</strong> &sum;<sub>k &isin; K</sub> F<sub>k</sub> &middot; z<sub>k</sub> &le; B &nbsp;&nbsp;[z<sub>k</sub> &isin; {0, 1}]
+              </div>
+
+              <p>
+                By strictly enforcing binary decision variables $x_{ij} \in \{0, 1\}$, ReverseResilia completely eliminates partial order deliveries, split dispatching discrepancies, and uncoordinated carrier dispatches. Powered by a dual-engine architecture combining Google OR-Tools CP-SAT and the HiGHS MIP engine via SciPy, our solver completes Stage C target recovery across 30 customer destinations and multiple candidate hubs in under <strong>35 milliseconds</strong> on standard commodity hardware.
+              </p>
+
+              <table class="j-table">
+                <thead>
+                  <tr>
+                    <th>Solver Stage</th>
+                    <th>Decision Variables</th>
+                    <th>Objective Function</th>
+                    <th>Mathematical Goal</th>
+                    <th>Average Latency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Stage A: Natural Max Service</td>
+                    <td>x<sub>ij</sub> &isin; {0, 1}</td>
+                    <td>Maximize &sum; x<sub>ij</sub></td>
+                    <td>Upper bound at &#8377;0 emergency budget</td>
+                    <td>&sim;12 ms</td>
+                  </tr>
+                  <tr>
+                    <td>Stage B: Min-Cost Natural</td>
+                    <td>x<sub>ij</sub> &isin; {0, 1}</td>
+                    <td>Minimize &sum; c<sub>ij</sub> x<sub>ij</sub></td>
+                    <td>Cheapest routing achieving natural max</td>
+                    <td>&sim;18 ms</td>
+                  </tr>
+                  <tr>
+                    <td>Stage C: Goal Optimization</td>
+                    <td>x<sub>ij</sub> &isin; {0, 1}, z<sub>k</sub> &isin; {0, 1}</td>
+                    <td>Minimize Transport + Interventions</td>
+                    <td>Exact target recovery within budget ceiling</td>
+                    <td>&sim;32 ms</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 02 -->
+        <article class="j-article-card" id="art-2">
+          <div class="j-article-img-wrap">
+            <img src="/media/hero/mumbai_hero.jpeg" alt="Bandra-Worli Sea Link, Mumbai — Western Coastal Gateway" />
+          </div>
+          <div>
+            <div class="j-article-meta">
+              <span>02 / PRIORITY ARCHITECTURE</span>
+              <span>NOVEMBER 2026 &middot; 05 MIN READ</span>
+            </div>
+            <h2 class="j-article-title">WHY HARD PRIORITY COMMITMENTS CANNOT BE HEURISTICALLY APPROXIMATED</h2>
+            <p class="j-article-excerpt">
+              Critical medical, hospital, and emergency supply shipments require deterministic protection. When disasters strike, soft penalties can silently drop essential deliveries.
+            </p>
+            <div>
+              <span class="j-tag">TRIAGE POLICIES</span>
+              <span class="j-tag">HARD CONSTRAINTS</span>
+              <span class="j-tag">LEXICOGRAPHICAL MIP</span>
+              <span class="j-tag">DISASTER RESILIENCE</span>
+            </div>
+            <div class="j-full-content">
+              <p>
+                In supply chain disruption triage, customer orders carry fundamentally distinct operational severities. A delivery of critical insulin or neonatal ICU supplies to a district hospital cannot be weighed equally against discretionary consumer electronics.
+              </p>
+              <p style="margin-top: 12px;">
+                Many heuristic optimization tools convert priorities into arbitrary linear penalty weights (&lambda;). In acute bottlenecks, the mathematical solver may calculate that dropping one critical hospital order is "cheaper" than rerouting three commercial parcels. This creates unacceptable moral and operational hazards during catastrophe management.
+              </p>
+              
+              <div class="j-math-box">
+                <strong>REVERSERESILIA'S THREE DETERMINISTIC PRIORITY POLICIES:</strong><br><br>
+                1. <strong>HARD (Deterministic Survival Policy):</strong><br>
+                &nbsp;&nbsp;&nbsp;&sum;<sub>i &isin; W</sub> x<sub>ij</sub> = 1, &forall; j &isin; CriticalOrders<br>
+                Critical orders are formulated as hard equality constraints. If road blockages or surviving inventory make serving all critical orders physically impossible, the engine refuses false promises and reports an explicit INFEASIBILITY certificate.<br><br>
+                2. <strong>WEIGHTED (Hierarchical Penalty Tradeoff):</strong><br>
+                &nbsp;&nbsp;&nbsp;Penalty = &sum;<sub>j &isin; Unassigned</sub> Weight<sub>j</sub> &middot; 100,000<br>
+                Trades off non-essential orders while aggressively penalizing omissions of prioritized shipments.<br><br>
+                3. <strong>FIFO (Chronological Equivalence):</strong><br>
+                &nbsp;&nbsp;&nbsp;Sorted strictly by order deadline; earlier delivery commitments receive priority dispatch.
+              </div>
+
+              <p>
+                By providing an explicit HARD priority mode, ReverseResilia guarantees that critical societal and life-saving deliveries are mathematically protected without compromise or heuristic trade-off.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 03 -->
+        <article class="j-article-card" id="art-3">
+          <div class="j-article-img-wrap">
+            <img src="/media/hero/delhi_hero.jpeg" alt="India Gate, Delhi NCR — Northern Logistics Hub" />
+          </div>
+          <div>
+            <div class="j-article-meta">
+              <span>03 / DECISION HONESTY &amp; DUALITY</span>
+              <span>NOVEMBER 2026 &middot; 05 MIN READ</span>
+            </div>
+            <h2 class="j-article-title">HONEST INFEASIBILITY: WHY FABRICATING 100% RECOVERY COSTS MISLEADS PLANNERS</h2>
+            <p class="j-article-excerpt">
+              Heuristic tools often invent synthetic recovery costs when targets are physically impossible. Why mathematical solvers must surface physical bottlenecks with zero fabricated expenses.
+            </p>
+            <div>
+              <span class="j-tag">BOTTLENECK ANALYSIS</span>
+              <span class="j-tag">FARKAS LEMMA</span>
+              <span class="j-tag">ZERO FAKE COSTS</span>
+              <span class="j-tag">SYSTEM INTEGRITY</span>
+            </div>
+            <div class="j-full-content">
+              <p>
+                A pervasive flaw in modern commercial dashboards is the "magic green light." When an executive demands 100% customer recovery during a severe facility disaster, commercial heuristic software often outputs a synthetic plan with an inflated "estimated budget," even when physical capacity is completely exhausted.
+              </p>
+              <p style="margin-top: 12px;">
+                ReverseResilia enforces absolute decision-support honesty. If an requested service level target exceeds the physical limits of surviving warehouses, road access, and permitted intervention packages, our engine does not fabricate numbers.
+              </p>
+
+              <div class="j-math-box">
+                <strong>THE THREE PHYSICAL INFEASIBILITY REGIMES:</strong><br><br>
+                &bull; <strong>Inventory Exhaustion:</strong> Total surviving warehouse stock plus maximum permitted emergency procurement (&Delta;S) is less than required order units.<br>
+                &bull; <strong>Bay Capacity Chokepoint:</strong> Warehouse dispatch bay throughput (Cap<sub>i</sub> + &Delta;Cap) cannot physically process the required number of orders before cutoff.<br>
+                &bull; <strong>Temporal Road Severance:</strong> Bridge collapses or arterial highway closures isolate destinations such that travel time t<sub>ij</sub> exceeds the customer deadline for all surviving depots.
+              </div>
+
+              <p>
+                In every infeasible case, ReverseResilia outputs an explicit <strong>Infeasibility Certificate</strong>, reports <strong>&#8377;0 modeled expenditure</strong>, and isolates the precise limiting constraint to the operations commander, preventing catastrophic budget misallocation.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 04 -->
+        <article class="j-article-card" id="art-4">
+          <div class="j-article-img-wrap">
+            <img src="/media/hero/chennai_hero.jpeg" alt="Chennai Central Station, Chennai — Southern Coastal Grid" />
+          </div>
+          <div>
+            <div class="j-article-meta">
+              <span>04 / ZERO-TRUST VERIFICATION</span>
+              <span>NOVEMBER 2026 &middot; 05 MIN READ</span>
+            </div>
+            <h2 class="j-article-title">ZERO-TRUST VERIFICATION: THE 10-POINT INDEPENDENT PLAN AUDIT</h2>
+            <p class="j-article-excerpt">
+              Why recovery plans must be audited independently outside the solver pipeline, and how our 10-point constraint verifier guarantees operational truth with zero shared memory.
+            </p>
+            <div>
+              <span class="j-tag">ZERO TRUST</span>
+              <span class="j-tag">10/10 CONSTRAINTS</span>
+              <span class="j-tag">29 PYTEST SUITE</span>
+              <span class="j-tag">INVARIANT CHECKS</span>
+            </div>
+            <div class="j-full-content">
+              <p>
+                In safety-critical optimization, the software solving the problem should never be the sole authority that verifies the result. A bug in solver formulation, index aliasing, or floating-point rounding could pass illegal assignments undetected.
+              </p>
+              <p style="margin-top: 12px;">
+                ReverseResilia implements an <strong>independent Zero-Trust Verifier</strong> that shares no internal variables or memory with the solver. It consumes only the raw ground-truth network JSON, disruption spec, and exported plan, subjecting the solution to 10 independent verification rules:
+              </p>
+
+              <div class="j-math-box">
+                <strong>THE 10 INDEPENDENT VERIFIER CHECKS [C1 &ndash; C10]:</strong><br><br>
+                [C1] <strong>Uniqueness Invariant:</strong> &sum;<sub>i</sub> x<sub>ij</sub> &le; 1, &forall; j &isin; C (every order assigned at most once).<br>
+                [C2] <strong>Facility Liveness:</strong> x<sub>ij</sub> = 0 if warehouse i is in active outage status.<br>
+                [C3] <strong>Stock Conservation:</strong> &sum;<sub>j</sub> d<sub>j</sub> x<sub>ij</sub> &le; BaseStock<sub>i</sub> + ActiveInterventionStock<sub>i</sub>.<br>
+                [C4] <strong>Throughput Capacity:</strong> &sum;<sub>j</sub> x<sub>ij</sub> &le; BaseCapacity<sub>i</sub> + ActiveInterventionCapacity<sub>i</sub>.<br>
+                [C5] <strong>Deadline Feasibility:</strong> Route travel duration t<sub>ij</sub> &le; customer order deadline.<br>
+                [C6] <strong>Corridor Connectivity:</strong> Assigned corridor route does not traverse severed road links.<br>
+                [C7] <strong>Budget Ceiling:</strong> Total intervention costs &le; allocated recovery budget.<br>
+                [C8] <strong>Package Authorization:</strong> Activated interventions belong strictly to permitted catalog IDs.<br>
+                [C9] <strong>Priority Compliance:</strong> All critical hospital orders fulfilled according to active policy.<br>
+                [C10] <strong>Cost Arithmetic:</strong> Reported recovery expenditure equals exact sum of transport + emergency fees.
+              </div>
+
+              <p>
+                Our automated test suite tests both positive confirmation and adversarial rejection (intentionally injecting stock overflows, deadline violations, and forged budgets), achieving a perfect 29/29 PyTest pass rate.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 05: How Can We Trust It? -->
+        <article class="j-article-card" id="art-5">
+          <div class="j-article-img-wrap">
+            <img src="/media/hero/delhi_hero.jpeg" alt="Delhi NCR — Verified Recovery Audit" />
+          </div>
+          <div>
+            <div class="j-article-meta">
+              <span>05 / ZERO-TRUST VERIFICATION</span>
+              <span>NOVEMBER 2026 &middot; 05 MIN READ</span>
+            </div>
+            <h2 class="j-article-title">HOW CAN WE TRUST A MATH SOLVER? THE ZERO-TRUST VERIFIER.</h2>
+            <p class="j-article-excerpt">
+              Why optimization engines must never be their own judge, and how ReverseResilia's independent 10-point audit guarantees every proposed recovery plan is physically real, budget-feasible, and deadline-honest.
+            </p>
+            <div>
+              <span class="j-tag">ZERO-TRUST</span>
+              <span class="j-tag">INDEPENDENT VERIFIER</span>
+              <span class="j-tag">10-POINT AUDIT</span>
+              <span class="j-tag">REPRODUCIBILITY</span>
+              <span class="j-tag">NO FABRICATED COSTS</span>
+            </div>
+            <div class="j-full-content">
+              <p>
+                ReverseResilia addresses this with an <strong>independent Zero-Trust Verifier</strong> that shares no internal variables, no memory, and no code paths with the optimization solver. It consumes only the raw ground-truth network JSON, the disruption specification, and the exported plan — then subjects the solution to 10 independent verification rules:
+              </p>
+              <div class="j-math-box">
+                <strong>THE 10-POINT INDEPENDENT AUDIT:</strong><br />  
+                &bull; <strong>Stock Feasibility:</strong> No warehouse dispatches more than it holds.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                &bull; <strong>Capacity Limits:</strong> No warehouse processes more orders than its capacity.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Deadline Satisfaction:</strong> Every order arrives within its declared deadline.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Binary Integrality:</strong> Every assignment is exactly 0 or 1 — no fractional splits.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Indivisible Assignment:</strong> Each order is served by exactly one warehouse.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Budget Compliance:</strong> Total recovery cost never exceeds the declared budget.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Service Target:</strong> Achieved service level meets or exceeds the target.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Intervention Validity:</strong> Every activated intervention is declared in the scenario.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Geographic Realism:</strong> All routes use real coordinates and calibrated road distances.<br />  
+                <strong style="color: var(--accent);">10-POINT INDEPENDENT AUDIT:</strong><br />  
+                <strong style="color: var(--accent);">Provenance Integrity:</strong> Every data field carries an explicit sourced/simulated/derived tag.<br /><br />  
+                <em>If any single check fails, the plan is rejected — no exceptions, no workarounds.</em>
+              </div>
+              <p>
+                ReverseResilia proves that student hackathon engineering can deliver production-grade mathematical optimization and absolute decision-support honesty.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Bottom Statement -->
+      <footer style="margin-top: calc(96 * var(--px)); border-top: 1px solid var(--border); padding-top: calc(48 * var(--px)); max-width: calc(850 * var(--px));">
+        <p class="mono" style="color: var(--accent); margin-bottom: calc(12 * var(--px)); font-size: calc(11 * var(--px)); letter-spacing: 0.08em;">[OPERATIONAL SIMULATION &amp; BENCHMARKING]</p>
+        <p style="font-family: 'PP Neue Montreal', sans-serif; font-size: calc(20 * var(--px)); line-height: 1.35; text-transform: uppercase; color: var(--text-primary);">
+          ReverseResilia proves that student hackathon engineering can deliver production-grade mathematical optimization and absolute decision-support honesty.
+        </p>
+        <div style="margin-top: calc(24 * var(--px));">
+          <a class="pill" href="http://localhost:8000/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; width: auto; padding: calc(8 * var(--px)) calc(18 * var(--px)); background: var(--accent); color: var(--bg-matte); font-weight: 700; border: 1px solid var(--accent); border-radius: 9999px;">Launch Live Solver Suite &rarr;</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Floating Top Navigation -->
+    <p class="blend h3 corner corner--tl" data-ui><a href="/" data-home style="color: var(--accent);">ReverseResilia</a></p>
+    <!-- macOS MagnificationDock (Fluid Spring Navigation) -->
+    <div id="dock-root" class="top-dock-container"></div>
+    <p class="blend h3 corner corner--br" data-ui style="color: var(--text-muted);">&copy;2026 Runtime Rebels</p>
+    <div class="veil" data-veil></div>
+  </body>
+</html>

@@ -1,0 +1,2577 @@
+{
+  "city_id": "bengaluru",
+  "city_name": "Bengaluru",
+  "currency": "INR",
+  "warehouses": [
+    {
+      "id": "WH-BEN-01",
+      "name": "Bengaluru Central Fulfillment Hub",
+      "pincode": "562106",
+      "latitude": 12.69,
+      "longitude": 77.73,
+      "stock_units": 17,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 31.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-BEN-02",
+      "name": "Bengaluru North Distribution Center",
+      "pincode": "560007",
+      "latitude": 12.963639,
+      "longitude": 77.629111,
+      "stock_units": 16,
+      "capacity_orders": 14,
+      "handling_cost_per_order": 33.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-BEN-03",
+      "name": "Bengaluru South Regional Depot",
+      "pincode": "560113",
+      "latitude": 13.025073,
+      "longitude": 77.659665,
+      "stock_units": 16,
+      "capacity_orders": 18,
+      "handling_cost_per_order": 33.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-BEN-04",
+      "name": "Bengaluru West Industrial Yard",
+      "pincode": "560042",
+      "latitude": 12.982047,
+      "longitude": 77.61238,
+      "stock_units": 18,
+      "capacity_orders": 17,
+      "handling_cost_per_order": 27.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-BEN-001",
+      "customer_name": "Customer K H B Colony S.O",
+      "pincode": "560079",
+      "latitude": 12.982047,
+      "longitude": 77.533118,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-002",
+      "customer_name": "Customer Swimming Pool Extn S.O",
+      "pincode": "560003",
+      "latitude": 13.00273,
+      "longitude": 77.571959,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-003",
+      "customer_name": "Customer Mahadevapura B.O",
+      "pincode": "562123",
+      "latitude": 13.06,
+      "longitude": 77.32,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-004",
+      "customer_name": "Customer BSF Campus Yelahanka S.O",
+      "pincode": "560063",
+      "latitude": 13.128,
+      "longitude": 77.607694,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-005",
+      "customer_name": "Customer Konanakunte S.O",
+      "pincode": "560062",
+      "latitude": 12.926917,
+      "longitude": 77.591778,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-006",
+      "customer_name": "Customer Nandinilayout S.O",
+      "pincode": "560096",
+      "latitude": 13.011426,
+      "longitude": 77.535877,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-007",
+      "customer_name": "Customer Chikkabidarkal S.O",
+      "pincode": "560073",
+      "latitude": 13.047907,
+      "longitude": 77.486483,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-008",
+      "customer_name": "Customer Sakalavara B.O",
+      "pincode": "560083",
+      "latitude": 12.820608,
+      "longitude": 77.608978,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-009",
+      "customer_name": "Customer Madanayakanahalli S.O",
+      "pincode": "562162",
+      "latitude": 13.024934,
+      "longitude": 77.340559,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-010",
+      "customer_name": "Customer Training Command IAF S.O",
+      "pincode": "560006",
+      "latitude": 13.016833,
+      "longitude": 77.583278,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-011",
+      "customer_name": "Customer Gollahalli B.O",
+      "pincode": "562123",
+      "latitude": 13.15,
+      "longitude": 77.42,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-012",
+      "customer_name": "Customer Shanthinagar S.O",
+      "pincode": "560027",
+      "latitude": 12.961692,
+      "longitude": 77.597723,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-013",
+      "customer_name": "Customer Agara B.O",
+      "pincode": "560034",
+      "latitude": 12.922779,
+      "longitude": 77.649994,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-BEN-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-014",
+      "customer_name": "Customer Arakere B.O",
+      "pincode": "562163",
+      "latitude": 13.2,
+      "longitude": 77.54,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-015",
+      "customer_name": "Customer Doddahejjaji B.O",
+      "pincode": "561204",
+      "latitude": 13.27,
+      "longitude": 77.42,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-016",
+      "customer_name": "Customer Kadanur B.O",
+      "pincode": "561204",
+      "latitude": 13.24,
+      "longitude": 77.46,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-017",
+      "customer_name": "Customer Begur",
+      "pincode": "560114",
+      "latitude": 12.870465,
+      "longitude": 77.626906,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-018",
+      "customer_name": "Customer Hosahalli B.O",
+      "pincode": "561203",
+      "latitude": 13.44,
+      "longitude": 77.46,
+      "demand_units": 1,
+      "deadline_minutes": 157,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-019",
+      "customer_name": "Customer Jigani S.O",
+      "pincode": "560105",
+      "latitude": 12.786834,
+      "longitude": 77.637753,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-BEN-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-020",
+      "customer_name": "Customer Mavalli S.O",
+      "pincode": "560004",
+      "latitude": 12.951403,
+      "longitude": 77.581555,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-021",
+      "customer_name": "Customer Kodigehalli B.O",
+      "pincode": "561203",
+      "latitude": 13.3,
+      "longitude": 77.51,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-022",
+      "customer_name": "Customer Anandanagar S.O",
+      "pincode": "560024",
+      "latitude": 13.033045,
+      "longitude": 77.590663,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-023",
+      "customer_name": "Customer JP Nagar III Phase S.O",
+      "pincode": "560078",
+      "latitude": 12.913992,
+      "longitude": 77.59767,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-024",
+      "customer_name": "Customer Ragihalli B.O",
+      "pincode": "560083",
+      "latitude": 12.738543,
+      "longitude": 77.574528,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-025",
+      "customer_name": "Customer Yelekyathanahalli B.O",
+      "pincode": "562111",
+      "latitude": 13.3,
+      "longitude": 77.27,
+      "demand_units": 1,
+      "deadline_minutes": 157,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-026",
+      "customer_name": "Customer Jalahalli East S.O",
+      "pincode": "560013",
+      "latitude": 13.064257,
+      "longitude": 77.546488,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-027",
+      "customer_name": "Customer Dodballapura Bazar S.O",
+      "pincode": "561203",
+      "latitude": 13.294306,
+      "longitude": 77.542111,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-028",
+      "customer_name": "Customer Vidhana Soudha S.O",
+      "pincode": "560001",
+      "latitude": 12.987472,
+      "longitude": 77.60475,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-029",
+      "customer_name": "Customer Banaswadi S.O",
+      "pincode": "560043",
+      "latitude": 13.013778,
+      "longitude": 77.652389,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-BEN-030",
+      "customer_name": "Customer J P Nagar S.O",
+      "pincode": "560078",
+      "latitude": 12.911943,
+      "longitude": 77.586866,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-BEN-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-001",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-001",
+      "distance_km": 51.3,
+      "transit_time_minutes": 112,
+      "cost_inr": 476.05,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-002",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-002",
+      "distance_km": 51.17,
+      "transit_time_minutes": 111,
+      "cost_inr": 474.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-003",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-003",
+      "distance_km": 79.94,
+      "transit_time_minutes": 165,
+      "cost_inr": 719.49,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-004",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-004",
+      "distance_km": 66.63,
+      "transit_time_minutes": 140,
+      "cost_inr": 606.36,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-005",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-005",
+      "distance_km": 40.01,
+      "transit_time_minutes": 91,
+      "cost_inr": 380.08,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-006",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-006",
+      "distance_km": 54.75,
+      "transit_time_minutes": 118,
+      "cost_inr": 505.38,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-007",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-007",
+      "distance_km": 63.04,
+      "transit_time_minutes": 134,
+      "cost_inr": 575.84,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-008",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-008",
+      "distance_km": 25.84,
+      "transit_time_minutes": 64,
+      "cost_inr": 259.64,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-009",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-009",
+      "distance_km": 74.31,
+      "transit_time_minutes": 155,
+      "cost_inr": 671.63,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-010",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-010",
+      "distance_km": 52.37,
+      "transit_time_minutes": 114,
+      "cost_inr": 485.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-011",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-011",
+      "distance_km": 80.78,
+      "transit_time_minutes": 167,
+      "cost_inr": 726.63,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-012",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-012",
+      "distance_km": 44.14,
+      "transit_time_minutes": 98,
+      "cost_inr": 415.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-013",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-013",
+      "distance_km": 36.03,
+      "transit_time_minutes": 83,
+      "cost_inr": 346.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-014",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-014",
+      "distance_km": 79.64,
+      "transit_time_minutes": 165,
+      "cost_inr": 716.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-015",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-015",
+      "distance_km": 95.99,
+      "transit_time_minutes": 195,
+      "cost_inr": 855.91,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-016",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-016",
+      "distance_km": 89.49,
+      "transit_time_minutes": 183,
+      "cost_inr": 800.66,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-017",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-017",
+      "distance_km": 30.32,
+      "transit_time_minutes": 72,
+      "cost_inr": 297.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-018",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-018",
+      "distance_km": 116.66,
+      "transit_time_minutes": 234,
+      "cost_inr": 1031.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-019",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-019",
+      "distance_km": 19.4,
+      "transit_time_minutes": 52,
+      "cost_inr": 204.9,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-020",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-020",
+      "distance_km": 43.86,
+      "transit_time_minutes": 98,
+      "cost_inr": 412.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-021",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-021",
+      "distance_km": 94.9,
+      "transit_time_minutes": 193,
+      "cost_inr": 846.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-022",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-022",
+      "distance_km": 54.16,
+      "transit_time_minutes": 117,
+      "cost_inr": 500.36,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-023",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-023",
+      "distance_km": 37.94,
+      "transit_time_minutes": 87,
+      "cost_inr": 362.49,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-024",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-024",
+      "distance_km": 23.37,
+      "transit_time_minutes": 59,
+      "cost_inr": 238.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-025",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-025",
+      "distance_km": 111.11,
+      "transit_time_minutes": 224,
+      "cost_inr": 984.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-026",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-026",
+      "distance_km": 60.89,
+      "transit_time_minutes": 130,
+      "cost_inr": 557.57,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-027",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-027",
+      "distance_km": 92.68,
+      "transit_time_minutes": 189,
+      "cost_inr": 827.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-028",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-028",
+      "distance_km": 47.2,
+      "transit_time_minutes": 104,
+      "cost_inr": 441.2,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-029",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-029",
+      "distance_km": 48.8,
+      "transit_time_minutes": 107,
+      "cost_inr": 454.8,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-01-ORD-BEN-030",
+      "warehouse_id": "WH-BEN-01",
+      "order_id": "ORD-BEN-030",
+      "distance_km": 38.48,
+      "transit_time_minutes": 88,
+      "cost_inr": 367.08,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-001",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-001",
+      "distance_km": 13.99,
+      "transit_time_minutes": 42,
+      "cost_inr": 158.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-002",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-002",
+      "distance_km": 9.99,
+      "transit_time_minutes": 34,
+      "cost_inr": 124.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-003",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-003",
+      "distance_km": 46.41,
+      "transit_time_minutes": 103,
+      "cost_inr": 434.48,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-004",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-004",
+      "distance_km": 24.32,
+      "transit_time_minutes": 61,
+      "cost_inr": 246.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-005",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-005",
+      "distance_km": 7.59,
+      "transit_time_minutes": 30,
+      "cost_inr": 104.52,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-006",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-006",
+      "distance_km": 15.07,
+      "transit_time_minutes": 44,
+      "cost_inr": 168.09,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-007",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-007",
+      "distance_km": 23.85,
+      "transit_time_minutes": 60,
+      "cost_inr": 242.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-008",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-008",
+      "distance_km": 21.19,
+      "transit_time_minutes": 55,
+      "cost_inr": 220.12,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-009",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-009",
+      "distance_km": 42.24,
+      "transit_time_minutes": 95,
+      "cost_inr": 399.04,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-010",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-010",
+      "distance_km": 10.19,
+      "transit_time_minutes": 35,
+      "cost_inr": 126.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-011",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-011",
+      "distance_km": 40.52,
+      "transit_time_minutes": 91,
+      "cost_inr": 384.42,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-012",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-012",
+      "distance_km": 4.5,
+      "transit_time_minutes": 24,
+      "cost_inr": 78.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-013",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-013",
+      "distance_km": 6.7,
+      "transit_time_minutes": 28,
+      "cost_inr": 96.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-014",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-014",
+      "distance_km": 36.96,
+      "transit_time_minutes": 85,
+      "cost_inr": 354.16,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-015",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-015",
+      "distance_km": 54.0,
+      "transit_time_minutes": 117,
+      "cost_inr": 499.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-016",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-016",
+      "distance_km": 47.22,
+      "transit_time_minutes": 104,
+      "cost_inr": 441.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-017",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-017",
+      "distance_km": 13.68,
+      "transit_time_minutes": 41,
+      "cost_inr": 156.28,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-018",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-018",
+      "distance_km": 73.98,
+      "transit_time_minutes": 154,
+      "cost_inr": 668.83,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-019",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-019",
+      "distance_km": 25.98,
+      "transit_time_minutes": 64,
+      "cost_inr": 260.83,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-020",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-020",
+      "distance_km": 7.04,
+      "transit_time_minutes": 29,
+      "cost_inr": 99.84,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-021",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-021",
+      "distance_km": 52.22,
+      "transit_time_minutes": 113,
+      "cost_inr": 483.87,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-022",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-022",
+      "distance_km": 11.58,
+      "transit_time_minutes": 37,
+      "cost_inr": 138.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-023",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-023",
+      "distance_km": 8.56,
+      "transit_time_minutes": 32,
+      "cost_inr": 112.76,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-024",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-024",
+      "distance_km": 33.95,
+      "transit_time_minutes": 79,
+      "cost_inr": 328.58,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-025",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-025",
+      "distance_km": 71.22,
+      "transit_time_minutes": 149,
+      "cost_inr": 645.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-026",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-026",
+      "distance_km": 18.91,
+      "transit_time_minutes": 51,
+      "cost_inr": 200.74,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-027",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-027",
+      "distance_km": 50.1,
+      "transit_time_minutes": 109,
+      "cost_inr": 465.85,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-028",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-028",
+      "distance_km": 4.94,
+      "transit_time_minutes": 25,
+      "cost_inr": 81.99,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-029",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-029",
+      "distance_km": 8.08,
+      "transit_time_minutes": 31,
+      "cost_inr": 108.68,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-02-ORD-BEN-030",
+      "warehouse_id": "WH-BEN-02",
+      "order_id": "ORD-BEN-030",
+      "distance_km": 9.7,
+      "transit_time_minutes": 34,
+      "cost_inr": 122.45,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-001",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-001",
+      "distance_km": 19.17,
+      "transit_time_minutes": 51,
+      "cost_inr": 202.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-002",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-002",
+      "distance_km": 12.96,
+      "transit_time_minutes": 40,
+      "cost_inr": 150.16,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-003",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-003",
+      "distance_km": 48.84,
+      "transit_time_minutes": 107,
+      "cost_inr": 455.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-004",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-004",
+      "distance_km": 16.84,
+      "transit_time_minutes": 47,
+      "cost_inr": 183.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-005",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-005",
+      "distance_km": 17.37,
+      "transit_time_minutes": 48,
+      "cost_inr": 187.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-006",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-006",
+      "distance_km": 17.82,
+      "transit_time_minutes": 49,
+      "cost_inr": 191.47,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-007",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-007",
+      "distance_km": 24.99,
+      "transit_time_minutes": 62,
+      "cost_inr": 252.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-008",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-008",
+      "distance_km": 30.87,
+      "transit_time_minutes": 73,
+      "cost_inr": 302.39,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-009",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-009",
+      "distance_km": 45.63,
+      "transit_time_minutes": 101,
+      "cost_inr": 427.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-010",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-010",
+      "distance_km": 10.99,
+      "transit_time_minutes": 36,
+      "cost_inr": 133.42,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-011",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-011",
+      "distance_km": 38.86,
+      "transit_time_minutes": 88,
+      "cost_inr": 370.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-012",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-012",
+      "distance_km": 12.85,
+      "transit_time_minutes": 40,
+      "cost_inr": 149.22,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-013",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-013",
+      "distance_km": 15.08,
+      "transit_time_minutes": 44,
+      "cost_inr": 168.18,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-014",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-014",
+      "distance_km": 30.85,
+      "transit_time_minutes": 73,
+      "cost_inr": 302.23,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-015",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-015",
+      "distance_km": 49.66,
+      "transit_time_minutes": 109,
+      "cost_inr": 462.11,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-016",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-016",
+      "distance_km": 42.54,
+      "transit_time_minutes": 95,
+      "cost_inr": 401.59,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-017",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-017",
+      "distance_km": 23.17,
+      "transit_time_minutes": 59,
+      "cost_inr": 236.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-018",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-018",
+      "distance_km": 67.25,
+      "transit_time_minutes": 142,
+      "cost_inr": 611.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-019",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-019",
+      "distance_km": 35.11,
+      "transit_time_minutes": 81,
+      "cost_inr": 338.44,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-020",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-020",
+      "distance_km": 15.55,
+      "transit_time_minutes": 45,
+      "cost_inr": 172.18,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-021",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-021",
+      "distance_km": 45.67,
+      "transit_time_minutes": 101,
+      "cost_inr": 428.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-022",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-022",
+      "distance_km": 9.94,
+      "transit_time_minutes": 34,
+      "cost_inr": 124.49,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-023",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-023",
+      "distance_km": 18.56,
+      "transit_time_minutes": 50,
+      "cost_inr": 197.76,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-024",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-024",
+      "distance_km": 43.78,
+      "transit_time_minutes": 98,
+      "cost_inr": 412.13,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-025",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-025",
+      "distance_km": 68.77,
+      "transit_time_minutes": 144,
+      "cost_inr": 624.54,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-026",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-026",
+      "distance_km": 17.17,
+      "transit_time_minutes": 48,
+      "cost_inr": 185.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-027",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-027",
+      "distance_km": 42.94,
+      "transit_time_minutes": 96,
+      "cost_inr": 404.99,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-028",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-028",
+      "distance_km": 9.6,
+      "transit_time_minutes": 33,
+      "cost_inr": 121.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-029",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-029",
+      "distance_km": 1.96,
+      "transit_time_minutes": 19,
+      "cost_inr": 56.66,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-03-ORD-BEN-030",
+      "warehouse_id": "WH-BEN-03",
+      "order_id": "ORD-BEN-030",
+      "distance_km": 19.6,
+      "transit_time_minutes": 52,
+      "cost_inr": 206.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-001",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-001",
+      "distance_km": 11.34,
+      "transit_time_minutes": 37,
+      "cost_inr": 136.39,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-002",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-002",
+      "distance_km": 6.53,
+      "transit_time_minutes": 28,
+      "cost_inr": 95.5,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-003",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-003",
+      "distance_km": 43.35,
+      "transit_time_minutes": 97,
+      "cost_inr": 408.48,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-004",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-004",
+      "distance_km": 21.43,
+      "transit_time_minutes": 56,
+      "cost_inr": 222.16,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-005",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-005",
+      "distance_km": 8.61,
+      "transit_time_minutes": 32,
+      "cost_inr": 113.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-006",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-006",
+      "distance_km": 11.76,
+      "transit_time_minutes": 38,
+      "cost_inr": 139.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-007",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-007",
+      "distance_km": 20.44,
+      "transit_time_minutes": 54,
+      "cost_inr": 213.74,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-008",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-008",
+      "distance_km": 23.7,
+      "transit_time_minutes": 60,
+      "cost_inr": 241.45,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-009",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-009",
+      "distance_km": 39.38,
+      "transit_time_minutes": 89,
+      "cost_inr": 374.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-010",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-010",
+      "distance_km": 6.59,
+      "transit_time_minutes": 28,
+      "cost_inr": 96.02,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-011",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-011",
+      "distance_km": 36.94,
+      "transit_time_minutes": 85,
+      "cost_inr": 353.99,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-012",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-012",
+      "distance_km": 3.65,
+      "transit_time_minutes": 22,
+      "cost_inr": 71.03,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-013",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-013",
+      "distance_km": 10.23,
+      "transit_time_minutes": 35,
+      "cost_inr": 126.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-014",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-014",
+      "distance_km": 33.62,
+      "transit_time_minutes": 79,
+      "cost_inr": 325.77,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-015",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-015",
+      "distance_km": 50.42,
+      "transit_time_minutes": 110,
+      "cost_inr": 468.57,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-016",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-016",
+      "distance_km": 43.68,
+      "transit_time_minutes": 97,
+      "cost_inr": 411.28,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-017",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-017",
+      "distance_km": 16.51,
+      "transit_time_minutes": 46,
+      "cost_inr": 180.34,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-018",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-018",
+      "distance_km": 70.66,
+      "transit_time_minutes": 148,
+      "cost_inr": 640.61,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-019",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-019",
+      "distance_km": 28.88,
+      "transit_time_minutes": 70,
+      "cost_inr": 285.48,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-020",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-020",
+      "distance_km": 6.3,
+      "transit_time_minutes": 27,
+      "cost_inr": 93.55,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-021",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-021",
+      "distance_km": 48.91,
+      "transit_time_minutes": 107,
+      "cost_inr": 455.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-022",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-022",
+      "distance_km": 8.1,
+      "transit_time_minutes": 31,
+      "cost_inr": 108.85,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-023",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-023",
+      "distance_km": 10.21,
+      "transit_time_minutes": 35,
+      "cost_inr": 126.79,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-024",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-024",
+      "distance_km": 36.15,
+      "transit_time_minutes": 83,
+      "cost_inr": 347.27,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-025",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-025",
+      "distance_km": 67.62,
+      "transit_time_minutes": 142,
+      "cost_inr": 614.77,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-026",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-026",
+      "distance_km": 15.31,
+      "transit_time_minutes": 44,
+      "cost_inr": 170.13,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-027",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-027",
+      "distance_km": 46.92,
+      "transit_time_minutes": 103,
+      "cost_inr": 438.82,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-028",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-028",
+      "distance_km": 1.35,
+      "transit_time_minutes": 18,
+      "cost_inr": 51.48,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-029",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-029",
+      "distance_km": 7.38,
+      "transit_time_minutes": 29,
+      "cost_inr": 102.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-BEN-04-ORD-BEN-030",
+      "warehouse_id": "WH-BEN-04",
+      "order_id": "ORD-BEN-030",
+      "distance_km": 10.92,
+      "transit_time_minutes": 36,
+      "cost_inr": 132.82,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    }
+  ],
+  "available_interventions": [
+    {
+      "id": "INT-BEN-STK-WH-BEN-01",
+      "name": "Emergency Stock Bundle for Bengaluru Central Fulfillment Hub",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-BEN-01",
+      "cost_inr": 1800.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-BEN-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-CAP-WH-BEN-01",
+      "name": "Overtime Handling Shift for Bengaluru Central Fulfillment Hub",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-BEN-01",
+      "cost_inr": 1400.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-BEN-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-STK-WH-BEN-02",
+      "name": "Emergency Stock Bundle for Bengaluru North Distribution Center",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-BEN-02",
+      "cost_inr": 2000.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-BEN-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-CAP-WH-BEN-02",
+      "name": "Overtime Handling Shift for Bengaluru North Distribution Center",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-BEN-02",
+      "cost_inr": 1550.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-BEN-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-STK-WH-BEN-03",
+      "name": "Emergency Stock Bundle for Bengaluru South Regional Depot",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-BEN-03",
+      "cost_inr": 2200.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-BEN-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-CAP-WH-BEN-03",
+      "name": "Overtime Handling Shift for Bengaluru South Regional Depot",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-BEN-03",
+      "cost_inr": 1700.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-BEN-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-STK-WH-BEN-04",
+      "name": "Emergency Stock Bundle for Bengaluru West Industrial Yard",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-BEN-04",
+      "cost_inr": 2400.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-BEN-04",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-BEN-CAP-WH-BEN-04",
+      "name": "Overtime Handling Shift for Bengaluru West Industrial Yard",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-BEN-04",
+      "cost_inr": 1850.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-BEN-04",
+      "provenance": "simulated operations"
+    }
+  ],
+  "disruptions": [
+    {
+      "id": "DIS-BEN-01",
+      "name": "Bengaluru Primary Hub Complete Outage",
+      "failed_warehouse_ids": [
+        "WH-BEN-01"
+      ],
+      "closed_route_ids": [],
+      "capacity_reductions": {},
+      "description": "Total operational shutdown at Bengaluru Central Fulfillment Hub (WH-BEN-01) due to facility flood / structural hazard."
+    },
+    {
+      "id": "DIS-BEN-02",
+      "name": "Bengaluru Arterial Road Corridor Blockage",
+      "failed_warehouse_ids": [],
+      "closed_route_ids": [
+        "ROUTE-WH-BEN-02-ORD-BEN-001",
+        "ROUTE-WH-BEN-02-ORD-BEN-002",
+        "ROUTE-WH-BEN-02-ORD-BEN-003",
+        "ROUTE-WH-BEN-02-ORD-BEN-004"
+      ],
+      "capacity_reductions": {},
+      "description": "Severe traffic lockdown and arterial road collapse blocking 4 key delivery lanes."
+    },
+    {
+      "id": "DIS-BEN-03",
+      "name": "Bengaluru Compound Disruption: Outage & Capacity Shock",
+      "failed_warehouse_ids": [
+        "WH-BEN-01"
+      ],
+      "closed_route_ids": [
+        "ROUTE-WH-BEN-02-ORD-BEN-001",
+        "ROUTE-WH-BEN-02-ORD-BEN-002"
+      ],
+      "capacity_reductions": {
+        "WH-BEN-02": 50.0
+      },
+      "description": "Primary hub failure at WH-BEN-01 combined with a 50% labor capacity reduction at WH-BEN-02."
+    }
+  ],
+  "metadata": {
+    "provenance_summary": {
+      "geography": "Sourced from real pincode.csv GPS coordinates",
+      "operations": "Simulated operational parameters with deterministic seeds",
+      "road_metrics": "Derived from Great Circle + 1.32 circuity factor"
+    },
+    "total_orders": 30,
+    "total_warehouses": 4,
+    "total_routes": 120,
+    "initial_total_stock": 67,
+    "initial_total_capacity": 65
+  }
+}

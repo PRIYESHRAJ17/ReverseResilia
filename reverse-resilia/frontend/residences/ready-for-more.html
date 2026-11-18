@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bengaluru Regional Grid — ReverseResilia Deep Dive</title>
+    <meta name="description" content="Technical deep-dive into the Bengaluru regional supply chain network, hub topology, and mathematical recovery under facility outage shocks." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/PPNeueMontreal-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/PPNeueMontrealMono-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/FHPhemister-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/residences.css" />
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/src/dock-mount.tsx"></script>
+  </head>
+  <body style="overflow-y: auto; height: auto;">
+    <main class="r-page">
+      <header class="res-hero">
+        <div class="res-meta-bar">
+          <span>[NETWORK 001]</span>
+          <span>BENGALURU, KARNATAKA</span>
+          <span>SOUTHERN DISTRIBUTION GRID</span>
+          <span>4 HUBS / 30 ORDERS / 76 UNITS</span>
+        </div>
+        <h1 class="res-hero-title">BENGALURU REGIONAL NETWORK</h1>
+        <p class="res-lead">
+          High-throughput regional fulfillment network covering Bengaluru Urban and Rural districts.
+        </p>
+      </header>
+
+      <div class="res-gallery-grid">
+        <div class="res-img-wrap full-span">
+          <img src="/media/hero/bengaluru_hero.jpeg" alt="Vidhana Soudha & Tech Corridor — Bengaluru Regional Logistics Grid" />
+        </div>
+      </div>
+
+      <section class="res-specs-grid">
+        <div class="res-spec-item">
+          <span class="res-spec-key">Network Typology</span>
+          <span class="res-spec-val">Regional Fulfillment Grid</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Active Facilities</span>
+          <span class="res-spec-val">4 Hubs (Nelamangala, Peenya, Whitefield, Bommasandra)</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Customer Demands</span>
+          <span class="res-spec-val">30 Indivisible Orders (1 Unit Each)</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Geographic Boundaries</span>
+          <span class="res-spec-val">Lat 12.80&deg;N - 13.15&deg;N / Lon 77.45&deg;E - 77.80&deg;E</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Circuity &amp; Velocity</span>
+          <span class="res-spec-val">1.32x Circuity / 32 km/h Urban Transit Speed</span>
+        </div>
+        <div class="res-spec-item">
+          <span class="res-spec-key">Optimization Engine</span>
+          <span class="res-spec-val">HiGHS Mixed-Integer Programming</span>
+        </div>
+      </section>
+
+      <article class="res-quote-box">
+        <p class="res-quote-text">
+          "When the primary Nelamangala hub suffers a complete outage, the network loses 30% of valid assignments. The HiGHS optimizer reallocates surviving stock from Peenya and Whitefield, achieving 80% natural recovery and 100% target recovery with discrete overtime shifts."
+        </p>
+      </article>
+
+
+
+      <footer style="margin-top: calc(80 * var(--px)); border-top: 1px solid var(--green-12); padding-top: calc(40 * var(--px));">
+        <a class="pill" href="http://localhost:8000/" target="_blank" rel="noopener noreferrer">Launch Live Solver Suite &rarr;</a>
+      </footer>
+    </main>
+
+    <!-- Floating Top Navigation -->
+    <p class="blend h3 corner corner--tl" data-ui><a href="/" data-home>ReverseResilia</a></p>
+        <!-- macOS MagnificationDock (Fluid Spring Navigation) -->
+    <div id="dock-root" class="top-dock-container"></div>
+    <p class="blend h3 corner corner--br" data-ui>&copy;2026 Runtime Rebels</p>
+    <div class="veil" data-veil></div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "auren-herasymenko",
+  "version": "1.0.0",
+  "description": "Auren Contemporary Real Estate & Architecture in Herasymenko Design System",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.89",
+    "@vitejs/plugin-react": "^6.3.0",
+    "framer-motion": "^14.14.0",
+    "gsap": "^3.15.1",
+    "lucide-react": "^1.72.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  }
+}

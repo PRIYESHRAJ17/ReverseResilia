@@ -1,0 +1,267 @@
+/* Journal Publication Styling — ReverseResilia Design System */
+
+html,
+body {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--bg-matte);
+  font-family: 'PP Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-matte);
+  color: var(--text-primary);
+}
+
+.j-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: calc(1440 * var(--px));
+  margin: 0 auto;
+  color: var(--text-primary);
+  background: var(--bg-matte);
+  padding: calc(110 * var(--px)) calc(40 * var(--px)) calc(120 * var(--px));
+  box-sizing: border-box;
+}
+
+.j-header {
+  margin-top: calc(20 * var(--px));
+  margin-bottom: calc(56 * var(--px));
+  max-width: calc(1050 * var(--px));
+}
+
+.j-kicker {
+  font-family: 'PP Neue Montreal Mono', monospace;
+  font-size: calc(11 * var(--px));
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: calc(16 * var(--px));
+  text-transform: uppercase;
+}
+
+.j-title {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, calc(48 * var(--px)), 64px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  margin: 0 0 calc(18 * var(--px)) 0;
+  color: var(--text-primary);
+}
+
+.j-subtitle {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 400;
+  font-size: calc(17 * var(--px));
+  line-height: 1.45;
+  color: var(--text-muted);
+  max-width: calc(800 * var(--px));
+  margin: 0;
+}
+
+.j-articles {
+  display: flex;
+  flex-direction: column;
+  gap: calc(64 * var(--px));
+  border-top: 1px solid var(--border);
+  padding-top: calc(48 * var(--px));
+}
+
+.j-article-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 1.35fr;
+  gap: calc(56 * var(--px));
+  align-items: start;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: calc(64 * var(--px));
+}
+
+.j-article-img-wrap {
+  position: sticky;
+  top: calc(90 * var(--px));
+  overflow: hidden;
+  border-radius: calc(4 * var(--px));
+  background: var(--surface);
+  aspect-ratio: 16 / 10;
+  max-height: calc(420 * var(--px));
+  border: 1px solid var(--border);
+}
+
+.j-article-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.j-article-card:hover .j-article-img-wrap img {
+  transform: scale(1.03);
+}
+
+.j-article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(14 * var(--px));
+  font-family: 'PP Neue Montreal Mono', monospace;
+  font-size: calc(11 * var(--px));
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.j-article-title {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, calc(28 * var(--px)), 38px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 calc(16 * var(--px)) 0;
+  color: var(--text-primary);
+}
+
+.j-article-excerpt {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 400;
+  font-size: calc(15.5 * var(--px));
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 0 calc(18 * var(--px)) 0;
+}
+
+.j-tag {
+  display: inline-block;
+  border: 1px solid var(--border);
+  padding: calc(4 * var(--px)) calc(11 * var(--px));
+  border-radius: 9999px;
+  font-size: calc(10 * var(--px));
+  font-family: 'PP Neue Montreal Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-right: calc(6 * var(--px));
+  margin-bottom: calc(8 * var(--px));
+  background: var(--surface);
+  color: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.j-tag:hover {
+  border-color: var(--accent-hover);
+  color: var(--accent-hover);
+  background: rgba(38, 41, 48, 0.8);
+}
+
+.j-full-content {
+  display: block;
+  margin-top: calc(20 * var(--px));
+  padding-top: calc(18 * var(--px));
+  border-top: 1px dashed var(--border);
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 400;
+  font-size: calc(14.5 * var(--px));
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.j-full-content p {
+  margin: 0 0 calc(14 * var(--px)) 0;
+}
+
+.j-math-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: calc(20 * var(--px)) calc(24 * var(--px));
+  margin: calc(20 * var(--px)) 0;
+  border-radius: calc(4 * var(--px));
+  font-family: 'PP Neue Montreal Mono', monospace;
+  font-size: calc(11.5 * var(--px));
+  line-height: 1.7;
+  color: var(--text-primary);
+  overflow-x: auto;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.6);
+}
+
+.j-math-box strong {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.j-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: calc(20 * var(--px)) 0;
+  font-family: 'PP Neue Montreal Mono', monospace;
+  font-size: calc(11.5 * var(--px));
+  line-height: 1.4;
+  border: 1px solid var(--border);
+  border-radius: calc(4 * var(--px));
+  overflow: hidden;
+  background: var(--bg-matte);
+}
+
+.j-table th,
+.j-table td {
+  border: 1px solid var(--border);
+  padding: calc(10 * var(--px)) calc(14 * var(--px));
+  text-align: left;
+}
+
+.j-table th {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.j-table td {
+  color: var(--text-primary);
+}
+
+.j-table tbody tr:hover td {
+  background: rgba(23, 25, 29, 0.6);
+}
+
+@media (max-width: 960px) {
+  .j-page {
+    padding: calc(80 * var(--px)) calc(20 * var(--px)) calc(90 * var(--px));
+  }
+
+  .j-article-card {
+    grid-template-columns: 1fr;
+    gap: calc(28 * var(--px));
+  }
+
+  .j-article-img-wrap {
+    position: relative;
+    top: 0;
+    max-height: calc(300 * var(--px));
+  }
+}
+
+/* Zero-Trust Verification article accent */
+#art-5 .j-article-img-wrap {
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 40px rgba(120, 255, 60, 0.15);
+}
+
+#art-5 .j-article-meta span:first-child {
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+#art-5 .j-article-title {
+  border-left: 3px solid var(--accent);
+  padding-left: calc(16 * var(--px));
+}
+
+#art-5 .j-tag {
+  background: rgba(120, 255, 60, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}

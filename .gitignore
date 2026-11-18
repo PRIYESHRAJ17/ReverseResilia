@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+.vite/
+
+# Database & runtime state
+runs.sqlite*
+*.sqlite3
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/

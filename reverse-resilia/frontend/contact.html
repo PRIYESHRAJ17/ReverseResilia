@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" class="connect">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=http://localhost:8000/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>window.location.replace("http://localhost:8000/");</script>
+    <title>Live Solver Suite — ReverseResilia</title>
+    <meta name="description" content="Direct operations console and recovery optimization interface for ReverseResilia. Inject disruptions and compute provable recovery plans." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/PPNeueMontreal-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/PPNeueMontrealMono-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/FHPhemister-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/connect.css" />
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/src/dock-mount.tsx"></script>
+    <style>
+      /* Recovery Console Drawer */
+      .consult-drawer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: clamp(340px, 45vw, 560px);
+        background: #0f100d;
+        border-left: 1px solid var(--green-12);
+        z-index: 200;
+        transform: translateX(100%);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: calc(48 * var(--px)) calc(32 * var(--px));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: var(--green);
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.8);
+        overflow-y: auto;
+      }
+      .consult-drawer.is-open {
+        transform: translateX(0);
+      }
+      .consult-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(11, 11, 11, 0.7);
+        backdrop-filter: blur(4px);
+        z-index: 190;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+      }
+      .consult-overlay.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .consult-form {
+        display: flex;
+        flex-direction: column;
+        gap: calc(16 * var(--px));
+        margin-top: calc(24 * var(--px));
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: calc(6 * var(--px));
+      }
+      .form-label {
+        font-family: 'PP Neue Montreal Mono', monospace;
+        font-size: calc(10 * var(--px));
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.7;
+      }
+      .form-input, .form-textarea {
+        background: rgba(206, 228, 159, 0.04);
+        border: 1px solid var(--green-12);
+        border-radius: calc(2 * var(--px));
+        padding: calc(10 * var(--px)) calc(12 * var(--px));
+        color: var(--green);
+        font-family: 'PP Neue Montreal Mono', monospace;
+        font-size: calc(12 * var(--px));
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .form-input:focus, .form-textarea:focus {
+        border-color: var(--green);
+      }
+      .btn-submit {
+        background: var(--green);
+        color: var(--black);
+        border: none;
+        padding: calc(12 * var(--px)) calc(16 * var(--px));
+        font-family: 'PP Neue Montreal', sans-serif;
+        font-weight: 700;
+        font-size: calc(12 * var(--px));
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: calc(2 * var(--px));
+        letter-spacing: 0.02em;
+        transition: opacity 0.2s, transform 0.1s;
+      }
+      .btn-submit:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+      .close-drawer {
+        align-self: flex-end;
+        background: transparent;
+        border: 1px solid var(--green-12);
+        color: var(--green);
+        padding: calc(4 * var(--px)) calc(10 * var(--px));
+        border-radius: calc(2 * var(--px));
+        cursor: pointer;
+        font-family: 'PP Neue Montreal Mono', monospace;
+        font-size: calc(10 * var(--px));
+        text-transform: uppercase;
+      }
+      .result-badge {
+        background: rgba(206, 228, 159, 0.05);
+        border: 1px solid var(--green-12);
+        padding: 12px;
+        margin-top: 16px;
+        border-radius: 2px;
+        font-family: 'PP Neue Montreal Mono', monospace;
+        font-size: 11px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="c-page">
+      <main class="c-stage" data-stage>
+        <section class="c-screen" data-screen>
+          <div class="c-center">
+            <a class="c-row c-row--phone" href="#solve" id="btn-hero-open-drawer" title="Click to Open MIP Optimization Drawer">
+              <span class="c-mask"><span class="c-move" data-reveal-block="0">
+                <span class="c-text"><span>SOLVE RECOVERY PLAN</span></span>
+                <span class="c-u" aria-hidden="true"></span>
+              </span></span>
+            </a>
+            <a class="c-row c-row--email" href="http://localhost:8000/" target="_blank" title="Launch Standalone Optimization Engines on Port 8000">
+              <span class="c-mask"><span class="c-move" data-reveal-block="1">
+                <span class="c-text"><span>LIVE SOLVER SUITE &nearr;</span></span>
+                <span class="c-u" aria-hidden="true"></span>
+              </span></span>
+            </a>
+          </div>
+
+          <div class="c-block c-block--top">
+            <p class="blend h3 c-note c-note--l" data-reveal="2" style="cursor: pointer;" id="btn-toggle-form">[OPEN MIP SOLVER DESK &rarr;]</p>
+            <p class="blend h3 c-note c-note--r" data-reveal="2">RUNTIME REBELS</p>
+          </div>
+
+          <div class="c-block c-block--bottom">
+            <div class="c-globe"><img src="/assets/connect/globe.svg" alt="" /></div>
+            <p class="blend h3 c-foot c-foot--top" data-reveal="3">Recover to a target. And prove it holds.</p>
+            <p class="blend h3 c-foot c-foot--bottom" data-reveal="4">DR. AIT BENGALURU &mdash; 5 SOURCED REGIONAL GRIDS &mdash; 2026</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Optimization Console Drawer -->
+    <div class="consult-overlay" id="consult-overlay"></div>
+    <aside class="consult-drawer" id="consult-drawer" aria-label="Optimization Console">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="mono" style="color: var(--green);">[OPERATIONS &amp; SOLVER CONSOLE]</span>
+          <button class="close-drawer" id="btn-close-form">Close [&#10005;]</button>
+        </div>
+        <h2 class="h3" style="font-size: calc(22 * var(--px)); line-height: 1.1; margin-top: calc(20 * var(--px));">
+          SOLVE RECOVERY PLAN
+        </h2>
+        <p style="font-family: 'PP Neue Montreal', sans-serif; font-size: calc(12 * var(--px)); opacity: 0.7; margin-top: calc(8 * var(--px)); line-height: 1.4;">
+          Direct communication with the FastAPI optimization engine. Solves Stage C target recovery using exact HiGHS Mixed-Integer Programming.
+        </p>
+
+        <form class="consult-form" id="solver-form" onsubmit="event.preventDefault(); solveFromConsole();">
+          <div class="form-group">
+            <label class="form-label">Regional Network</label>
+            <select id="console-city" class="form-input" style="background: #151612;">
+              <option value="bengaluru">Bengaluru Hub (Southern Zone)</option>
+              <option value="mumbai">Mumbai Depot (Western Zone)</option>
+              <option value="delhi_ncr">Delhi NCR Gateway (Northern Zone)</option>
+              <option value="chennai">Chennai Corridor (Southern Zone)</option>
+              <option value="guwahati">Guwahati Depot (North-Eastern Zone)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Shock Scenario</label>
+            <select id="console-disruption" class="form-input" style="background: #151612;">
+              <option value="0">Primary Hub Complete Outage</option>
+              <option value="1">Key Arterial Road Blockage</option>
+              <option value="2">Compound Outage &amp; Capacity Shock</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Target Service Level (%)</label>
+            <input type="number" id="console-target" class="form-input" value="100" min="50" max="100" step="5" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Recovery Budget (INR)</label>
+            <input type="number" id="console-budget" class="form-input" value="40000" min="0" step="1000" required />
+          </div>
+          <button type="submit" id="btn-solve-console" class="btn-submit">Execute Mathematical Optimization</button>
+          
+          <div id="console-feedback" class="result-badge hidden"></div>
+        </form>
+      </div>
+
+      <div style="border-top: 1px solid var(--green-12); padding-top: calc(16 * var(--px)); font-size: calc(10 * var(--px)); margin-top: 24px;" class="mono">
+        BENGALURU, KARNATAKA, INDIA<br />
+        RUNTIME REBELS &middot; MATHEMATICAL SUPPLY CHAIN RECOVERY
+      </div>
+    </aside>
+
+    <div class="veil" data-veil></div>
+
+    <p class="blend h3 corner corner--tl" data-ui><a href="/" data-home>ReverseResilia</a></p>
+
+    <!-- macOS MagnificationDock (Fluid Spring Navigation) -->
+    <div id="dock-root" class="top-dock-container"></div>
+
+    <p class="blend h3 corner corner--br" data-ui>&copy;2026 Runtime Rebels</p>
+
+    <script src="/js/vendor/gsap.min.js"></script>
+    <script type="module" src="/js/connect.js"></script>
+    <script>
+      // Interactive Console Drawer Controls
+      function openDrawer() {
+        document.getElementById('consult-drawer')?.classList.add('is-open');
+        document.getElementById('consult-overlay')?.classList.add('is-open');
+      }
+      function closeDrawer() {
+        document.getElementById('consult-drawer')?.classList.remove('is-open');
+        document.getElementById('consult-overlay')?.classList.remove('is-open');
+      }
+
+      const handleDrawerTaps = (e) => {
+        if (e.target.closest('#btn-toggle-form, #btn-hero-open-drawer, [data-open-drawer]')) {
+          e.preventDefault();
+          openDrawer();
+        }
+        if (e.target.closest('#btn-close-form, #consult-overlay')) {
+          e.preventDefault();
+          closeDrawer();
+        }
+      };
+
+      document.addEventListener('click', handleDrawerTaps);
+      document.addEventListener('touchend', handleDrawerTaps, { passive: false });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDrawer();
+      });
+
+      async function solveFromConsole() {
+        const city = document.getElementById('console-city').value;
+        const disIdx = parseInt(document.getElementById('console-disruption').value) || 0;
+        const target = parseFloat(document.getElementById('console-target').value) || 100;
+        const budget = parseFloat(document.getElementById('console-budget').value) || 40000;
+        const btn = document.getElementById('btn-solve-console');
+        const feedback = document.getElementById('console-feedback');
+
+        btn.disabled = true;
+        btn.textContent = 'SOLVING VIA OR-TOOLS CP-SAT...';
+        feedback.classList.remove('hidden');
+        feedback.innerHTML = 'Connecting to backend optimization engine...';
+
+        try {
+          const netRes = await fetch(`/api/network/${city}`);
+          if (!netRes.ok) throw new Error("Could not load regional network for " + city);
+          const network = await netRes.json();
+
+          let disruption = { kind: 'none' };
+          if (disIdx === 0 && network.warehouses.length > 0) {
+            disruption = { kind: 'outage', entity: network.warehouses[0].id, slots: 0 };
+          } else if (disIdx === 1 && network.lanes.length > 0) {
+            disruption = { kind: 'closure', entity: network.lanes[0].id, slots: 0 };
+          } else if (disIdx === 2 && network.warehouses.length > 0) {
+            disruption = { kind: 'capacity', entity: network.warehouses[0].id, slots: 2 };
+          }
+
+          const scenario = {
+            network: network,
+            disruption: disruption,
+            protect_critical: true,
+            target_pct: Math.round(target),
+            budget_inr: Math.round(budget),
+            allowed: (network.packages || []).map(p => p.id)
+          };
+
+          const optRes = await fetch('/api/recovery/optimize', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(scenario)
+          });
+
+          if (!optRes.ok) {
+            const errData = await optRes.json().catch(() => ({}));
+            throw new Error(errData.detail || "Optimization request failed with HTTP " + optRes.status);
+          }
+          const res = await optRes.json();
+          const plan = res.plan;
+          const ver = res.verification;
+
+          feedback.innerHTML = `
+            <strong>PROVEN SOLVER RESULT:</strong><br>
+            Status: <span style="color: ${plan.solver_status === 'OPTIMAL' ? 'var(--green)' : '#ff4d4d'}">${plan.solver_status}</span><br>
+            Service Achieved: <strong>${plan.achieved}/${network.orders.length} (${plan.percentage}%)</strong><br>
+            Modeled Total Cost: ₹${plan.total_inr.toLocaleString('en-IN')}<br>
+            Emergency Interventions: ₹${plan.package_inr.toLocaleString('en-IN')} (${plan.selected.length} packages deployed)<br>
+            Verification: <strong style="color: ${ver && ver.passed ? 'var(--green)' : '#ff4d4d'}">${ver && ver.passed ? '10/10 CONSTRAINTS PASSED' : 'UNVERIFIED'}</strong> (${plan.seconds}s)<br>
+            <a href="/api/runs/${res.run_id}/export" style="color: var(--green); text-decoration: underline; display: inline-block; margin-top: 8px;" target="_blank">Download Action Sheet CSV &darr;</a>
+          `;
+        } catch (err) {
+          feedback.innerHTML = `<span style="color: #ff4d4d;">Error: ${err.message}</span>`;
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Execute Mathematical Optimization';
+        }
+      }
+    </script>
+  </body>
+</html>

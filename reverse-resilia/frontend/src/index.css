@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Neue Montreal Mono';
+  src: url('/fonts/PPNeueMontrealMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FH Phemister';
+  src: url('/fonts/FHPhemister-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --green: #cee49f;
+  --black: #0b0b0b;
+  --card-bg: #11120f;
+  --card-border: rgba(206, 228, 159, 0.14);
+  --card-border-active: rgba(206, 228, 159, 0.4);
+  --green-12: rgba(206, 228, 159, 0.12);
+  --text-muted: rgba(206, 228, 159, 0.6);
+  --danger: #ff4d4d;
+  --danger-bg: rgba(255, 77, 77, 0.1);
+  --warning: #facc15;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--black);
+  color: var(--green);
+  font-family: 'PP Neue Montreal', -apple-system, sans-serif;
+  line-height: 1.4;
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.mono {
+  font-family: 'PP Neue Montreal Mono', monospace;
+  letter-spacing: 0.05em;
+}

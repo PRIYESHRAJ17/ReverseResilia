@@ -1,0 +1,2577 @@
+{
+  "city_id": "chennai",
+  "city_name": "Chennai",
+  "currency": "INR",
+  "warehouses": [
+    {
+      "id": "WH-CHE-01",
+      "name": "Chennai Central Fulfillment Hub",
+      "pincode": "603108",
+      "latitude": 12.706995,
+      "longitude": 80.094009,
+      "stock_units": 19,
+      "capacity_orders": 15,
+      "handling_cost_per_order": 33.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-CHE-02",
+      "name": "Chennai North Distribution Center",
+      "pincode": "603202",
+      "latitude": 12.84275,
+      "longitude": 80.0556,
+      "stock_units": 15,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 32.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-CHE-03",
+      "name": "Chennai South Regional Depot",
+      "pincode": "600102",
+      "latitude": 13.151889,
+      "longitude": 80.363194,
+      "stock_units": 20,
+      "capacity_orders": 18,
+      "handling_cost_per_order": 31.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    },
+    {
+      "id": "WH-CHE-04",
+      "name": "Chennai West Industrial Yard",
+      "pincode": "603102",
+      "latitude": 12.499384,
+      "longitude": 80.147026,
+      "stock_units": 16,
+      "capacity_orders": 16,
+      "handling_cost_per_order": 34.0,
+      "is_active": true,
+      "capacity_reduction_percent": 0.0,
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "stock_units": "simulated operations",
+        "capacity_orders": "simulated operations",
+        "handling_cost_per_order": "simulated operations"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-CHE-001",
+      "customer_name": "Customer Ram Nagar",
+      "pincode": "600091",
+      "latitude": 12.993084,
+      "longitude": 80.163043,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-CHE-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-002",
+      "customer_name": "Customer Madurantakam SO",
+      "pincode": "603306",
+      "latitude": 12.510524,
+      "longitude": 79.885137,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-003",
+      "customer_name": "Customer Alapakkam BO",
+      "pincode": "600116",
+      "latitude": 13.028,
+      "longitude": 80.136,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-004",
+      "customer_name": "Customer Illalur BO",
+      "pincode": "603110",
+      "latitude": 12.714129,
+      "longitude": 80.150203,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-005",
+      "customer_name": "Customer Lloyds Estate S.O",
+      "pincode": "600014",
+      "latitude": 12.93675,
+      "longitude": 80.939222,
+      "demand_units": 1,
+      "deadline_minutes": 196,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-006",
+      "customer_name": "Customer Thygarayanagar H.O",
+      "pincode": "600017",
+      "latitude": 13.045361,
+      "longitude": 80.237611,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-007",
+      "customer_name": "Customer Mullikolathur BO",
+      "pincode": "603109",
+      "latitude": 12.5972,
+      "longitude": 80.05565,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-008",
+      "customer_name": "Customer Madipakkam S.O",
+      "pincode": "600091",
+      "latitude": 12.102389,
+      "longitude": 80.019306,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-009",
+      "customer_name": "Customer Lakshmipuram BO",
+      "pincode": "600099",
+      "latitude": 13.116,
+      "longitude": 70.181,
+      "demand_units": 1,
+      "deadline_minutes": 2680,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-010",
+      "customer_name": "Customer Chettipunniam BO",
+      "pincode": "603204",
+      "latitude": 12.744812,
+      "longitude": 79.990492,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-011",
+      "customer_name": "Customer Loyola College S.O",
+      "pincode": "600034",
+      "latitude": 13.109083,
+      "longitude": 80.394167,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-012",
+      "customer_name": "Customer Kalpakkam SO",
+      "pincode": "603102",
+      "latitude": 12.512482,
+      "longitude": 80.161372,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-013",
+      "customer_name": "Customer Janakipuram BO",
+      "pincode": "603303",
+      "latitude": 12.510228,
+      "longitude": 79.884924,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-014",
+      "customer_name": "Customer World University Service Centre",
+      "pincode": "600031",
+      "latitude": 13.072942,
+      "longitude": 80.252094,
+      "demand_units": 1,
+      "deadline_minutes": 170,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-015",
+      "customer_name": "Customer Navalur BO",
+      "pincode": "600130",
+      "latitude": 12.592,
+      "longitude": 80.026,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-016",
+      "customer_name": "Customer Tambaram Sanatorium SO",
+      "pincode": "600047",
+      "latitude": 12.942149,
+      "longitude": 80.133706,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-017",
+      "customer_name": "Customer Neelangarai S.O",
+      "pincode": "600115",
+      "latitude": 13.04682,
+      "longitude": 80.245617,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-018",
+      "customer_name": "Customer Teynampet S.O",
+      "pincode": "600018",
+      "latitude": 13.039444,
+      "longitude": 80.257361,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-019",
+      "customer_name": "Customer Chetput S.O",
+      "pincode": "600031",
+      "latitude": 13.083361,
+      "longitude": 80.239472,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-020",
+      "customer_name": "Customer Meyyur BO",
+      "pincode": "603111",
+      "latitude": 12.75775,
+      "longitude": 80.18619,
+      "demand_units": 1,
+      "deadline_minutes": 120,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-021",
+      "customer_name": "Customer Flower Bazaar",
+      "pincode": "600001",
+      "latitude": 13.091444,
+      "longitude": 80.292278,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-022",
+      "customer_name": "Customer Sirunagalur BO",
+      "pincode": "603319",
+      "latitude": 12.52485,
+      "longitude": 79.9555,
+      "demand_units": 1,
+      "deadline_minutes": 160,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-023",
+      "customer_name": "Customer LIC Colony BO",
+      "pincode": "600059",
+      "latitude": 12.905,
+      "longitude": 80.091,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-024",
+      "customer_name": "Customer Thiruvidanthai BO",
+      "pincode": "603112",
+      "latitude": 12.748,
+      "longitude": 80.212,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-025",
+      "customer_name": "Customer Selaiyur SO",
+      "pincode": "600073",
+      "latitude": 24.927778,
+      "longitude": 80.150167,
+      "demand_units": 1,
+      "deadline_minutes": 3272,
+      "is_critical": true,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-026",
+      "customer_name": "Customer Vadaperumbakkam BO",
+      "pincode": "600060",
+      "latitude": 13.161,
+      "longitude": 80.188,
+      "demand_units": 1,
+      "deadline_minutes": 150,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-03",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-027",
+      "customer_name": "Customer St Thomas Mount HO",
+      "pincode": "600016",
+      "latitude": 13.001528,
+      "longitude": 80.197333,
+      "demand_units": 1,
+      "deadline_minutes": 140,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-02",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-028",
+      "customer_name": "Customer Paiyambadi BO",
+      "pincode": "603309",
+      "latitude": 12.439898,
+      "longitude": 79.898979,
+      "demand_units": 1,
+      "deadline_minutes": 110,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-029",
+      "customer_name": "Customer Zamin Paiyanur BO",
+      "pincode": "603104",
+      "latitude": 12.63917,
+      "longitude": 80.19266,
+      "demand_units": 1,
+      "deadline_minutes": 130,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-01",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    },
+    {
+      "id": "ORD-CHE-030",
+      "customer_name": "Customer Suradimangalam BO",
+      "pincode": "603102",
+      "latitude": 12.5088,
+      "longitude": 80.12641,
+      "demand_units": 1,
+      "deadline_minutes": 180,
+      "is_critical": false,
+      "baseline_warehouse_id": "WH-CHE-04",
+      "provenance": {
+        "coordinates": "sourced geography",
+        "pincode": "sourced geography",
+        "demand_units": "simulated operations",
+        "deadline_minutes": "simulated operations",
+        "is_critical": "simulated operations"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-001",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-001",
+      "distance_km": 43.14,
+      "transit_time_minutes": 96,
+      "cost_inr": 406.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-002",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-002",
+      "distance_km": 41.55,
+      "transit_time_minutes": 93,
+      "cost_inr": 393.17,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-003",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-003",
+      "distance_km": 47.5,
+      "transit_time_minutes": 105,
+      "cost_inr": 443.75,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-004",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-004",
+      "distance_km": 8.11,
+      "transit_time_minutes": 31,
+      "cost_inr": 108.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-005",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-005",
+      "distance_km": 125.58,
+      "transit_time_minutes": 251,
+      "cost_inr": 1107.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-006",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-006",
+      "distance_km": 53.75,
+      "transit_time_minutes": 116,
+      "cost_inr": 496.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-007",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-007",
+      "distance_km": 17.03,
+      "transit_time_minutes": 47,
+      "cost_inr": 184.75,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-008",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-008",
+      "distance_km": 89.39,
+      "transit_time_minutes": 183,
+      "cost_inr": 799.82,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-009",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-009",
+      "distance_km": 1419.39,
+      "transit_time_minutes": 2677,
+      "cost_inr": 12104.82,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-010",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-010",
+      "distance_km": 15.83,
+      "transit_time_minutes": 45,
+      "cost_inr": 174.56,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-011",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-011",
+      "distance_km": 72.99,
+      "transit_time_minutes": 152,
+      "cost_inr": 660.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-012",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-012",
+      "distance_km": 30.14,
+      "transit_time_minutes": 72,
+      "cost_inr": 296.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-013",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-013",
+      "distance_km": 41.61,
+      "transit_time_minutes": 94,
+      "cost_inr": 393.69,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-014",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-014",
+      "distance_km": 58.28,
+      "transit_time_minutes": 125,
+      "cost_inr": 535.38,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-015",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-015",
+      "distance_km": 19.49,
+      "transit_time_minutes": 52,
+      "cost_inr": 205.66,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-016",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-016",
+      "distance_km": 34.98,
+      "transit_time_minutes": 81,
+      "cost_inr": 337.33,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-017",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-017",
+      "distance_km": 54.39,
+      "transit_time_minutes": 117,
+      "cost_inr": 502.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-018",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-018",
+      "distance_km": 54.11,
+      "transit_time_minutes": 117,
+      "cost_inr": 499.94,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-019",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-019",
+      "distance_km": 59.03,
+      "transit_time_minutes": 126,
+      "cost_inr": 541.75,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-020",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-020",
+      "distance_km": 15.15,
+      "transit_time_minutes": 44,
+      "cost_inr": 168.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-021",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-021",
+      "distance_km": 63.16,
+      "transit_time_minutes": 134,
+      "cost_inr": 576.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-022",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-022",
+      "distance_km": 33.29,
+      "transit_time_minutes": 78,
+      "cost_inr": 322.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-023",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-023",
+      "distance_km": 29.07,
+      "transit_time_minutes": 70,
+      "cost_inr": 287.1,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-024",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-024",
+      "distance_km": 17.93,
+      "transit_time_minutes": 49,
+      "cost_inr": 192.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-025",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-025",
+      "distance_km": 1793.75,
+      "transit_time_minutes": 3379,
+      "cost_inr": 15286.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-026",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-026",
+      "distance_km": 67.98,
+      "transit_time_minutes": 143,
+      "cost_inr": 617.83,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-027",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-027",
+      "distance_km": 45.69,
+      "transit_time_minutes": 101,
+      "cost_inr": 428.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-028",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-028",
+      "distance_km": 48.14,
+      "transit_time_minutes": 106,
+      "cost_inr": 449.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-029",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-029",
+      "distance_km": 17.28,
+      "transit_time_minutes": 48,
+      "cost_inr": 186.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-01-ORD-CHE-030",
+      "warehouse_id": "WH-CHE-01",
+      "order_id": "ORD-CHE-030",
+      "distance_km": 29.46,
+      "transit_time_minutes": 71,
+      "cost_inr": 290.41,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-001",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-001",
+      "distance_km": 26.89,
+      "transit_time_minutes": 66,
+      "cost_inr": 268.56,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-002",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-002",
+      "distance_km": 54.53,
+      "transit_time_minutes": 118,
+      "cost_inr": 503.5,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-003",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-003",
+      "distance_km": 29.52,
+      "transit_time_minutes": 71,
+      "cost_inr": 290.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-004",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-004",
+      "distance_km": 23.23,
+      "transit_time_minutes": 59,
+      "cost_inr": 237.46,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-005",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-005",
+      "distance_km": 127.18,
+      "transit_time_minutes": 254,
+      "cost_inr": 1121.03,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-006",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-006",
+      "distance_km": 39.53,
+      "transit_time_minutes": 90,
+      "cost_inr": 376.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-007",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-007",
+      "distance_km": 36.04,
+      "transit_time_minutes": 83,
+      "cost_inr": 346.34,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-008",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-008",
+      "distance_km": 108.79,
+      "transit_time_minutes": 219,
+      "cost_inr": 964.72,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-009",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-009",
+      "distance_km": 1412.82,
+      "transit_time_minutes": 2665,
+      "cost_inr": 12048.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-010",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-010",
+      "distance_km": 17.13,
+      "transit_time_minutes": 48,
+      "cost_inr": 185.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-011",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-011",
+      "distance_km": 62.23,
+      "transit_time_minutes": 132,
+      "cost_inr": 568.95,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-012",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-012",
+      "distance_km": 50.79,
+      "transit_time_minutes": 111,
+      "cost_inr": 471.71,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-013",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-013",
+      "distance_km": 54.58,
+      "transit_time_minutes": 118,
+      "cost_inr": 503.93,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-014",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-014",
+      "distance_km": 43.95,
+      "transit_time_minutes": 98,
+      "cost_inr": 413.58,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-015",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-015",
+      "distance_km": 37.05,
+      "transit_time_minutes": 85,
+      "cost_inr": 354.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-016",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-016",
+      "distance_km": 18.38,
+      "transit_time_minutes": 50,
+      "cost_inr": 196.23,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-017",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-017",
+      "distance_km": 40.45,
+      "transit_time_minutes": 91,
+      "cost_inr": 383.83,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-018",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-018",
+      "distance_km": 40.82,
+      "transit_time_minutes": 92,
+      "cost_inr": 386.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-019",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-019",
+      "distance_km": 44.03,
+      "transit_time_minutes": 98,
+      "cost_inr": 414.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-020",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-020",
+      "distance_km": 22.47,
+      "transit_time_minutes": 58,
+      "cost_inr": 231.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-021",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-021",
+      "distance_km": 49.78,
+      "transit_time_minutes": 109,
+      "cost_inr": 463.13,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-022",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-022",
+      "distance_km": 48.81,
+      "transit_time_minutes": 107,
+      "cost_inr": 454.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-023",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-023",
+      "distance_km": 10.45,
+      "transit_time_minutes": 35,
+      "cost_inr": 128.82,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-024",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-024",
+      "distance_km": 26.35,
+      "transit_time_minutes": 65,
+      "cost_inr": 263.98,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-025",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-025",
+      "distance_km": 1773.86,
+      "transit_time_minutes": 3341,
+      "cost_inr": 15117.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-026",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-026",
+      "distance_km": 50.4,
+      "transit_time_minutes": 110,
+      "cost_inr": 468.4,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-027",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-027",
+      "distance_km": 30.89,
+      "transit_time_minutes": 73,
+      "cost_inr": 302.56,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-028",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-028",
+      "distance_km": 63.24,
+      "transit_time_minutes": 134,
+      "cost_inr": 577.54,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-029",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-029",
+      "distance_km": 35.75,
+      "transit_time_minutes": 83,
+      "cost_inr": 343.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-02-ORD-CHE-030",
+      "warehouse_id": "WH-CHE-02",
+      "order_id": "ORD-CHE-030",
+      "distance_km": 50.05,
+      "transit_time_minutes": 109,
+      "cost_inr": 465.42,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-001",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-001",
+      "distance_km": 36.91,
+      "transit_time_minutes": 85,
+      "cost_inr": 353.73,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-002",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-002",
+      "distance_km": 116.37,
+      "transit_time_minutes": 234,
+      "cost_inr": 1029.14,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-003",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-003",
+      "distance_km": 37.22,
+      "transit_time_minutes": 85,
+      "cost_inr": 356.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-004",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-004",
+      "distance_km": 71.11,
+      "transit_time_minutes": 149,
+      "cost_inr": 644.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-005",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-005",
+      "distance_km": 88.21,
+      "transit_time_minutes": 181,
+      "cost_inr": 789.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-006",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-006",
+      "distance_km": 23.81,
+      "transit_time_minutes": 60,
+      "cost_inr": 242.38,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-007",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-007",
+      "distance_km": 92.55,
+      "transit_time_minutes": 189,
+      "cost_inr": 826.67,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-008",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-008",
+      "distance_km": 161.73,
+      "transit_time_minutes": 319,
+      "cost_inr": 1414.7,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-009",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-009",
+      "distance_km": 1455.33,
+      "transit_time_minutes": 2744,
+      "cost_inr": 12410.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-010",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-010",
+      "distance_km": 80.08,
+      "transit_time_minutes": 166,
+      "cost_inr": 720.68,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-011",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-011",
+      "distance_km": 7.69,
+      "transit_time_minutes": 30,
+      "cost_inr": 105.37,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-012",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-012",
+      "distance_km": 98.19,
+      "transit_time_minutes": 200,
+      "cost_inr": 874.62,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-013",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-013",
+      "distance_km": 116.43,
+      "transit_time_minutes": 234,
+      "cost_inr": 1029.66,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-014",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-014",
+      "distance_km": 19.66,
+      "transit_time_minutes": 52,
+      "cost_inr": 207.11,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-015",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-015",
+      "distance_km": 95.3,
+      "transit_time_minutes": 194,
+      "cost_inr": 850.05,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-016",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-016",
+      "distance_km": 44.99,
+      "transit_time_minutes": 100,
+      "cost_inr": 422.42,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-017",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-017",
+      "distance_km": 22.81,
+      "transit_time_minutes": 58,
+      "cost_inr": 233.88,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-018",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-018",
+      "distance_km": 22.39,
+      "transit_time_minutes": 57,
+      "cost_inr": 230.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-019",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-019",
+      "distance_km": 20.35,
+      "transit_time_minutes": 54,
+      "cost_inr": 212.98,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-020",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-020",
+      "distance_km": 63.15,
+      "transit_time_minutes": 134,
+      "cost_inr": 576.77,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-021",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-021",
+      "distance_km": 13.47,
+      "transit_time_minutes": 41,
+      "cost_inr": 154.5,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-022",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-022",
+      "distance_km": 108.97,
+      "transit_time_minutes": 220,
+      "cost_inr": 966.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-023",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-023",
+      "distance_km": 53.18,
+      "transit_time_minutes": 115,
+      "cost_inr": 492.03,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-024",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-024",
+      "distance_km": 63.1,
+      "transit_time_minutes": 134,
+      "cost_inr": 576.35,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-025",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-025",
+      "distance_km": 1728.68,
+      "transit_time_minutes": 3257,
+      "cost_inr": 14733.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-026",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-026",
+      "distance_km": 25.08,
+      "transit_time_minutes": 63,
+      "cost_inr": 253.18,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-027",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-027",
+      "distance_km": 32.39,
+      "transit_time_minutes": 76,
+      "cost_inr": 315.31,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-028",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-028",
+      "distance_km": 123.84,
+      "transit_time_minutes": 248,
+      "cost_inr": 1092.64,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-029",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-029",
+      "distance_km": 79.11,
+      "transit_time_minutes": 164,
+      "cost_inr": 712.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-03-ORD-CHE-030",
+      "warehouse_id": "WH-CHE-03",
+      "order_id": "ORD-CHE-030",
+      "distance_km": 100.29,
+      "transit_time_minutes": 204,
+      "cost_inr": 892.47,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-001",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-001",
+      "distance_km": 72.5,
+      "transit_time_minutes": 151,
+      "cost_inr": 656.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-002",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-002",
+      "distance_km": 37.56,
+      "transit_time_minutes": 86,
+      "cost_inr": 359.26,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-003",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-003",
+      "distance_km": 77.6,
+      "transit_time_minutes": 161,
+      "cost_inr": 699.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-004",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-004",
+      "distance_km": 31.52,
+      "transit_time_minutes": 75,
+      "cost_inr": 307.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-005",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-005",
+      "distance_km": 130.33,
+      "transit_time_minutes": 260,
+      "cost_inr": 1147.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-006",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-006",
+      "distance_km": 81.18,
+      "transit_time_minutes": 168,
+      "cost_inr": 730.03,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-007",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-007",
+      "distance_km": 19.43,
+      "transit_time_minutes": 52,
+      "cost_inr": 205.16,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-008",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-008",
+      "distance_km": 61.08,
+      "transit_time_minutes": 130,
+      "cost_inr": 559.18,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-009",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-009",
+      "distance_km": 1429.16,
+      "transit_time_minutes": 2695,
+      "cost_inr": 12187.86,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-010",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-010",
+      "distance_km": 42.43,
+      "transit_time_minutes": 95,
+      "cost_inr": 400.65,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-011",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-011",
+      "distance_km": 96.23,
+      "transit_time_minutes": 196,
+      "cost_inr": 857.96,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-012",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-012",
+      "distance_km": 2.81,
+      "transit_time_minutes": 21,
+      "cost_inr": 63.89,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-013",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-013",
+      "distance_km": 37.59,
+      "transit_time_minutes": 86,
+      "cost_inr": 359.52,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-014",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-014",
+      "distance_km": 85.52,
+      "transit_time_minutes": 176,
+      "cost_inr": 766.92,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-015",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-015",
+      "distance_km": 22.03,
+      "transit_time_minutes": 57,
+      "cost_inr": 227.25,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-016",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-016",
+      "distance_km": 65.02,
+      "transit_time_minutes": 137,
+      "cost_inr": 592.67,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-017",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-017",
+      "distance_km": 81.58,
+      "transit_time_minutes": 168,
+      "cost_inr": 733.43,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-018",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-018",
+      "distance_km": 80.83,
+      "transit_time_minutes": 167,
+      "cost_inr": 727.05,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-019",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-019",
+      "distance_km": 86.73,
+      "transit_time_minutes": 178,
+      "cost_inr": 777.21,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-020",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-020",
+      "distance_km": 38.33,
+      "transit_time_minutes": 87,
+      "cost_inr": 365.81,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-021",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-021",
+      "distance_km": 89.35,
+      "transit_time_minutes": 183,
+      "cost_inr": 799.47,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-022",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-022",
+      "distance_km": 27.7,
+      "transit_time_minutes": 67,
+      "cost_inr": 275.45,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-023",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-023",
+      "distance_km": 60.07,
+      "transit_time_minutes": 128,
+      "cost_inr": 550.6,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-024",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-024",
+      "distance_km": 37.66,
+      "transit_time_minutes": 86,
+      "cost_inr": 360.11,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-025",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-025",
+      "distance_km": 1824.21,
+      "transit_time_minutes": 3436,
+      "cost_inr": 15545.78,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-026",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-026",
+      "distance_km": 97.29,
+      "transit_time_minutes": 198,
+      "cost_inr": 866.97,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-027",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-027",
+      "distance_km": 74.05,
+      "transit_time_minutes": 154,
+      "cost_inr": 669.42,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-028",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-028",
+      "distance_km": 36.61,
+      "transit_time_minutes": 84,
+      "cost_inr": 351.19,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-029",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-029",
+      "distance_km": 21.53,
+      "transit_time_minutes": 56,
+      "cost_inr": 223.0,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    },
+    {
+      "id": "ROUTE-WH-CHE-04-ORD-CHE-030",
+      "warehouse_id": "WH-CHE-04",
+      "order_id": "ORD-CHE-030",
+      "distance_km": 3.26,
+      "transit_time_minutes": 22,
+      "cost_inr": 67.71,
+      "is_open": true,
+      "is_express": false,
+      "provenance": {
+        "distance_km": "derived from sourced geography",
+        "transit_time_minutes": "derived from sourced geography",
+        "cost_inr": "simulated operations"
+      }
+    }
+  ],
+  "available_interventions": [
+    {
+      "id": "INT-CHE-STK-WH-CHE-01",
+      "name": "Emergency Stock Bundle for Chennai Central Fulfillment Hub",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-CHE-01",
+      "cost_inr": 1800.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-CHE-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-CAP-WH-CHE-01",
+      "name": "Overtime Handling Shift for Chennai Central Fulfillment Hub",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-CHE-01",
+      "cost_inr": 1400.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-CHE-01",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-STK-WH-CHE-02",
+      "name": "Emergency Stock Bundle for Chennai North Distribution Center",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-CHE-02",
+      "cost_inr": 2000.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-CHE-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-CAP-WH-CHE-02",
+      "name": "Overtime Handling Shift for Chennai North Distribution Center",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-CHE-02",
+      "cost_inr": 1550.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-CHE-02",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-STK-WH-CHE-03",
+      "name": "Emergency Stock Bundle for Chennai South Regional Depot",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-CHE-03",
+      "cost_inr": 2200.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-CHE-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-CAP-WH-CHE-03",
+      "name": "Overtime Handling Shift for Chennai South Regional Depot",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-CHE-03",
+      "cost_inr": 1700.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-CHE-03",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-STK-WH-CHE-04",
+      "name": "Emergency Stock Bundle for Chennai West Industrial Yard",
+      "type": "EMERGENCY_STOCK",
+      "target_id": "WH-CHE-04",
+      "cost_inr": 2400.0,
+      "stock_delta": 8,
+      "capacity_delta": 0,
+      "time_reduction_minutes": 0,
+      "description": "Expedited stock transfer adding 8 inventory units to WH-CHE-04",
+      "provenance": "simulated operations"
+    },
+    {
+      "id": "INT-CHE-CAP-WH-CHE-04",
+      "name": "Overtime Handling Shift for Chennai West Industrial Yard",
+      "type": "EXTRA_CAPACITY",
+      "target_id": "WH-CHE-04",
+      "cost_inr": 1850.0,
+      "stock_delta": 0,
+      "capacity_delta": 7,
+      "time_reduction_minutes": 0,
+      "description": "Overtime labor crew adding 7 order handling slots to WH-CHE-04",
+      "provenance": "simulated operations"
+    }
+  ],
+  "disruptions": [
+    {
+      "id": "DIS-CHE-01",
+      "name": "Chennai Primary Hub Complete Outage",
+      "failed_warehouse_ids": [
+        "WH-CHE-01"
+      ],
+      "closed_route_ids": [],
+      "capacity_reductions": {},
+      "description": "Total operational shutdown at Chennai Central Fulfillment Hub (WH-CHE-01) due to facility flood / structural hazard."
+    },
+    {
+      "id": "DIS-CHE-02",
+      "name": "Chennai Arterial Road Corridor Blockage",
+      "failed_warehouse_ids": [],
+      "closed_route_ids": [
+        "ROUTE-WH-CHE-02-ORD-CHE-001",
+        "ROUTE-WH-CHE-02-ORD-CHE-002",
+        "ROUTE-WH-CHE-02-ORD-CHE-003",
+        "ROUTE-WH-CHE-02-ORD-CHE-004"
+      ],
+      "capacity_reductions": {},
+      "description": "Severe traffic lockdown and arterial road collapse blocking 4 key delivery lanes."
+    },
+    {
+      "id": "DIS-CHE-03",
+      "name": "Chennai Compound Disruption: Outage & Capacity Shock",
+      "failed_warehouse_ids": [
+        "WH-CHE-01"
+      ],
+      "closed_route_ids": [
+        "ROUTE-WH-CHE-02-ORD-CHE-001",
+        "ROUTE-WH-CHE-02-ORD-CHE-002"
+      ],
+      "capacity_reductions": {
+        "WH-CHE-02": 50.0
+      },
+      "description": "Primary hub failure at WH-CHE-01 combined with a 50% labor capacity reduction at WH-CHE-02."
+    }
+  ],
+  "metadata": {
+    "provenance_summary": {
+      "geography": "Sourced from real pincode.csv GPS coordinates",
+      "operations": "Simulated operational parameters with deterministic seeds",
+      "road_metrics": "Derived from Great Circle + 1.32 circuity factor"
+    },
+    "total_orders": 30,
+    "total_warehouses": 4,
+    "total_routes": 120,
+    "initial_total_stock": 70,
+    "initial_total_capacity": 65
+  }
+}

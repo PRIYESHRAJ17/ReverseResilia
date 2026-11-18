@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReverseResilia — Goal-Driven Supply Chain Recovery</title>
+  <style>
+    @font-face {
+      font-family: 'PP Neue Montreal';
+      src: url('/static/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PP Neue Montreal Mono';
+      src: url('/static/fonts/PPNeueMontrealMono-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'FH Phemister';
+      src: url('/static/fonts/FHPhemister-Light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --green: #cee49f;
+      --black: #0b0b0b;
+      --card-bg: #11120f;
+      --card-border: rgba(206, 228, 159, 0.14);
+      --card-border-active: rgba(206, 228, 159, 0.4);
+      --green-12: rgba(206, 228, 159, 0.12);
+      --text-muted: rgba(206, 228, 159, 0.6);
+      --danger: #ff4d4d;
+      --danger-bg: rgba(255, 77, 77, 0.1);
+      --warning: #facc15;
+      --info: #38bdf8;
+      --px: 1px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background-color: var(--black);
+      color: var(--green);
+      font-family: 'PP Neue Montreal', -apple-system, sans-serif;
+      line-height: 1.4;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      height: auto !important;
+      min-height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+    }
+
+    .mono {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      letter-spacing: 0.05em;
+    }
+
+    /* Top Fixed Editorial Header */
+    header.auren-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--green-12);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-title {
+      font-size: clamp(20px, 2.2vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      margin-top: 6px;
+    }
+
+    .header-meta {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .live-clock {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 11px;
+      background: rgba(206, 228, 159, 0.05);
+      border: 1px solid var(--green-12);
+      padding: 6px 12px;
+      border-radius: 2px;
+    }
+
+    /* Region Selector Pills */
+    .city-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .city-pill {
+      background: transparent;
+      border: 1px solid var(--green-12);
+      color: var(--text-muted);
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 11px;
+      padding: 6px 14px;
+      border-radius: 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    .city-pill:hover, .city-pill.active {
+      background: var(--green);
+      color: var(--black);
+      border-color: var(--green);
+      font-weight: 700;
+    }
+
+    /* View Switcher / Navigation Tabs */
+    .view-switch {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--green-12);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+
+    .view-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 12px;
+      padding: 8px 16px;
+      border-radius: 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .view-btn:hover {
+      color: var(--green);
+      background: rgba(206, 228, 159, 0.04);
+    }
+
+    .view-btn.active {
+      background: var(--green);
+      color: var(--black);
+      border-color: var(--green);
+      font-weight: 700;
+    }
+
+    /* Grid & Cards */
+    .grid { display: grid; gap: 20px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+    .auren-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 2px;
+      padding: 24px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .auren-card:hover {
+      border-color: var(--card-border-active);
+    }
+
+    .card-kicker {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-heading {
+      font-size: clamp(18px, 1.4vw, 24px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    /* Big Numeric KPIs */
+    .kpi-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .kpi-tile {
+      background: rgba(206, 228, 159, 0.03);
+      border: 1px solid var(--green-12);
+      border-radius: 2px;
+      padding: 16px 12px;
+      text-align: left;
+    }
+
+    .kpi-number {
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 6px;
+      color: var(--green);
+    }
+
+    .kpi-label {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* Buttons */
+    .auren-btn {
+      background: var(--green);
+      color: var(--black);
+      border: 1px solid var(--green);
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 10px 20px;
+      border-radius: 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+    }
+
+    .auren-btn:hover {
+      background: transparent;
+      color: var(--green);
+    }
+
+    .auren-btn-outline {
+      background: transparent;
+      color: var(--green);
+      border: 1px solid var(--green-12);
+    }
+
+    .auren-btn-outline:hover {
+      border-color: var(--green);
+      background: rgba(206, 228, 159, 0.06);
+    }
+
+    .auren-btn-danger {
+      background: var(--danger);
+      color: white;
+      border: 1px solid var(--danger);
+    }
+
+    .auren-btn-danger:hover {
+      background: transparent;
+      color: var(--danger);
+    }
+
+    /* Inputs and Controls */
+    label.control-label {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    select.auren-input, input.auren-input {
+      width: 100%;
+      background: rgba(206, 228, 159, 0.03);
+      border: 1px solid var(--green-12);
+      border-radius: 2px;
+      color: var(--green);
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 12px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    select.auren-input:focus, input.auren-input:focus {
+      border-color: var(--green);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      background: var(--green-12);
+      border-radius: 2px;
+      outline: none;
+      margin: 12px 0 20px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--green);
+      cursor: pointer;
+      border: 2px solid var(--black);
+    }
+
+    /* Badges */
+    .status-badge {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .status-optimal { background: rgba(206, 228, 159, 0.2); color: var(--green); border: 1px solid var(--green); }
+    .status-danger { background: var(--danger-bg); color: var(--danger); border: 1px solid var(--danger); }
+    .status-warning { background: rgba(250, 204, 21, 0.15); color: var(--warning); border: 1px solid var(--warning); }
+
+    /* Tables (Auren Editorial Row Design) */
+    table.auren-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    table.auren-table th {
+      font-family: 'PP Neue Montreal Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--green-12);
+      padding: 12px 10px;
+      text-align: left;
+    }
+
+    table.auren-table td {
+      border-bottom: 1px solid rgba(206, 228, 159, 0.06);
+      padding: 14px 10px;
+      font-family: 'PP Neue Montreal', sans-serif;
+    }
+
+    table.auren-table tr:hover td {
+      background: rgba(206, 228, 159, 0.02);
+    }
+
+    /* Offline Topological SVG Network Map */
+    .map-box {
+      background: #090a08;
+      border: 1px solid var(--green-12);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    svg.vector-map {
+      width: 100%;
+      height: 420px;
+      display: block;
+    }
+
+    /* Alerts */
+    .auren-alert {
+      border: 1px solid var(--green-12);
+      background: rgba(206, 228, 159, 0.03);
+      padding: 14px 18px;
+      border-radius: 2px;
+      font-size: 12px;
+      margin-bottom: 16px;
+      font-family: 'PP Neue Montreal Mono', monospace;
+      line-height: 1.5;
+    }
+
+    .alert-hazard {
+      border-color: var(--danger);
+      background: var(--danger-bg);
+      color: #ff9999;
+    }
+
+    .alert-shortfall {
+      border-color: var(--warning);
+      background: rgba(250, 204, 21, 0.08);
+      color: #fef08a;
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Editorial Header -->
+  <header class="auren-header">
+    <div>
+      <h1 class="brand-title">ReverseResilia // Goal-Driven Recovery</h1>
+      <p class="brand-subtitle">[RUNTIME REBELS — DR. AIT, BENGALURU]</p>
+    </div>
+    <div class="header-meta">
+      <div id="liveClock" class="live-clock">BENGALURU, IN_18:15:00</div>
+      <span class="status-badge status-optimal">[100% OFFLINE // SOURCED GEOGRAPHY]</span>
+    </div>
+
+    <!-- Quick Navigation to Visual UI (:5173) -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; font-family: monospace; font-size: 11px;">
+      <span style="color: var(--muted); padding: 5px 0;">PORTAL LINKS &rarr;</span>
+      <a href="http://localhost:5173/" target="_blank" style="color: var(--fg); text-decoration: none; border: 1px solid var(--border); padding: 4px 10px; border-radius: 9999px; background: rgba(255,255,255,0.03);">[HOME :5173]</a>
+      <a href="http://localhost:5173/residences" target="_blank" style="color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 4px 10px; border-radius: 9999px; background: rgba(206,228,159,0.05);">[REGIONAL GRIDS]</a>
+      <a href="http://localhost:5173/about" target="_blank" style="color: var(--fg); text-decoration: none; border: 1px solid var(--border); padding: 4px 10px; border-radius: 9999px; background: rgba(255,255,255,0.03);">[RECOVERY ENGINE]</a>
+      <a href="http://localhost:5173/journal" target="_blank" style="color: var(--fg); text-decoration: none; border: 1px solid var(--border); padding: 4px 10px; border-radius: 9999px; background: rgba(255,255,255,0.03);">[DISRUPTION RESEARCH]</a>
+      <a href="http://localhost:5173/contact" target="_blank" style="color: var(--fg); text-decoration: none; border: 1px solid var(--border); padding: 4px 10px; border-radius: 9999px; background: rgba(255,255,255,0.03);">[OPTIMIZATION DESK]</a>
+    </div>
+
+    <!-- Five-City Selector Pills -->
+    <div class="city-pills">
+      <button class="city-pill active" onclick="selectCity('bengaluru')">[01] BENGALURU</button>
+      <button class="city-pill" onclick="selectCity('mumbai')">[02] MUMBAI</button>
+      <button class="city-pill" onclick="selectCity('delhi')">[03] DELHI NCR</button>
+      <button class="city-pill" onclick="selectCity('chennai')">[04] CHENNAI</button>
+      <button class="city-pill" onclick="selectCity('guwahati')">[05] GUWAHATI</button>
+    </div>
+  </header>
+
+  <!-- View Switcher (Screens 1 to 5) -->
+  <nav class="view-switch" aria-label="Views">
+    <button class="view-btn active" data-target="view-overview" onclick="switchView('view-overview', this)">01 // Regional Grid Overview</button>
+    <button class="view-btn" data-target="view-disruption" onclick="switchView('view-disruption', this)">02 // Disruption Simulator</button>
+    <button class="view-btn" data-target="view-recovery" onclick="switchView('view-recovery', this)">03 // Recovery Planner</button>
+    <button class="view-btn" data-target="view-compare" onclick="switchView('view-compare', this)">04 // Scenario Comparison</button>
+    <button class="view-btn" data-target="view-verified" onclick="switchView('view-verified', this)">05 // Verified Action Sheet</button>
+  </nav>
+
+  <!-- SCREEN 1: NETWORK OVERVIEW -->
+  <div id="view-overview" class="view-content">
+    <div class="grid grid-2" style="margin-bottom: 24px;">
+      
+      <!-- Network Summary Card -->
+      <div class="auren-card">
+        <div class="card-kicker">
+          <span>[SYSTEM DIRECTORY / SOURCED GEOGRAPHY]</span>
+          <span id="regionTag" class="mono">SOUTHERN ZONE</span>
+        </div>
+        <h2 class="card-heading" id="networkCityTitle">BENGALURU REGIONAL NETWORK</h2>
+        
+        <!-- Famous Regional Monument Banner -->
+        <div style="margin: 14px 0 16px 0; border-radius: 4px; overflow: hidden; border: 1px solid var(--border); height: 110px; position: relative;">
+          <img id="cityMonumentImg" src="/static/monuments/bengaluru_vidhana_soudha.jpg" alt="Regional Monument" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div id="cityMonumentLabel" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(11,11,11,0.8); backdrop-filter: blur(2px); padding: 5px 12px; font-size: 11px; font-family: monospace; color: var(--accent); border-top: 1px solid var(--border);">VIDHANA SOUDHA // BENGALURU, KARNATAKA</div>
+        </div>
+
+        <div class="kpi-container">
+          <div class="kpi-tile">
+            <div id="whCountKpi" class="kpi-number">04</div>
+            <div class="kpi-label">Warehouses</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="orderCountKpi" class="kpi-number">30</div>
+            <div class="kpi-label">Customer Orders</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="stockTotalKpi" class="kpi-number">76</div>
+            <div class="kpi-label">Available Stock</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="routesCountKpi" class="kpi-number">120</div>
+            <div class="kpi-label">Road Corridors</div>
+          </div>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+          Authentic Indian PIN code coordinates extracted from verified post office directories. Road distances calculated via Great Circle coordinates augmented with a 1.32x urban circuity factor.
+        </p>
+
+        <button class="auren-btn auren-btn-outline" onclick="loadNetwork()">RE-SYNC REGIONAL DATA</button>
+      </div>
+
+      <!-- Offline Topological SVG Network Map -->
+      <div class="auren-card map-box" style="padding: 0;">
+        <div style="padding: 14px 20px; border-bottom: 1px solid var(--green-12); display: flex; justify-content: space-between; align-items: center;">
+          <span class="mono" style="font-size: 11px;">[OFFLINE TOPOLOGICAL VECTOR MAP]</span>
+          <div class="mono" style="font-size: 10px; color: var(--text-muted);">
+            <span style="color: var(--green);">■</span> HUB &nbsp;|&nbsp;
+            <span style="color: #6ee7b7;">●</span> ORDER &nbsp;|&nbsp;
+            <span style="color: var(--danger);">▲</span> SEVERED
+          </div>
+        </div>
+        <svg id="vectorMap" class="vector-map" viewBox="0 0 600 420"></svg>
+      </div>
+    </div>
+
+    <!-- Editable Warehouses Matrix -->
+    <div class="auren-card">
+      <div class="card-kicker">
+        <span>[FACILITY REGISTER / EDITABLE NODES]</span>
+        <span>MODIFICATIONS TRIGGER REAL RECOMPUTATION</span>
+      </div>
+      <h2 class="card-heading">FULFILLMENT DEPOTS &amp; THROUGHPUT LIMITS</h2>
+      <div style="overflow-x: auto;">
+        <table class="auren-table">
+          <thead>
+            <tr>
+              <th>Facility ID</th>
+              <th>Name &amp; PIN Code</th>
+              <th>Available Stock</th>
+              <th>Handling Capacity</th>
+              <th>Handling Fee</th>
+              <th>Operational Status</th>
+              <th>Interactive Action</th>
+            </tr>
+          </thead>
+          <tbody id="whTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: DISRUPTION SIMULATOR -->
+  <div id="view-disruption" class="view-content hidden">
+    <div class="grid grid-2">
+      
+      <!-- Fault Injection Controls -->
+      <div class="auren-card">
+        <div class="card-kicker">
+          <span>[FAULT INJECTION INTERFACE]</span>
+          <span>DISRUPTION ENGINE</span>
+        </div>
+        <h2 class="card-heading">INJECT REGIONAL SUPPLY SHOCK</h2>
+
+        <label class="control-label">Pre-Configured Failure Scenario:</label>
+        <select id="disruptionDropdown" class="auren-input" onchange="onDisruptionChange()"></select>
+
+        <div id="disruptionDescBox" class="auren-alert">
+          Select or customize a disruption scenario.
+        </div>
+
+        <label class="control-label">Custom Warehouse Outage Toggles:</label>
+        <div id="manualWhFailList" style="margin-bottom: 20px; font-size: 12px; font-family: 'PP Neue Montreal Mono', monospace;"></div>
+
+        <button class="auren-btn auren-btn-danger" style="width: 100%;" onclick="runImpactAnalysis()">
+          SIMULATE SHOCK &amp; CALCULATE IMMEDIATE LOSS
+        </button>
+      </div>
+
+      <!-- Pre-Recovery Impact Report -->
+      <div class="auren-card">
+        <div class="card-kicker">
+          <span>[PRE-RECOVERY IMPACT ASSESSMENT]</span>
+          <span id="impactStatusBadge" class="status-badge status-warning">AWAITING SIMULATION</span>
+        </div>
+        <h2 class="card-heading">IMMEDIATE DELIVERABILITY LOSS</h2>
+
+        <div class="kpi-container">
+          <div class="kpi-tile">
+            <div id="impactServiceVal" class="kpi-number">--%</div>
+            <div class="kpi-label">Immediate Service</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="impactSeveredVal" class="kpi-number" style="color: var(--danger);">--</div>
+            <div class="kpi-label">Severed Orders</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="impactLossVal" class="kpi-number" style="color: var(--warning);">--%</div>
+            <div class="kpi-label">Service Drop</div>
+          </div>
+        </div>
+
+        <div id="impactSummaryAlert" class="auren-alert">
+          Run fault injection to compute immediate unrecovered damage.
+        </div>
+
+        <div class="mono" style="font-size: 11px; line-height: 1.8;">
+          <div>FAILED HUBS: <span id="impactFailedList" style="color: var(--danger);">NONE</span></div>
+          <div>CLOSED LANES: <span id="impactLanesList" style="color: var(--danger);">NONE</span></div>
+          <div>AFFECTED CRITICAL ORDERS: <span id="impactCritList" style="color: var(--warning);">NONE</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: RECOVERY PLANNER -->
+  <div id="view-recovery" class="view-content hidden">
+    <div class="grid grid-2">
+      
+      <!-- Target & Budget Controls -->
+      <div class="auren-card">
+        <div class="card-kicker">
+          <span>[GOAL-DRIVEN CONTROLS]</span>
+          <span>STAGE C FORMULATION</span>
+        </div>
+        <h2 class="card-heading">RECOVERY TARGET &amp; EXPENDITURE</h2>
+
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <label class="control-label">Service Target Level:</label>
+            <span id="targetValueReadout" class="mono" style="font-size: 18px; font-weight: 700; color: var(--green);">100%</span>
+          </div>
+          <input type="range" id="targetSlider" min="50" max="100" step="5" value="100" oninput="document.getElementById('targetValueReadout').innerText = this.value + '%'">
+        </div>
+
+        <label class="control-label">Recovery Budget Ceiling (INR):</label>
+        <input type="number" id="budgetInputField" class="auren-input" value="40000" min="0" step="1000">
+
+        <label class="control-label">Priority Order Policy:</label>
+        <select id="priorityPolicyDropdown" class="auren-input">
+          <option value="HARD">HARD (Critical orders must be fulfilled on time or prove infeasible)</option>
+          <option value="SOFT">SOFT (Prioritize critical orders via high objective weight)</option>
+        </select>
+
+        <label class="control-label">Permitted Emergency Interventions (Discrete &amp; Priced):</label>
+        <div id="interventionCheckboxes" style="max-height: 180px; overflow-y: auto; border: 1px solid var(--green-12); padding: 12px; margin-bottom: 20px; font-size: 11px; font-family: 'PP Neue Montreal Mono', monospace;"></div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <button class="auren-btn auren-btn-outline" onclick="solveNaturalRecovery()">
+            STAGE A &amp; B // NATURAL
+          </button>
+          <button class="auren-btn" onclick="solveTargetRecovery()">
+            STAGE C // TARGET MIN-COST
+          </button>
+        </div>
+      </div>
+
+      <!-- Mathematical Optimizer Result -->
+      <div class="auren-card">
+        <div class="card-kicker">
+          <span>[HIGHS MIP SOLVER / BRANCH &amp; BOUND]</span>
+          <span id="solverStatusTag" class="status-badge status-optimal">READY</span>
+        </div>
+        <h2 class="card-heading">PROVABLE RECOVERY RESULT</h2>
+
+        <div class="kpi-container">
+          <div class="kpi-tile">
+            <div id="recServiceKpi" class="kpi-number">--%</div>
+            <div class="kpi-label">Service Achieved</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="recTotalCostKpi" class="kpi-number">₹0</div>
+            <div class="kpi-label">Modeled Recovery Cost</div>
+          </div>
+          <div class="kpi-tile">
+            <div id="recInterventionCostKpi" class="kpi-number">₹0</div>
+            <div class="kpi-label">Interventions Cost</div>
+          </div>
+        </div>
+
+        <div id="budgetWarningAlert" class="auren-alert alert-shortfall hidden"></div>
+        <div id="infeasibleAlert" class="auren-alert alert-hazard hidden"></div>
+
+        <div class="mono" style="font-size: 11px; line-height: 1.8; margin-bottom: 20px;">
+          <div>NUMERATOR / DENOMINATOR: <span id="recFractions" style="color: var(--green);">--</span></div>
+          <div>SOLVER EXECUTION TIME: <span id="recTime">-- ms</span></div>
+          <div>OPTIMALITY PROOF: <span id="recProof">--</span></div>
+          <div>SELECTED INTERVENTIONS: <span id="recSelectedList">None</span></div>
+          <div>UNFULFILLED ORDERS: <span id="recUnfulfilledList" style="color: var(--danger);">None</span></div>
+        </div>
+
+        <button class="auren-btn auren-btn-outline" style="width: 100%;" onclick="runPlanVerification()">
+          EXECUTE INDEPENDENT PLAN VERIFICATION &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 4: SCENARIO COMPARISON -->
+  <div id="view-compare" class="view-content hidden">
+    <div class="auren-card">
+      <div class="card-kicker">
+        <span>[THREE-STATE MATHEMATICAL AUDIT]</span>
+        <span>PROVABLE TRAJECTORY</span>
+      </div>
+      <h2 class="card-heading">BASELINE VS. DISRUPTED VS. RECOVERED RECONCILIATION</h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+        Rigorous comparison of operational states. All numbers derived from actual integer programming output.
+      </p>
+
+      <div style="overflow-x: auto;">
+        <table class="auren-table">
+          <thead>
+            <tr>
+              <th>Evaluation Parameter</th>
+              <th>[01] Baseline Network</th>
+              <th>[02] Disrupted Shock</th>
+              <th>[03] Recovered Plan</th>
+              <th>Metric Unit</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonTableBody">
+            <tr><td colspan="5" style="text-align: center; color: var(--text-muted); padding: 30px 0;">Solve a recovery plan to generate the 3-state comparison audit.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 5: VERIFIED ACTION SHEET -->
+  <div id="view-verified" class="view-content hidden">
+    
+    <!-- 10 Independent Verification Checks -->
+    <div class="auren-card" style="margin-bottom: 24px;">
+      <div class="card-kicker">
+        <span>[INDEPENDENT VERIFICATION / ZERO TRUST MODULE]</span>
+        <span id="verifierBadge" class="status-badge status-optimal">NOT VERIFIED</span>
+      </div>
+      <h2 class="card-heading">INDEPENDENT CONSTRAINT AUDIT (10/10 CHECKS)</h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+        Recalculates all capacities, deadlines, lane statuses, and cost sums directly from raw network inputs. Proves physical feasibility under model assumptions.
+      </p>
+
+      <div id="verificationChecksGrid" style="display: grid; gap: 8px;"></div>
+    </div>
+
+    <!-- Recovery Action Sheet -->
+    <div class="auren-card">
+      <div class="card-kicker">
+        <span>[OPERATIONAL DISPATCH ROSTER]</span>
+        <button class="auren-btn" style="padding: 6px 14px; font-size: 10px;" onclick="downloadCsvActionSheet()">
+          EXPORT ACTION SHEET (CSV) &darr;
+        </button>
+      </div>
+      <h2 class="card-heading">VERIFIED WAREHOUSE ASSIGNMENT ACTION SHEET</h2>
+
+      <div style="overflow-x: auto;">
+        <table class="auren-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Assigned Hub</th>
+              <th>Route ID</th>
+              <th>Transit Time</th>
+              <th>Deadline</th>
+              <th>On-Time Compliance</th>
+              <th>Transport Cost</th>
+              <th>Handling Cost</th>
+              <th>Total Order Cost</th>
+            </tr>
+          </thead>
+          <tbody id="actionRosterBody">
+            <tr><td colspan="9" style="text-align: center; color: var(--text-muted); padding: 30px 0;">No active recovery plan solved yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentCity = 'bengaluru';
+    let currentNetwork = null;
+    let activeDisruption = null;
+    let activePlan = null;
+    let activeVerification = null;
+
+    // Dual Clock
+    function updateClock() {
+      const now = new Date();
+      const ist = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' }).format(now);
+      const utc = new Intl.DateTimeFormat('en-GB', { timeZone: 'UTC', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' }).format(now);
+      document.getElementById('liveClock').textContent = `BENGALURU, IN_${ist} | UTC_${utc}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function switchView(viewId, clickedBtn) {
+      document.querySelectorAll('.view-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+      const targetEl = document.getElementById(viewId);
+      if (targetEl) targetEl.classList.remove('hidden');
+
+      let btn = clickedBtn;
+      if (!btn && typeof event !== 'undefined' && event && event.target) {
+        btn = event.target.closest('.view-btn');
+      }
+      if (!btn) {
+        btn = document.querySelector(`.view-btn[data-target="${viewId}"]`) || 
+              document.querySelector(`.view-btn[onclick*="${viewId}"]`);
+      }
+      if (btn) btn.classList.add('active');
+    }
+
+    const CITY_MONUMENTS = {
+      bengaluru: { img: '/static/monuments/bengaluru_vidhana_soudha.jpg', label: 'VIDHANA SOUDHA // BENGALURU, KARNATAKA' },
+      mumbai: { img: '/static/monuments/mumbai_gateway_of_india.jpg', label: 'GATEWAY OF INDIA // MUMBAI, MAHARASHTRA' },
+      delhi: { img: '/static/monuments/delhi_india_gate.jpg', label: 'INDIA GATE // NEW DELHI, NCR' },
+      chennai: { img: '/static/monuments/chennai_central.jpg', label: 'CHENNAI CENTRAL TERMINUS // CHENNAI, TAMIL NADU' },
+      guwahati: { img: '/static/monuments/guwahati_kamakhya.jpg', label: 'KAMAKHYA TEMPLE // GUWAHATI, ASSAM' }
+    };
+
+    async function selectCity(cityId) {
+      currentCity = cityId;
+      document.querySelectorAll('.city-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(cityId));
+      });
+      const mon = CITY_MONUMENTS[cityId];
+      if (mon) {
+        const imgEl = document.getElementById('cityMonumentImg');
+        const lblEl = document.getElementById('cityMonumentLabel');
+        if (imgEl) imgEl.src = mon.img;
+        if (lblEl) lblEl.innerText = mon.label;
+      }
+      await loadNetwork();
+    }
+
+    async function loadNetwork() {
+      try {
+        const resp = await fetch(`/api/network/${currentCity}`);
+        if (!resp.ok) throw new Error("Could not load network");
+        currentNetwork = await resp.json();
+
+        document.getElementById('networkCityTitle').innerText = `${currentNetwork.city_name.toUpperCase()} REGIONAL NETWORK`;
+        document.getElementById('regionTag').innerText = currentCity.toUpperCase();
+        document.getElementById('whCountKpi').innerText = String(currentNetwork.warehouses.length).padStart(2, '0');
+        document.getElementById('orderCountKpi').innerText = String(currentNetwork.orders.length).padStart(2, '0');
+        const totStock = currentNetwork.warehouses.reduce((a, w) => a + w.stock_units, 0);
+        document.getElementById('stockTotalKpi').innerText = totStock;
+        document.getElementById('routesCountKpi').innerText = currentNetwork.routes.length;
+
+        renderWarehousesTable();
+        renderDisruptionOptions();
+        renderInterventionsList();
+        renderVectorMap();
+      } catch (err) {
+        alert("Failed to load network: " + err.message);
+      }
+    }
+
+    function renderWarehousesTable() {
+      const tbody = document.getElementById('whTableBody');
+      tbody.innerHTML = '';
+      currentNetwork.warehouses.forEach(w => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong class="mono" style="color: var(--green);">${w.id}</strong></td>
+          <td>${w.name} <span class="mono" style="color: var(--text-muted); font-size: 10px;">[${w.pincode}]</span></td>
+          <td><input type="number" class="auren-input" value="${w.stock_units}" min="0" style="width: 80px; padding: 4px 8px; margin: 0;" onchange="onStockEdit('${w.id}', this.value)"></td>
+          <td><input type="number" class="auren-input" value="${w.capacity_orders}" min="0" style="width: 80px; padding: 4px 8px; margin: 0;" onchange="onCapEdit('${w.id}', this.value)"></td>
+          <td class="mono">₹${w.handling_cost_per_order}</td>
+          <td>
+            <span class="status-badge ${w.is_active ? 'status-optimal' : 'status-danger'}">
+              ${w.is_active ? 'ACTIVE' : 'OUTAGE'}
+            </span>
+          </td>
+          <td>
+            <button class="auren-btn auren-btn-outline" style="padding: 4px 10px; font-size: 10px;" onclick="toggleWhActive('${w.id}')">
+              ${w.is_active ? 'TRIGGER OUTAGE' : 'RESTORE'}
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function onStockEdit(id, val) {
+      const w = currentNetwork.warehouses.find(item => item.id === id);
+      if (w) { w.stock_units = parseInt(val) || 0; loadNetworkSummary(); }
+    }
+    function onCapEdit(id, val) {
+      const w = currentNetwork.warehouses.find(item => item.id === id);
+      if (w) { w.capacity_orders = parseInt(val) || 0; loadNetworkSummary(); }
+    }
+    function toggleWhActive(id) {
+      const w = currentNetwork.warehouses.find(item => item.id === id);
+      if (w) { w.is_active = !w.is_active; renderWarehousesTable(); renderVectorMap(); }
+    }
+    function loadNetworkSummary() {
+      const totStock = currentNetwork.warehouses.reduce((a, w) => a + w.stock_units, 0);
+      document.getElementById('stockTotalKpi').innerText = totStock;
+    }
+
+    function renderDisruptionOptions() {
+      const dd = document.getElementById('disruptionDropdown');
+      dd.innerHTML = '<option value="">[NONE] NORMAL REGIONAL OPERATION</option>';
+      currentNetwork.disruptions.forEach(d => {
+        dd.innerHTML += `<option value="${d.id}">${d.name.toUpperCase()}</option>`;
+      });
+      onDisruptionChange();
+
+      const manualList = document.getElementById('manualWhFailList');
+      manualList.innerHTML = '';
+      currentNetwork.warehouses.forEach(w => {
+        manualList.innerHTML += `
+          <label style="margin-right: 18px; display: inline-block;">
+            <input type="checkbox" id="chk_fail_${w.id}" onchange="syncManualShock()"> FAIL ${w.id} (${w.name.split(' ')[1] || ''})
+          </label>
+        `;
+      });
+    }
+
+    function onDisruptionChange() {
+      const val = document.getElementById('disruptionDropdown').value;
+      const box = document.getElementById('disruptionDescBox');
+      if (!val) {
+        activeDisruption = null;
+        box.innerText = "Normal baseline operations. No facility failures or route closures injected.";
+        return;
+      }
+      activeDisruption = currentNetwork.disruptions.find(d => d.id === val);
+      box.innerText = activeDisruption.description;
+    }
+
+    function syncManualShock() {
+      const failed = [];
+      currentNetwork.warehouses.forEach(w => {
+        const c = document.getElementById(`chk_fail_${w.id}`);
+        if (c && c.checked) failed.push(w.id);
+      });
+      activeDisruption = {
+        id: "DIS-CUSTOM",
+        name: "Manual User-Injected Outage",
+        failed_warehouse_ids: failed,
+        closed_route_ids: [],
+        capacity_reductions: {},
+        description: `Manual outage injected for fulfillment facilities: ${failed.join(', ')}`
+      };
+      document.getElementById('disruptionDescBox').innerText = activeDisruption.description;
+    }
+
+    function renderInterventionsList() {
+      const container = document.getElementById('interventionCheckboxes');
+      container.innerHTML = '';
+      currentNetwork.available_interventions.forEach(i => {
+        container.innerHTML += `
+          <div style="margin-bottom: 8px;">
+            <label style="cursor: pointer;">
+              <input type="checkbox" id="int_chk_${i.id}" value="${i.id}" checked>
+              <strong>${i.name}</strong> — ₹${i.cost_inr} (${i.description})
+            </label>
+          </div>
+        `;
+      });
+    }
+
+    function renderVectorMap() {
+      if (!currentNetwork) return;
+      const svg = document.getElementById('vectorMap');
+      svg.innerHTML = '';
+
+      const lats = [...currentNetwork.warehouses.map(w => w.latitude), ...currentNetwork.orders.map(o => o.latitude)];
+      const lngs = [...currentNetwork.warehouses.map(w => w.longitude), ...currentNetwork.orders.map(o => o.longitude)];
+      const minLat = Math.min(...lats), maxLat = Math.max(...lats);
+      const minLng = Math.min(...lngs), maxLng = Math.max(...lngs);
+
+      function project(lat, lng) {
+        const x = 50 + ((lng - minLng) / (maxLng - minLng || 1)) * 500;
+        const y = 370 - ((lat - minLat) / (maxLat - minLat || 1)) * 320;
+        return [x, y];
+      }
+
+      // Draw Routes if active plan
+      if (activePlan && activePlan.assignments.length > 0) {
+        activePlan.assignments.forEach(a => {
+          const wh = currentNetwork.warehouses.find(w => w.id === a.warehouse_id);
+          const ord = currentNetwork.orders.find(o => o.id === a.order_id);
+          if (wh && ord) {
+            const [x1, y1] = project(wh.latitude, wh.longitude);
+            const [x2, y2] = project(ord.latitude, ord.longitude);
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", x1); line.setAttribute("y1", y1);
+            line.setAttribute("x2", x2); line.setAttribute("y2", y2);
+            line.setAttribute("stroke", "#cee49f");
+            line.setAttribute("stroke-width", "1.2");
+            line.setAttribute("stroke-opacity", "0.4");
+            svg.appendChild(line);
+          }
+        });
+      }
+
+      // Draw Customers
+      currentNetwork.orders.forEach(o => {
+        const [x, y] = project(o.latitude, o.longitude);
+        const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        c.setAttribute("cx", x); c.setAttribute("cy", y);
+        c.setAttribute("r", o.is_critical ? "5" : "3");
+        c.setAttribute("fill", o.is_critical ? "#fde047" : "#6ee7b7");
+        c.setAttribute("stroke", "#0b0b0b");
+        c.setAttribute("stroke-width", "1");
+        svg.appendChild(c);
+      });
+
+      // Draw Warehouses
+      currentNetwork.warehouses.forEach(w => {
+        const [x, y] = project(w.latitude, w.longitude);
+        const r = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        r.setAttribute("x", x - 9); r.setAttribute("y", y - 9);
+        r.setAttribute("width", "18"); r.setAttribute("height", "18");
+        r.setAttribute("fill", w.is_active ? "#cee49f" : "#ff4d4d");
+        r.setAttribute("stroke", "#0b0b0b");
+        r.setAttribute("stroke-width", "2");
+        svg.appendChild(r);
+
+        const txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        txt.setAttribute("x", x + 14); txt.setAttribute("y", y + 4);
+        txt.setAttribute("fill", "#cee49f");
+        txt.setAttribute("font-size", "10");
+        txt.setAttribute("font-family", "'PP Neue Montreal Mono', monospace");
+        txt.textContent = w.id;
+        svg.appendChild(txt);
+      });
+    }
+
+    async function runImpactAnalysis() {
+      if (!currentNetwork || !activeDisruption) {
+        alert("Please select or inject an active disruption scenario first.");
+        return;
+      }
+      try {
+        const resp = await fetch("/api/scenarios/impact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ network: currentNetwork, disruption: activeDisruption })
+        });
+        const impact = await resp.json();
+        document.getElementById('impactServiceVal').innerText = impact.immediate_service_percentage + '%';
+        document.getElementById('impactSeveredVal').innerText = impact.immediately_disrupted_orders.length;
+        document.getElementById('impactLossVal').innerText = '-' + impact.service_loss_percentage + '%';
+        document.getElementById('impactFailedList').innerText = impact.disrupted_warehouses.join(', ') || 'NONE';
+        document.getElementById('impactLanesList').innerText = impact.closed_routes.join(', ') || 'NONE';
+        document.getElementById('impactCritList').innerText = impact.affected_critical_orders.join(', ') || 'NONE';
+        document.getElementById('impactSummaryAlert').innerText = impact.summary;
+        document.getElementById('impactStatusBadge').innerText = 'IMPACT EVALUATED';
+      } catch (err) {
+        alert("Impact calculation error: " + err.message);
+      }
+    }
+
+    async function solveNaturalRecovery() {
+      if (!currentNetwork) return;
+      try {
+        const resp = await fetch("/api/recovery/max-service", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            network: currentNetwork,
+            disruption: activeDisruption,
+            priority_policy: document.getElementById('priorityPolicyDropdown').value
+          })
+        });
+        activePlan = await resp.json();
+        displayRecoveryResult();
+        renderVectorMap();
+        switchView('view-recovery');
+      } catch (err) {
+        alert("Natural recovery solver error: " + err.message);
+      }
+    }
+
+    async function solveTargetRecovery() {
+      if (!currentNetwork) return;
+      const allowed = [];
+      currentNetwork.available_interventions.forEach(i => {
+        const chk = document.getElementById(`int_chk_${i.id}`);
+        if (chk && chk.checked) allowed.push(i.id);
+      });
+
+      const body = {
+        network: currentNetwork,
+        disruption: activeDisruption,
+        target_service_percentage: parseFloat(document.getElementById('targetSlider').value),
+        budget_inr: parseFloat(document.getElementById('budgetInputField').value) || 0,
+        allowed_intervention_ids: allowed,
+        priority_policy: document.getElementById('priorityPolicyDropdown').value
+      };
+
+      try {
+        const resp = await fetch("/api/recovery/optimize", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body)
+        });
+        activePlan = await resp.json();
+        displayRecoveryResult();
+        renderVectorMap();
+        await updateComparisonMatrix();
+      } catch (err) {
+        alert("Optimization error: " + err.message);
+      }
+    }
+
+    function displayRecoveryResult() {
+      if (!activePlan) return;
+      const p = activePlan;
+      document.getElementById('recServiceKpi').innerText = p.achieved_service_percentage + '%';
+      document.getElementById('recTotalCostKpi').innerText = '₹' + p.total_recovery_cost;
+      document.getElementById('recInterventionCostKpi').innerText = '₹' + p.emergency_intervention_cost;
+      document.getElementById('recFractions').innerText = p.service_fraction_display;
+      document.getElementById('recTime').innerText = p.solve_time_ms + ' ms';
+      document.getElementById('recProof').innerText = p.is_optimal ? 'BRANCH & BOUND OPTIMAL (HiGHS)' : 'FEASIBLE';
+
+      const statusTag = document.getElementById('solverStatusTag');
+      statusTag.innerText = p.solver_status;
+      statusTag.className = 'status-badge ' + (p.solver_status === 'OPTIMAL' ? 'status-optimal' : 'status-danger');
+
+      const bBox = document.getElementById('budgetWarningAlert');
+      if (!p.is_within_budget) {
+        bBox.classList.remove('hidden');
+        bBox.innerHTML = `<strong>BUDGET SHORTFALL:</strong> Expenditure exceeds budget by ₹${p.budget_shortfall} (Ceiling: ₹${p.budget_limit}, Required: ₹${p.total_recovery_cost}).`;
+      } else {
+        bBox.classList.add('hidden');
+      }
+
+      const infBox = document.getElementById('infeasibleAlert');
+      if (p.solver_status === 'INFEASIBLE') {
+        infBox.classList.remove('hidden');
+        infBox.innerHTML = `<strong>PHYSICALLY INFEASIBLE:</strong><br>${p.limiting_constraints.join('<br>')}`;
+      } else {
+        infBox.classList.add('hidden');
+      }
+
+      document.getElementById('recSelectedList').innerText = p.selected_interventions.map(i => `${i.name} [₹${i.cost_inr}]`).join(', ') || 'None';
+      document.getElementById('recUnfulfilledList').innerText = p.unfulfilled_orders.join(', ') || 'None';
+
+      renderActionSheet();
+    }
+
+    async function runPlanVerification() {
+      if (!currentNetwork || !activePlan) {
+        alert("Please calculate a recovery plan first.");
+        return;
+      }
+      try {
+        const resp = await fetch("/api/recovery/verify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            network: currentNetwork,
+            plan: activePlan,
+            disruption: activeDisruption,
+            priority_policy: document.getElementById('priorityPolicyDropdown').value
+          })
+        });
+        activeVerification = await resp.json();
+        renderVerificationUI();
+        switchView('view-verified');
+      } catch (err) {
+        alert("Verification execution failed: " + err.message);
+      }
+    }
+
+    function renderVerificationUI() {
+      if (!activeVerification) return;
+      const v = activeVerification;
+      const badge = document.getElementById('verifierBadge');
+      badge.innerText = v.is_valid ? 'VERIFIED PASSED (10/10)' : 'REJECTED (VIOLATIONS)';
+      badge.className = 'status-badge ' + (v.is_valid ? 'status-optimal' : 'status-danger');
+
+      const grid = document.getElementById('verificationChecksGrid');
+      grid.innerHTML = '';
+      v.checks.forEach(c => {
+        grid.innerHTML += `
+          <div style="background: rgba(206, 228, 159, 0.03); border: 1px solid var(--green-12); padding: 12px; border-radius: 2px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span class="mono" style="font-weight: 700; font-size: 11px;">${c.check_name}</span>
+              <span class="status-badge ${c.passed ? 'status-optimal' : 'status-danger'}">
+                ${c.passed ? 'PASS' : 'FAIL'}
+              </span>
+            </div>
+            <div class="mono" style="font-size: 10px; color: var(--text-muted);">${c.message}</div>
+          </div>
+        `;
+      });
+    }
+
+    function renderActionSheet() {
+      const tbody = document.getElementById('actionRosterBody');
+      tbody.innerHTML = '';
+      if (!activePlan || activePlan.assignments.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--danger); padding: 30px 0;">No active assignments (Target Infeasible).</td></tr>`;
+        return;
+      }
+      activePlan.assignments.forEach(a => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong class="mono" style="color: var(--green);">${a.order_id}</strong></td>
+          <td class="mono">${a.warehouse_id}</td>
+          <td class="mono" style="font-size: 10px; color: var(--text-muted);">${a.route_id}</td>
+          <td class="mono">${a.transit_time_minutes} min</td>
+          <td class="mono">${a.deadline_minutes} min</td>
+          <td><span class="status-badge ${a.is_on_time ? 'status-optimal' : 'status-danger'}">${a.is_on_time ? 'ON TIME' : 'LATE'}</span></td>
+          <td class="mono">₹${a.transport_cost}</td>
+          <td class="mono">₹${a.handling_cost}</td>
+          <td><strong class="mono" style="color: var(--green);">₹${a.total_cost}</strong></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    async function updateComparisonMatrix() {
+      if (!currentNetwork || !activePlan) return;
+      try {
+        const resp = await fetch("/api/scenarios/compare", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            network: currentNetwork,
+            disruption: activeDisruption || { id: "NONE", name: "None", failed_warehouse_ids: [], closed_route_ids: [], capacity_reductions: {} },
+            plan: activePlan
+          })
+        });
+        const comps = await resp.json();
+        const tbody = document.getElementById('comparisonTableBody');
+        tbody.innerHTML = '';
+        comps.forEach(c => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><strong>${c.metric}</strong></td>
+            <td class="mono">${c.baseline}</td>
+            <td class="mono" style="color: var(--danger);">${c.disrupted}</td>
+            <td class="mono" style="color: var(--green); font-weight: 700;">${c.recovered}</td>
+            <td class="mono" style="color: var(--text-muted);">${c.unit}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (err) {
+        console.error("Comparison matrix error:", err);
+      }
+    }
+
+    function downloadCsvActionSheet() {
+      if (!activePlan) {
+        alert("Please optimize a recovery plan first.");
+        return;
+      }
+      window.location.href = `/api/runs/${activePlan.run_id}/export`;
+    }
+
+    window.onload = () => selectCity('bengaluru');
+  </script>
+</body>
+</html>
