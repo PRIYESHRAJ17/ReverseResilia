@@ -2,6 +2,11 @@
 
 > **Recover to a target. And prove it holds.**
 
+🌐 **Live Production Deployment**: **[https://reverse-resilia.vercel.app](https://reverse-resilia.vercel.app/)**
+
+[![Live Web Portal](https://img.shields.io/badge/Live_Portal-reverse--resilia.vercel.app-CEE49F?style=for-the-badge&logo=vercel&logoColor=black)](https://reverse-resilia.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-PRIYESHRAJ17%2FReverseResilia-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/PRIYESHRAJ17/ReverseResilia)
+
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![OR-Tools](https://img.shields.io/badge/Google_OR--Tools-CP--SAT-4285F4?logo=google&logoColor=white)](https://developers.google.com/optimization)
@@ -10,6 +15,20 @@
 [![Vite](https://img.shields.io/badge/Vite-7%2F8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![WebGL](https://img.shields.io/badge/Three.js-WebGL_3D-black?logo=threedotjs&logoColor=white)](https://threejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+---
+
+## 🌐 Live Cloud Deployment
+
+ReverseResilia is deployed and accessible 24/7 globally:
+
+- 🚀 **Main Showcase & Command Desk**: [https://reverse-resilia.vercel.app](https://reverse-resilia.vercel.app/)
+- 🔬 **Disruption Research Suite**: [https://reverse-resilia.vercel.app/disruption-research](https://reverse-resilia.vercel.app/disruption-research)
+- 🗺️ **Geospatial Regional Grids (5 Indian Metros)**: [https://reverse-resilia.vercel.app/regional-grids](https://reverse-resilia.vercel.app/regional-grids)
+- ⚙️ **Mathematical Recovery Engine**: [https://reverse-resilia.vercel.app/recovery-engine](https://reverse-resilia.vercel.app/recovery-engine)
+- 📖 **Interactive Engineering Journal**: [https://reverse-resilia.vercel.app/journal](https://reverse-resilia.vercel.app/journal)
+
+*(Edge frontend delivery via Vercel Global CDN &bull; Python Google OR-Tools CP-SAT + HiGHS MIP Solver engine)*
 
 ---
 

@@ -15,6 +15,22 @@ if (typeof window !== 'undefined') {
   }
 }
 
+export function getEngineUrl(): string {
+  if (typeof window === 'undefined') return 'http://localhost:8000';
+  const custom = (window as any).__REVERSERESILIA_ENGINE_URL__ || localStorage.getItem('REVERSERESILIA_ENGINE_URL');
+  if (custom && typeof custom === 'string' && custom.trim()) {
+    return custom.trim().replace(/\/+$/, '');
+  }
+  const envUrl = (import.meta as any).env?.VITE_ENGINE_URL;
+  if (envUrl && typeof envUrl === 'string' && envUrl.trim() && envUrl !== 'http://localhost:8000') {
+    return envUrl.trim().replace(/\/+$/, '');
+  }
+  if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    return 'https://reverseresilia-engine.onrender.com';
+  }
+  return 'http://localhost:8000';
+}
+
 function bindDrawerEvents() {
   const drawer = document.getElementById('engine-dock-drawer');
   const backdrop = document.getElementById('engine-backdrop');
@@ -34,6 +50,23 @@ function bindDrawerEvents() {
       });
       (copilotBtn as any).__hasCopilotListener = true;
     }
+    const editUrlBtn = drawer.querySelector('#btn-edit-engine-url');
+    if (editUrlBtn && !(editUrlBtn as any).__hasEditListener) {
+      editUrlBtn.addEventListener('click', () => {
+        const current = getEngineUrl();
+        const entered = window.prompt('ReverseResilia Engine Backend URL (Render/Railway/Local):', current);
+        if (entered !== null && entered.trim() !== '') {
+          localStorage.setItem('REVERSERESILIA_ENGINE_URL', entered.trim());
+          const iframe = document.getElementById('engine-iframe') as HTMLIFrameElement;
+          if (iframe) {
+            iframe.src = `${entered.trim().replace(/\/+$/, '')}/?_rr_v=2.0`;
+          }
+          const label = drawer.querySelector('#engine-url-label');
+          if (label) label.textContent = entered.trim().replace(/^https?:\/\//, '');
+        }
+      });
+      (editUrlBtn as any).__hasEditListener = true;
+    }
   }
   if (backdrop && !(backdrop as any).__hasCloseListener) {
     backdrop.addEventListener('click', closeLiveSolverSuite);
@@ -51,8 +84,8 @@ function openLiveSolverSuite(initialTab?: 'copilot') {
     backdrop.id = 'engine-backdrop';
     document.body.appendChild(backdrop);
 
-    const rawEngineUrl = String((typeof window !== 'undefined' && (window as any).__REVERSERESILIA_ENGINE_URL__) || (import.meta as any).env?.VITE_ENGINE_URL || 'http://localhost:8000').trim();
-    const engineUrl = rawEngineUrl.replace(/\/+$/, '');
+    const engineUrl = getEngineUrl();
+    const displayUrl = engineUrl.replace(/^https?:\/\//, '');
     drawer = document.createElement('aside');
     drawer.className = 'engine-dock-drawer';
     drawer.id = 'engine-dock-drawer';
@@ -62,6 +95,7 @@ function openLiveSolverSuite(initialTab?: 'copilot') {
         <div class="engine-status-badge">
           <span class="engine-live-dot"></span>
           <span class="mono">LIVE SOLVER SUITE // REAL-TIME CP-SAT OPTIMIZATION</span>
+          <button class="pill pill--sm" id="btn-edit-engine-url" style="margin-left: 12px; font-size: 10px; opacity: 0.85; padding: 2px 8px;" title="Click to view or edit target Solver Engine URL">Target: <span id="engine-url-label">${displayUrl}</span> ✎</button>
         </div>
         <div class="engine-header-actions">
           <button class="pill pill--sm" id="btn-open-copilot-suite" style="color: #cee49f; border-color: rgba(206,228,159,0.5); background: rgba(206,228,159,0.14); margin-right: 8px; cursor: pointer; font-weight: 700;" title="Open AI Dispatch Copilot">🤖 AI Dispatch Copilot</button>
@@ -133,6 +167,17 @@ if (typeof window !== 'undefined') {
   window.addEventListener('message', (e) => {
     if (e.data === 'close-engine-drawer') closeLiveSolverSuite();
     if (e.data === 'open-copilot') openLiveSolverSuite('copilot');
+    if (e.data === 'open-engine') openLiveSolverSuite();
+  });
+  window.addEventListener('open-solver-suite', () => openLiveSolverSuite());
+  
+  // Smoothly intercept any static link or button pointing to localhost:8000
+  document.addEventListener('click', (e) => {
+    const target = (e.target as HTMLElement)?.closest('a[href*="localhost:8000"], [data-open-engine]');
+    if (target) {
+      e.preventDefault();
+      openLiveSolverSuite();
+    }
   });
 }
 

@@ -2,6 +2,8 @@
 
 > **Recover to a target. And prove it holds.**
 
+🌐 **Live Portal**: **[https://reverse-resilia.vercel.app](https://reverse-resilia.vercel.app/)**
+
 **Team:** Runtime Rebels  
 **Track:** Open Innovation Track, ReverseResilia Hackathon  
 **Institution:** Dr. Ambedkar Institute of Technology, Bengaluru  
