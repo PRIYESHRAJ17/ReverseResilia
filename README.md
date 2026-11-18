@@ -4,6 +4,8 @@
 
 🌐 **Live Production Deployment**: **[https://reverse-resilia.vercel.app](https://reverse-resilia.vercel.app/)**
 
+It's completely an Full / Desktop sites
+
 [![Live Web Portal](https://img.shields.io/badge/Live_Portal-reverse--resilia.vercel.app-CEE49F?style=for-the-badge&logo=vercel&logoColor=black)](https://reverse-resilia.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-PRIYESHRAJ17%2FReverseResilia-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/PRIYESHRAJ17/ReverseResilia)
 
