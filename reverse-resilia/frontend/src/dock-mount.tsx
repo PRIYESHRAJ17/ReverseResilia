@@ -51,7 +51,8 @@ function openLiveSolverSuite(initialTab?: 'copilot') {
     backdrop.id = 'engine-backdrop';
     document.body.appendChild(backdrop);
 
-    const engineUrl = (typeof window !== 'undefined' && (window as any).__REVERSERESILIA_ENGINE_URL__) || (import.meta as any).env?.VITE_ENGINE_URL || 'http://localhost:8000';
+    const rawEngineUrl = String((typeof window !== 'undefined' && (window as any).__REVERSERESILIA_ENGINE_URL__) || (import.meta as any).env?.VITE_ENGINE_URL || 'http://localhost:8000').trim();
+    const engineUrl = rawEngineUrl.replace(/\/+$/, '');
     drawer = document.createElement('aside');
     drawer.className = 'engine-dock-drawer';
     drawer.id = 'engine-dock-drawer';

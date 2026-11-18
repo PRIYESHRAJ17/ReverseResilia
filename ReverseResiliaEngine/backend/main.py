@@ -307,6 +307,15 @@ def export(run_id:str, plan:Literal["target","budget"]="target"):
     return Response(buf.getvalue(),media_type="text/csv",headers={"Content-Disposition":f'attachment; filename="{s.network.id}-{run_id}.csv"'})
 
 
+@app.get("/api/health")
+def health():
+    return {"status": "ok", "service": "ReverseResilia Decision Engine", "cities": list(CITIES.keys())}
+
+
 if (ROOT/"frontend/dist/index.html").exists():
     app.mount("/",StaticFiles(directory=ROOT/"frontend/dist",html=True),name="ui")
+else:
+    @app.get("/")
+    def index_fallback():
+        return {"status": "ok", "service": "ReverseResilia Decision Engine", "api": "active", "docs": "/docs"}
 
