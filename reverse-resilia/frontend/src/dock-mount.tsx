@@ -102,14 +102,43 @@ function openLiveSolverSuite(initialTab?: 'copilot') {
           <button class="pill pill--sm" id="btn-close-engine" title="Close and return to showcase">[✕ Close / Return to Showcase]</button>
         </div>
       </div>
-      <div class="engine-dock-body">
+      <div class="engine-dock-body" style="position: relative;">
         <div class="engine-iframe-wrap">
           <iframe src="${engineUrl}/?_rr_v=2.0" title="ReverseResilia Optimization Engines" class="engine-iframe" id="engine-iframe"></iframe>
+        </div>
+        <div id="engine-wake-banner" style="display: none; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(15,16,13,0.95); border: 1px solid #cee49f; color: #cee49f; padding: 8px 18px; border-radius: 9999px; font-size: 11px; z-index: 60; box-shadow: 0 4px 24px rgba(0,0,0,0.8); pointer-events: auto; font-family: monospace;">
+          <span>⚡ Connecting to cloud solver (Render free tier wakes up in ~15-20s)...</span>
+          <a href="${engineUrl}/" target="_blank" rel="noopener noreferrer" style="color: #fff; margin-left: 10px; text-decoration: underline; font-weight: 700;">Open Direct Link &nearr;</a>
         </div>
       </div>
     `;
     document.body.appendChild(drawer);
   }
+
+  const engineUrl = getEngineUrl();
+  const iframe = drawer.querySelector('#engine-iframe') as HTMLIFrameElement;
+  if (iframe) {
+    const targetSrc = `${engineUrl}/?_rr_v=2.0`;
+    const cur = iframe.getAttribute('src') || '';
+    if (!cur || (cur.includes('localhost:8000') && engineUrl !== 'http://localhost:8000')) {
+      iframe.src = targetSrc;
+    }
+    
+    const wakeBanner = drawer.querySelector('#engine-wake-banner') as HTMLElement;
+    if (wakeBanner) {
+      wakeBanner.style.display = 'none';
+      let loaded = false;
+      iframe.onload = () => {
+        loaded = true;
+        wakeBanner.style.display = 'none';
+      };
+      setTimeout(() => {
+        if (!loaded) wakeBanner.style.display = 'flex';
+      }, 3500);
+    }
+  }
+  const label = drawer.querySelector('#engine-url-label');
+  if (label) label.textContent = engineUrl.replace(/^https?:\/\//, '');
 
   bindDrawerEvents();
 
