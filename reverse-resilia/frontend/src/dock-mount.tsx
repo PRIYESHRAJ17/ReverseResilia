@@ -6,12 +6,26 @@ import { DispatchCopilot } from './components/DispatchCopilot';
 import { initGlobalCursor } from './cursor';
 import '../css/dock.css';
 
-// Initialize global cursor across every page
+// Prewarm cloud solver silently on page load
+function prewarmCloudEngine() {
+  try {
+    const engineUrl = getEngineUrl();
+    if (engineUrl && engineUrl.startsWith('https://')) {
+      fetch(`${engineUrl}/api/health`, { mode: 'no-cors', cache: 'no-cache' }).catch(() => {});
+    }
+  } catch (_) {}
+}
+
+// Initialize global cursor and prewarm engine across every page
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => initGlobalCursor());
+    document.addEventListener('DOMContentLoaded', () => {
+      initGlobalCursor();
+      prewarmCloudEngine();
+    });
   } else {
     initGlobalCursor();
+    prewarmCloudEngine();
   }
 }
 

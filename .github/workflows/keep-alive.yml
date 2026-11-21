@@ -1,0 +1,16 @@
+name: 24/7 Cloud Engine Keep-Alive
+
+on:
+  schedule:
+    # Runs every 10 minutes to ensure Render never spins down (spins down after 15 min of inactivity)
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping ReverseResilia Solver Engine
+        run: |
+          echo "Pinging ReverseResilia Decision Engine on Render..."
+          curl -s -m 20 -o /dev/null -w "HTTP Status: %{http_code}\n" https://reverseresilia-engine.onrender.com/api/health || true
