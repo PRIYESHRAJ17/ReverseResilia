@@ -243,6 +243,21 @@ function initCursor() {
     },
   });
 
+  window.addEventListener('resilia-drawer-state', (e) => {
+    if (!e.detail?.isOpen) {
+      isMoving = false;
+      cursor.enabled = true;
+      el.style.display = 'block';
+      el.style.opacity = '1';
+      gsap.set(el, { opacity: 1, scale: 1, display: 'block' });
+    } else {
+      cursor.enabled = false;
+      el.style.display = 'none';
+      el.style.opacity = '0';
+      gsap.set(el, { opacity: 0, display: 'none' });
+    }
+  });
+
   window.addEventListener('mousemove', (e) => {
     if (document.documentElement.classList.contains('is-drawer-open') || window.__isDrawerOpen) {
       gsap.set(el, { opacity: 0 });
@@ -250,12 +265,14 @@ function initCursor() {
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
-    if (!isMoving) {
+    if (!isMoving || parseFloat(window.getComputedStyle(el).opacity) < 0.1 || el.style.opacity === '0' || el.style.display === 'none') {
       isMoving = true;
-      gsap.to(el, { opacity: 1, scale: 1, duration: 0.25 });
+      cursor.enabled = true;
+      el.style.display = 'block';
+      gsap.to(el, { opacity: 1, scale: 1, duration: 0.2, overwrite: 'auto' });
     }
     const isInteractive = Boolean(
-      e.target.closest('a, button, [role="button"], .dock-item, .view-switch-item, .pill, select, input')
+      e.target.closest('a, button, [role="button"], .dock-item, .view-switch-item, .pill, select, input, .work-close')
     );
     if (isInteractive !== isHovering) {
       isHovering = isInteractive;
@@ -399,24 +416,16 @@ async function boot() {
   });
 
 
-  // Wire Live Backend Engines HUD (Port 8000)
+  // Wire Live Backend Engines HUD (Delegated cleanly to unified drawer controller)
   const btnToggleEngine = document.getElementById('btn-toggle-engine');
   const btnCloseEngine = document.getElementById('btn-close-engine');
-  const engineDrawer = document.getElementById('engine-dock-drawer');
-  const engineBackdrop = document.getElementById('engine-backdrop');
 
   function openEngineDrawer() {
-    if (!engineDrawer) return;
-    engineDrawer.classList.add('is-open');
-    if (engineBackdrop) engineBackdrop.classList.add('is-open');
-    engineDrawer.setAttribute('aria-hidden', 'false');
+    window.dispatchEvent(new CustomEvent('open-solver-suite'));
   }
 
   function closeEngineDrawer() {
-    if (!engineDrawer) return;
-    engineDrawer.classList.remove('is-open');
-    if (engineBackdrop) engineBackdrop.classList.remove('is-open');
-    engineDrawer.setAttribute('aria-hidden', 'true');
+    window.dispatchEvent(new CustomEvent('close-solver-suite'));
   }
 
   if (btnToggleEngine) {
@@ -427,22 +436,6 @@ async function boot() {
     btnCloseEngine.addEventListener('click', closeEngineDrawer);
     btnCloseEngine.addEventListener('touchend', (e) => { e.preventDefault(); closeEngineDrawer(); }, { passive: false });
   }
-  if (engineBackdrop) {
-    engineBackdrop.addEventListener('click', closeEngineDrawer);
-    engineBackdrop.addEventListener('touchend', (e) => { e.preventDefault(); closeEngineDrawer(); }, { passive: false });
-  }
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && engineDrawer && engineDrawer.classList.contains('is-open')) {
-      closeEngineDrawer();
-    }
-  });
-
-  window.addEventListener('message', (e) => {
-    if (e.data === 'close-engine-drawer') {
-      closeEngineDrawer();
-    }
-  });
 
   // Quick Solver Execution directly from Hero Engine Drawer
   const btnHeroSolve = document.getElementById('btn-hero-run-solve');
@@ -572,6 +565,8 @@ async function boot() {
     header: workHeader,
   });
   work.preloaded = workPictures;
+  window.__resiliaWork = work;
+  window.__resiliaCloseWork = () => { if (work && work.isOpen) work.close(); };
   media.forEach((m) => m.ready.then(() => !m.isVideo && renderer.upload(m)));
   tiles.forEach((m) => renderer.upload(m));
   texts.forEach((t) => t.update(scroll.position));
@@ -987,7 +982,7 @@ async function boot() {
     scroll.jump(index);
     transition.update(index);
     transition.playOnly(mod(index));
-    cursor.setEnabled(false);
+    cursor.setEnabled(true);
     hideForWork(texts[mod(index)]);
     work.open(SLIDES[mod(index)], media[mod(index)]);
   }
@@ -1170,9 +1165,12 @@ async function boot() {
   };
 
   window.addEventListener('resilia-drawer-state', (e) => {
-    if (!e.detail?.isOpen && isMainPaused) {
+    if (!e.detail?.isOpen) {
+      window.__isDrawerOpen = false;
+      document.documentElement.classList.remove('is-drawer-open');
+      document.body.classList.remove('is-drawer-open');
       isMainPaused = false;
-      last = 0;
+      last = performance.now();
       if (!mainRaf) mainRaf = requestAnimationFrame(frame);
     }
   });

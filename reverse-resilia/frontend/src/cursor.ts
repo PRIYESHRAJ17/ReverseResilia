@@ -49,6 +49,23 @@ export function initGlobalCursor(): ResiliaCursor {
   let isHovering = false;
   let isEnabled = true;
 
+  // Listen for drawer state events to cleanly toggle cursor visibility
+  window.addEventListener('resilia-drawer-state', (e: any) => {
+    if (!e.detail?.isOpen) {
+      isMoving = false;
+      isEnabled = true;
+      el.style.display = 'block';
+      el.style.opacity = '1';
+      el.style.visibility = 'visible';
+      gsap.set(el, { opacity: 1, scale: 1, display: 'block' });
+    } else {
+      isEnabled = false;
+      el.style.display = 'none';
+      el.style.opacity = '0';
+      gsap.set(el, { opacity: 0, display: 'none' });
+    }
+  });
+
   // Smooth lagging cursor loop from GSAP Topic #36296:
   // Interpolates toward mouse coordinates with linear lag formula
   gsap.to(el, {
@@ -68,13 +85,15 @@ export function initGlobalCursor(): ResiliaCursor {
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
-    if (!isMoving) {
+    if (!isMoving || parseFloat(window.getComputedStyle(el).opacity) < 0.1 || el.style.opacity === '0' || el.style.display === 'none') {
       isMoving = true;
-      gsap.to(el, { opacity: 1, scale: 1, duration: 0.25 });
+      isEnabled = true;
+      el.style.display = 'block';
+      gsap.to(el, { opacity: 1, scale: 1, duration: 0.2, overwrite: 'auto' });
     }
     const isInteractive = Boolean(
       (e.target as HTMLElement)?.closest(
-        'a, button, [role="button"], .dock-item, .view-switch-item, .pill, select, input, textarea, .r-item, .j-article-card, [data-stub]'
+        'a, button, [role="button"], .dock-item, .view-switch-item, .pill, select, input, textarea, .r-item, .j-article-card, [data-stub], .work-close'
       )
     );
     if (isInteractive !== isHovering) {

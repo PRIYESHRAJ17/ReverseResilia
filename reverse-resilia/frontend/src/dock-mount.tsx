@@ -51,7 +51,7 @@ function bindDrawerEvents() {
   if (drawer) {
     const closeBtn = drawer.querySelector('#btn-close-engine');
     if (closeBtn && !(closeBtn as any).__hasCloseListener) {
-      closeBtn.addEventListener('click', closeLiveSolverSuite);
+      closeBtn.addEventListener('click', () => closeLiveSolverSuite(true));
       (closeBtn as any).__hasCloseListener = true;
     }
     const copilotBtn = drawer.querySelector('#btn-open-copilot-suite');
@@ -83,21 +83,23 @@ function bindDrawerEvents() {
     }
   }
   if (backdrop && !(backdrop as any).__hasCloseListener) {
-    backdrop.addEventListener('click', closeLiveSolverSuite);
+    backdrop.addEventListener('click', () => closeLiveSolverSuite(true));
     (backdrop as any).__hasCloseListener = true;
   }
 }
 
-function openLiveSolverSuite(initialTab?: 'copilot') {
+export function openLiveSolverSuite(initialTab?: 'copilot') {
   let drawer = document.getElementById('engine-dock-drawer');
   let backdrop = document.getElementById('engine-backdrop');
 
-  if (!drawer) {
+  if (!backdrop) {
     backdrop = document.createElement('div');
     backdrop.className = 'engine-backdrop';
     backdrop.id = 'engine-backdrop';
     document.body.appendChild(backdrop);
+  }
 
+  if (!drawer) {
     const engineUrl = getEngineUrl();
     const displayUrl = engineUrl.replace(/^https?:\/\//, '');
     drawer = document.createElement('aside');
@@ -156,14 +158,29 @@ function openLiveSolverSuite(initialTab?: 'copilot') {
 
   bindDrawerEvents();
 
+  // Push history state so browser Back button closes drawer cleanly
+  if (!window.history.state?.drawerOpen) {
+    try {
+      window.history.pushState({ drawerOpen: true }, '', window.location.href);
+    } catch (_) {}
+  }
+
   drawer.classList.add('is-open');
   drawer.setAttribute('aria-hidden', 'false');
-  if (backdrop) backdrop.classList.add('is-open');
+  drawer.style.display = 'flex';
+  drawer.style.pointerEvents = 'auto';
+
+  if (backdrop) {
+    backdrop.classList.add('is-open');
+    backdrop.style.display = 'block';
+    backdrop.style.pointerEvents = 'auto';
+  }
+
   document.documentElement.classList.add('is-drawer-open');
   document.body.classList.add('is-drawer-open');
   (window as any).__isDrawerOpen = true;
 
-  // Fully hide parent cursor when solver suite drawer is open to prevent double cursors
+  // Fully hide parent cursor while drawer is open to prevent double cursors
   const cursorEl = document.querySelector('[data-cursor]') as HTMLElement;
   if (cursorEl) {
     cursorEl.style.opacity = '0';
@@ -182,21 +199,45 @@ function openLiveSolverSuite(initialTab?: 'copilot') {
   window.dispatchEvent(new CustomEvent('resilia-drawer-state', { detail: { isOpen: true } }));
 }
 
-function closeLiveSolverSuite() {
-  const drawer = document.getElementById('engine-dock-drawer');
-  const backdrop = document.getElementById('engine-backdrop');
-  if (drawer) {
-    drawer.classList.remove('is-open');
-    drawer.setAttribute('aria-hidden', 'true');
+export function closeLiveSolverSuite(syncHistory = true) {
+  if (syncHistory && window.history.state?.drawerOpen) {
+    try {
+      window.history.back();
+    } catch (_) {}
   }
-  if (backdrop) backdrop.classList.remove('is-open');
+
+  // Synchronously reset open states and body classes
+  (window as any).__isDrawerOpen = false;
   document.documentElement.classList.remove('is-drawer-open');
   document.body.classList.remove('is-drawer-open');
-  (window as any).__isDrawerOpen = false;
 
+  // Deactivate and completely disable pointer events on all backdrops and drawers
+  document.querySelectorAll('.engine-backdrop').forEach((el) => {
+    el.classList.remove('is-open');
+    (el as HTMLElement).style.display = 'none';
+    (el as HTMLElement).style.pointerEvents = 'none';
+  });
+
+  document.querySelectorAll('.engine-dock-drawer').forEach((el) => {
+    el.classList.remove('is-open');
+    el.setAttribute('aria-hidden', 'true');
+    (el as HTMLElement).style.display = 'none';
+    (el as HTMLElement).style.pointerEvents = 'none';
+  });
+
+  // Explicitly restore custom cursor visibility and interaction
   const cursorEl = document.querySelector('[data-cursor]') as HTMLElement;
   if (cursorEl) {
-    cursorEl.style.display = '';
+    cursorEl.style.display = 'block';
+    cursorEl.style.opacity = '1';
+    cursorEl.style.visibility = 'visible';
+    cursorEl.style.pointerEvents = 'none';
+    const gsap = (window as any).gsap;
+    if (gsap) gsap.set(cursorEl, { opacity: 1, scale: 1, display: 'block' });
+  }
+
+  if ((window as any).__resiliaCursor) {
+    (window as any).__resiliaCursor.setEnabled(true);
   }
 
   window.dispatchEvent(new CustomEvent('resilia-drawer-state', { detail: { isOpen: false } }));
@@ -204,16 +245,30 @@ function closeLiveSolverSuite() {
 
 if (typeof window !== 'undefined') {
   bindDrawerEvents();
+
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLiveSolverSuite();
+    if (e.key === 'Escape' && (window as any).__isDrawerOpen) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeLiveSolverSuite(true);
+    }
   });
+
+  window.addEventListener('popstate', () => {
+    if ((window as any).__isDrawerOpen) {
+      closeLiveSolverSuite(false);
+    }
+  });
+
   window.addEventListener('message', (e) => {
-    if (e.data === 'close-engine-drawer') closeLiveSolverSuite();
+    if (e.data === 'close-engine-drawer') closeLiveSolverSuite(true);
     if (e.data === 'open-copilot') openLiveSolverSuite('copilot');
     if (e.data === 'open-engine') openLiveSolverSuite();
   });
+
   window.addEventListener('open-solver-suite', () => openLiveSolverSuite());
-  
+  window.addEventListener('close-solver-suite', () => closeLiveSolverSuite(true));
+
   // Smoothly intercept any static link or button pointing to localhost:8000
   document.addEventListener('click', (e) => {
     const target = (e.target as HTMLElement)?.closest('a[href*="localhost:8000"], [data-open-engine]');
@@ -239,6 +294,11 @@ function TopNavDock() {
       label: '01 // REGIONAL GRIDS',
       href: '/regional-grids',
       isActive: isRegionalGrids,
+      onClick: () => {
+        if (typeof window !== 'undefined' && (window as any).__resiliaCloseWork) {
+          (window as any).__resiliaCloseWork();
+        }
+      },
     },
     {
       icon: <Cpu size={18} strokeWidth={2.1} />,

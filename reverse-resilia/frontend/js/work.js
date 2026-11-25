@@ -704,6 +704,7 @@ export class Work {
 
     window.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
+      if (window.__isDrawerOpen || document.documentElement.classList.contains('is-drawer-open')) return;
       if (this.state === 'full') this.closeFull();
       else if (this.state === 'open') this.dom.close.click();
     });

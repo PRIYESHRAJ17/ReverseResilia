@@ -1237,7 +1237,8 @@ body:has(.work.is-open) .view-switch {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   z-index: 99999;
-  display: none;
+  display: none !important;
+  pointer-events: none !important;
   flex-direction: column;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.95);
   animation: engineDrawerFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -1255,7 +1256,8 @@ body:has(.work.is-open) .view-switch {
 }
 
 .engine-dock-drawer.is-open {
-  display: flex;
+  display: flex !important;
+  pointer-events: auto !important;
 }
 
 .engine-dock-header {
@@ -1368,9 +1370,11 @@ body:has(.work.is-open) .view-switch {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 99998;
-  display: none;
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .engine-backdrop.is-open {
-  display: block;
+  display: block !important;
+  pointer-events: auto !important;
 }
